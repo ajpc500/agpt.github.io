@@ -24,12 +24,13 @@ echo ""
 curl "https://api.github.com/orgs/aguidetopurpleteaming/repos?page=1&per_page=100" | grep -e 'clone_url*' | cut -d \" -f 4 | while read -r repo; do
     repo_name=$(basename "${repo}" .git)
     echo ""
-    echo "[-] Checking: ${repo_name}"
     if [ -d "$repo_name" ]; then
+        echo "[-] Updating: ${repo_name}"
         cd "$repo_name"
         git pull
         cd ..
     else
+        echo "[-] Fetching: ${repo_name}"
         git clone "${repo}"
     fi
 done
