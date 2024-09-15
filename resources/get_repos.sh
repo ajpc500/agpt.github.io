@@ -14,7 +14,7 @@ echo "[!] Make sure you have the git command line tool installed and an anti-vir
 echo ""
 
 echo "Ready to download? (y/n): " 
-read -r answer
+read -r answer </dev/tty
 if [ "$answer" != "y" ]; then
     echo "[!] Aborted."
     exit 0
