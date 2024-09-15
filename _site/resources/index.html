@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-09-15 19:50:46 +0100 -->
+    <!-- Page build 2024-09-15 20:17:55 +0100 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -13,12 +13,12 @@
 	  "@type": "Article",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/resources/"
+        "@id": "http://localhost:4000/resources/"
       },
       "headline": "Resources",
       "image": "https://github.com/ajpc500.png",
-      "datePublished": "2024-09-15T19:50:46+01:00",
-      "dateModified": "2024-09-15T19:50:46+01:00",
+      "datePublished": "2024-09-15T20:17:55+01:00",
+      "dateModified": "2024-09-15T20:17:55+01:00",
       "author": {
         "@type": "Person",
         "name": "AGPT"
@@ -26,7 +26,7 @@
        "publisher": {
         "@type": "Organization",
         "name": "AGPT",
-        "url": "/",
+        "url": "http://localhost:4000/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://github.com/ajpc500.png"
@@ -42,7 +42,7 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "/"
+        "item": "http://localhost:4000/"
       },{
         "@type": "ListItem",
         "position": 2,
@@ -68,15 +68,15 @@
     },
   "description": "Publisher",
   "name" : "AGPT",
-  "url" : "/"
+  "url" : "http://localhost:4000/"
 }
 </script>
    <title>Resources | A Guide to Purple Teaming</title>
-  <link rel="canonical" href="/resources/">
+  <link rel="canonical" href="http://localhost:4000/resources/">
     <!-- Atom feed -->
-  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
     <!-- RSS 2.0 feed -->
-  <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
     <!-- Meta tags -->
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta name="author" content="AGPT" >
@@ -89,7 +89,7 @@
     <!-- OpenGraph -->
    <meta property="og:title" content="Resources | A Guide to Purple Teaming" >
    <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
-   <meta property="og:url" content="/resources/" >
+   <meta property="og:url" content="http://localhost:4000/resources/" >
    <meta property="og:type" content="website" >
    <meta property="og:description" content="Getting Started" >
    <meta property="og:locale" content="en-US" >
@@ -108,20 +108,20 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
     <!-- Theme css (Bootstrap included) -->
-  <link rel="stylesheet" id="maincss" href="/assets/css/main.css" >
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
     <!-- Highlighter -->
-  <link id="csshigh" rel="stylesheet" href="/assets/css/highlighter.css" >
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
     <!-- Custom css -->
-  <link rel="stylesheet" href="/assets/css/custom.css" >
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
       <!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
 <body class="d-flex flex-column h-entry" id="body">
-	<a class="u-url d-none" href="/resources/">Invisible link to canonical for Microformats</a>
+	<a class="u-url d-none" href="http://localhost:4000/resources/">Invisible link to canonical for Microformats</a>
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
 	<div class="container-fluid mx-md-2">
-			<a class="navbar-brand font-weight-bold" href="/">Home</a></div>
+			<a class="navbar-brand font-weight-bold" href="http://localhost:4000/">Home</a></div>
 </nav>	<header class="text-center header-chulapa"><div class="container-lg mt-2">
        <div class="row">
            <div class="col-lg-8 offset-lg-2">
@@ -141,13 +141,13 @@
 			<h1 id="getting-started">Getting Started</h1>
 <p>You can download all the repositories used in the book from the Guide to Purple Teaming GitHub organization <a href="https://github.com/aguidetopurpleteaming">here</a>.</p>
 <p>For quick installation, the following one-liners can be used to download all repositories to the current directory.</p>
+<p id="avexclusion" class="alert alert-warning p-3 mx-2">Ensure the <code class="language-plaintext highlighter-rouge">git</code> command-line tool is installed and any appropriate AV exclusions are in place to prevent tool downloads being quarantined.</p>
 <p>For Unix:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> https://aguidetopurpleteaming.com/resources/get_repos.sh | sh
 </code></pre></div></div>
 <p>And for Windows using PowerShell:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IWR</span><span class="w"> </span><span class="nx">https://aguidetopurpleteaming.com/resources/get_repos.ps1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">IEX</span><span class="w">
 </span></code></pre></div></div>
-<p id="avexclusion" class="alert alert-warning p-3 mx-2">Make sure you’ve added the appropriate AV exclusions to prevent tool downloads being quarantined.</p>
 			</article>
 		</div>
 	</main><!-- Footer -->
