@@ -11,7 +11,7 @@ project_links:
 You can download all the repositories used in the book from the Guide to Purple Teaming GitHub organization [here](https://github.com/aguidetopurpleteaming).
 
 
-For quick installation, the following one-liners can be used. 
+For quick installation, the following one-liners can be used to download all repositories to the current directory. 
 
 For Unix:
 
@@ -25,5 +25,5 @@ And for Windows using PowerShell:
 IWR https://aguidetopurpleteaming.com/resources/get_repos.ps1 | IEX
 ```
 
-Make sure you've added an AV exclusion for the current directory to prevent tool downloads being quarantined. 
+Make sure you've added the appropriate AV exclusions to prevent tool downloads being quarantined. 
 {: #avexclusion .alert .alert-warning .p-3 .mx-2 mb-3}
