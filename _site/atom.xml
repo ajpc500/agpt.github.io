@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" >
+	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
+	<link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" />
+	<link href="http://localhost:4000/" rel="alternate" type="text/html" />
+	<updated>2024-09-15T18:16:35+01:00</updated>
+	<id>http://localhost:4000/atom.xml</id>
+	<title>A Guide to Purple Teaming | A Guide to Purple Teaming</title>
+	<subtitle>A Guide to Purple Teaming</subtitle>
+	<author>
+		<name>AGPT</name>
+					
+	</author>
+	<rights>(c) 2024, AGPT</rights>
+	
+	<logo>https://github.com/ajpc500.png</logo><entry>
+		<title>First post!</title>
+		<link href="http://localhost:4000/2024/09/15/first-post.html" rel="alternate" type="text/html" title="First post!"/>
+		<published>2024-09-15T00:00:00+01:00</published>
+		<updated>2024-09-15T00:00:00+01:00</updated>
+		<id>http://localhost:4000/2024/09/15/first-post.html</id>
+		<content type="html" xml:base="http://localhost:4000/2024/09/15/first-post.html">
+		
+  		
+	&lt;p&gt;1 min.&lt;/p&gt;
+			&lt;p&gt;Testing.&lt;/p&gt;
+
+		</content>
+		
+		<author>
+			<name>AGPT</name></author>
+		<summary type="html">&lt;p&gt;Testing.&lt;/p&gt;
+</summary>
+		<category term="posts"/>
+		<category term="intro"/>
+	</entry></feed>
