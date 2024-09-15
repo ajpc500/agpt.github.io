@@ -30,7 +30,7 @@ curl "https://api.github.com/orgs/aguidetopurpleteaming/repos?page=1&per_page=10
         git pull
         cd ..
     else
-        echo "[-] Fetching: ${repo_name}"
+        echo "[-] Cloning: ${repo_name}"
         git clone "${repo}"
     fi
 done
