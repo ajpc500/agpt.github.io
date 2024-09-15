@@ -13,7 +13,8 @@ echo "[!] This script will download all 'A Guide to Purple Teaming' repos to you
 echo "[!] Make sure you have the git command line tool installed and an anti-virus exclusion for this directory."
 echo ""
 
-read -p "Ready to download? (y/n): " answer
+echo "Ready to download? (y/n): " 
+read -r answer
 if [ "$answer" != "y" ]; then
     echo "[!] Aborted."
     exit 0
