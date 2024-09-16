@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-09-15 20:17:55 +0100 -->
+    <!-- Page build 2024-09-16 12:26:37 +0100 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -16,20 +16,20 @@
         "@id": "http://localhost:4000/"
       },
       "headline": "A Guide to Purple Teaming",
-      "image": "https://github.com/ajpc500.png",
-      "datePublished": "2024-09-15T20:17:55+01:00",
-      "dateModified": "2024-09-15T20:17:55+01:00",
+      "image": "http://localhost:4000/images/bg.jpg",
+      "datePublished": "2024-09-16T12:26:37+01:00",
+      "dateModified": "2024-09-16T12:26:37+01:00",
       "author": {
         "@type": "Person",
-        "name": "AGPT"
+        "name": "ajpc500"
       },
        "publisher": {
         "@type": "Organization",
-        "name": "AGPT",
+        "name": "ajpc500",
         "url": "http://localhost:4000/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://github.com/ajpc500.png"
+          "url": "http://localhost:4000/images/bg.jpg"
         }
       }
     }
@@ -64,10 +64,10 @@
   "@type" : "Person",
   "homeLocation": {
     "@type": "Place",
-    "name": ""
+    "name": "London, United Kingdom"
     },
   "description": "Publisher",
-  "name" : "AGPT",
+  "name" : "ajpc500",
   "url" : "http://localhost:4000/"
 }
 </script>
@@ -79,10 +79,10 @@
   <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
     <!-- Meta tags -->
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="author" content="AGPT" >
-   <meta name="copyright" content="AGPT" >
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
    <meta name="description" content="Coming Soon... - ">
-   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="thumbnail" content="http://localhost:4000/images/bg.jpg" >
    <meta name="robots" content="index, follow"><meta name="keywords" content="">
     <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#000000">
@@ -93,7 +93,7 @@
    <meta property="og:type" content="website" >
    <meta property="og:description" content="Coming Soon... - " >
    <meta property="og:locale" content="en-US" >
-   <meta property="og:image" content="https://github.com/ajpc500.png" >
+   <meta property="og:image" content="http://localhost:4000/images/bg.jpg" >
     <!-- Twitter/X Cards -->
    <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
 <!-- this script is inserted before the css stylesheet -->
@@ -119,10 +119,21 @@
 </head>
 <body class="d-flex flex-column h-entry" id="body">
 	<a class="u-url d-none" href="http://localhost:4000/">Invisible link to canonical for Microformats</a>
-	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
-	<div class="container-fluid mx-md-2">
-			<a class="navbar-brand font-weight-bold" href="http://localhost:4000/">Home</a></div>
-</nav>	<header class="d-flex align-items-center splash-chulapa"><div class="container-lg">
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('http://localhost:4000/images/bg.jpg')"><div class="container-lg">
    <h1 class="p-name" >A Guide to Purple Teaming</h1><hr class="my-3">
    <p class="chulapa-subtitle p-summary">Coming Soon...</p>
  </div>
@@ -141,7 +152,7 @@
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
               </span><span class="sr-only">Repo on Github</span>
-            </a></div><p class="mt-2 mb-3">&copy; 2024 AGPT</p>
+            </a></div><p class="mt-2 mb-3">&copy; 2024 ajpc500</p>
           <!-- Do not remove this in order to give  attributions -->
          <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
           <!-- End  attributions -->
