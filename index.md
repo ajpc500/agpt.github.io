@@ -1,8 +1,7 @@
 ---
 layout: default
-title: A Guide to Purple Teaming
+title: Purple Teaming
 header_type: splash
-header_img: "./images/bg.jpg"
-subtitle: Coming Soon...
+subtitle: The art of collaborative defence
 ---
 
