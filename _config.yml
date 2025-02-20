@@ -18,7 +18,7 @@ words_per_minute        :     #default[200]
 timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/configuration/options/ and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # SEO
-og_image                :   ./images/bg.jpg  #default[author.avatar (see below)] or [github-avatar]
+og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
 author:
   name                  :  ajpc500  # Name Surname Company
