@@ -30,6 +30,8 @@ This section provides reproductions of the key figures and code snippets seen in
 
 Microsoft offers its own list of key event IDs to monitor. These can be seen below:
 
+| Sourced from: <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor">https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor</a>
+
 <details>
 <summary>Key Event IDs</summary>
 
