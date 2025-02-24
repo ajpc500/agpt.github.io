@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/network-traffic-and-event-tracing/"
+      },
+      "headline": "Network Traffic and Event Tracing",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Network Traffic and Event Tracing"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Network Traffic and Event Tracing",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Network Traffic and Event Tracing | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/network-traffic-and-event-tracing/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Network Traffic and Event Tracing | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/network-traffic-and-event-tracing/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/network-traffic-and-event-tracing/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Network Traffic and Event Tracing</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 58.3%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This chapter explores additional log sources, frameworks and technologies that can augment telemetry, and detection and response capabilities. In this chapter, we explore Zeek, ETW, osquery, YARA, and Sigma.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="network-monitoring-with-zeek">Network Monitoring with Zeek</h4>
+<h5 id="plugins">Plugins</h5>
+<p>Commands to install MITRE ATT&amp;CK’s BZAR and confirm successful installation.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ip-10-0-1-50:/home/ubuntu# <span class="nb">sudo</span> <span class="nt">-s</span>
+root@ip-10-0-1-50:/home/ubuntu# /opt/zeek/bin/zkg <span class="nb">install </span>zeek/mitre-attack/bzar
+root@ip-10-0-1-50:/home/ubuntu# /opt/zeek/bin/zkg list
+
+zeek/mitre-attack/bzar <span class="o">(</span>installed: master<span class="o">)</span> - BZAR - Bro/Zeek ATT&amp;CK-based Analytics and Reporting.
+</code></pre></div></div>
+<h5 id="notable-logs">Notable Logs</h5>
+<p>An example of a JSON entry from the <code class="language-plaintext highlighter-rouge">dce_rpc.log</code> Zeek log file, showing a <code class="language-plaintext highlighter-rouge">DRSGetNCChanges</code> operation.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ts"</span><span class="p">:</span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uid"</span><span class="p">:</span><span class="s2">"CwDSP63BmWPjMwYOj4"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_h"</span><span class="p">:</span><span class="s2">"10.0.1.30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_p"</span><span class="p">:</span><span class="mi">58906</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_h"</span><span class="p">:</span><span class="s2">"10.0.1.14"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_p"</span><span class="p">:</span><span class="mi">49667</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rtt"</span><span class="p">:</span><span class="mf">0.0007340908050537109</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"named_pipe"</span><span class="p">:</span><span class="s2">"49667"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"endpoint"</span><span class="p">:</span><span class="s2">"drsuapi"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"operation"</span><span class="p">:</span><span class="s2">"DRSGetNCChanges"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>An example of an entry from the <code class="language-plaintext highlighter-rouge">notice.log</code> Zeek log file when BZAR detects a file moved to the Attack Range domain controller.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CwDSP63BmWPjMwYOj4"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_h"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.orig_p"</span><span class="p">:</span><span class="w"> </span><span class="mi">58906</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_h"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.14"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id.resp_p"</span><span class="p">:</span><span class="w"> </span><span class="mi">445</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"proto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tcp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ATTACK::Lateral_Movement"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Detected SMB::FILE_WRITE to admin file share '</span><span class="se">\\\\</span><span class="s2">ar-win-dc</span><span class="se">\\</span><span class="s2">c$temp</span><span class="se">\\</span><span class="s2">agpt.exe'"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1021.002 Remote Services: SMB/Windows Admin Shares + T1570 Lateral Tool Transfer"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dst"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.1.14"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"p"</span><span class="p">:</span><span class="w"> </span><span class="mi">445</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Notice::ACTION_LOG"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"suppress_for"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h5 id="event-tracing-for-windows">Event Tracing for Windows</h5>
+<p>Use of the <code class="language-plaintext highlighter-rouge">logman</code> tool to list existing event tracing sessions.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator&gt; logman <span class="nt">-ets</span>
+
+Data Collector Set                      Type                          Status
+<span class="nt">------------------------------------------------------------------------------</span>
+Eventlog-Security                       Trace                         Running
+EventLog-Application                    Trace                         Running
+EventLog-System                         Trace                         Running
+<span class="nt">--snip--</span>
+SYSMON TRACE                            Trace                         Running
+SysmonDnsEtwSession                     Trace                         Running
+</code></pre></div></div>
+<p>Further use of <code class="language-plaintext highlighter-rouge">logman</code> to retrieve details of a specific trace (in this case Sysmon’s use of ETW for DNS query logging).</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator&gt; logman <span class="s1">'SysmonDnsEtwSession'</span> <span class="nt">-ets</span>
+
+Name:                 SysmonDnsEtwSession
+Status:               Running
+Root Path:            %systemdrive%<span class="se">\P</span>erfLogs<span class="se">\A</span>dmin
+Segment:              Off
+Schedules:            On
+Segment Max Size:     1 MB
+
+Name:                 SysmonDnsEtwSession<span class="se">\S</span>ysmonDnsEtwSession
+Type:                 Trace
+Append:               Off
+Circular:             Off
+Overwrite:            Off
+Buffer Size:          64
+Buffers Lost:         0
+Buffers Written:      195
+Buffer Flush Timer:   1
+Clock Type:           Performance
+File Mode:            Real-time
+
+Provider:
+Name:                 Microsoft-Windows-DNS-Client
+Provider Guid:        <span class="o">{</span>1C95126E-7EEA-49A9-A3FE-A378B03DDB4D<span class="o">}</span>
+Level:                4 <span class="o">(</span>win:Informational<span class="o">)</span>
+KeywordsAll:          0x0
+KeywordsAny:          0xffffffffffffffff 
+<span class="nt">--snip--</span>
+Properties:           64
+Filter Type:          0
+</code></pre></div></div>
+<p>A command to fetch an execute the contents of a remote file via PowerShell, resulting in the initial domain name resolution which will produce a DNS Client Event entry.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iex</span><span class="p">(</span><span class="n">iwr</span><span class="w"> </span><span class="nx">https://aguidetopurpleteaming.com/resources/7/etw.txt</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<h5 id="filtering-for-events-of-interest">Filtering for Events of Interest</h5>
+<p>As performed in <a href="/part-II/collecting-telemetry/">Chapter 4</a>, we can query the DNS logs produced by Event Tracing using Event Viewer or <code class="language-plaintext highlighter-rouge">wevtutil</code>. An example query for DNS lookups of this site can be performed as follows.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;QueryList&gt;</span>
+  <span class="nt">&lt;Query</span> <span class="na">Id=</span><span class="s">"0"</span> <span class="na">Path=</span><span class="s">"Microsoft-Windows-DNS-Client/Operational"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Select</span> <span class="na">Path=</span><span class="s">"Microsoft-Windows-DNS-Client/Operational"</span><span class="nt">&gt;</span>     
+      *[EventData[Data[@Name='QueryName']='aguidetopurpleteaming.com']]
+    <span class="nt">&lt;/Select&gt;</span>
+  <span class="nt">&lt;/Query&gt;</span>
+<span class="nt">&lt;/QueryList&gt;</span>
+</code></pre></div></div>
+<p>An example of an event log result is shown here.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/win/2004/08/events/event"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;System&gt;</span>
+    <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">"Microsoft-Windows-DNS-Client"</span> <span class="na">Guid=</span><span class="s">"{1c95126e-7eea-49a9-a3fe-a378b03ddb4d}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;EventID&gt;</span>3006<span class="nt">&lt;/EventID&gt;</span> 
+    <span class="nt">&lt;Level&gt;</span>4<span class="nt">&lt;/Level&gt;</span> 
+    --snip--
+    <span class="nt">&lt;EventRecordID&gt;</span>1054<span class="nt">&lt;/EventRecordID&gt;</span> 
+    <span class="nt">&lt;Correlation</span> <span class="na">ActivityID=</span><span class="s">"{a9fa96ac-7f96-0001-2ed6-faa9967fda01}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">"5584"</span> <span class="na">ThreadID=</span><span class="s">"3904"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Channel&gt;</span>Microsoft-Windows-DNS-Client/Operational<span class="nt">&lt;/Channel&gt;</span> 
+    <span class="nt">&lt;Computer&gt;</span>ar-win-dc<span class="nt">&lt;/Computer&gt;</span> 
+    <span class="nt">&lt;Security</span> <span class="na">UserID=</span><span class="s">"S-1-5-21-1097896708-1628162418-3612758767-500"</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/System&gt;</span>
+  <span class="nt">&lt;EventData&gt;</span>
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryName"</span><span class="nt">&gt;</span>aguidetopurpleteaming.com<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryType"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryOptions"</span><span class="nt">&gt;</span>1073766400<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ServerList"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"IsNetworkQuery"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"NetworkQueryIndex"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"InterfaceIndex"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"IsAsyncQuery"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;</span> 
+  <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<p>By comparison, here is the equivalent Sysmon event for the DNS lookup.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/win/2004/08/events/event"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;System&gt;</span>
+    <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">"Microsoft-Windows-Sysmon"</span> <span class="na">Guid=</span><span class="s">"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;EventID&gt;</span>22<span class="nt">&lt;/EventID&gt;</span> 
+    <span class="nt">&lt;Level&gt;</span>4<span class="nt">&lt;/Level&gt;</span> 
+    --snip--
+    <span class="nt">&lt;EventRecordID&gt;</span>3050<span class="nt">&lt;/EventRecordID&gt;</span> 
+    <span class="nt">&lt;Correlation</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">"2732"</span> <span class="na">ThreadID=</span><span class="s">"3460"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;Channel&gt;</span>Microsoft-Windows-Sysmon/Operational<span class="nt">&lt;/Channel&gt;</span> 
+    <span class="nt">&lt;Computer&gt;</span>ar-win-dc<span class="nt">&lt;/Computer&gt;</span> 
+    <span class="nt">&lt;Security</span> <span class="na">UserID=</span><span class="s">"S-1-5-18"</span> <span class="nt">/&gt;</span> 
+  <span class="nt">&lt;/System&gt;</span>
+  <span class="nt">&lt;EventData&gt;</span>
+    --snip--
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ProcessGuid"</span><span class="nt">&gt;</span>{46d76aeb-f24a-6602-1802-00000000d702}<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"ProcessId"</span><span class="nt">&gt;</span>5584<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryName"</span><span class="nt">&gt;</span>aguidetopurpleteaming.com<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryStatus"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"QueryResults"</span><span class="nt">&gt;</span>::ffff:185.199.110.153;::ffff:185.199.111.153;::ffff:185.199.108.153;::ffff:185.199.109.153;<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"Image"</span><span class="nt">&gt;</span>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe<span class="nt">&lt;/Data&gt;</span> 
+    <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">"User"</span><span class="nt">&gt;</span>AR-WIN-DC\Administrator<span class="nt">&lt;/Data&gt;</span> 
+  <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<h4 id="osquery">Osquery</h4>
+<h5 id="exploring-configurations-and-query-packs">Exploring Configurations and Query Packs</h5>
+<p>Here is the Attack Range Linux host osquery configuration found at <code class="language-plaintext highlighter-rouge">/etc/osquery/osquery.conf</code>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"logger_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/log/osquery"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schedule_splay_percent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+    </span><span class="err">--snip--</span><span class="w">
+    </span><span class="nl">"utc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"crontab"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"query"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECT * FROM crontab;"</span><span class="p">,</span><span class="w">
+       </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">--snip--</span><span class="w">
+    </span><span class="nl">"system_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECT hostname, cpu_brand, physical_memory FROM system_info;"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"decorators"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"load"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"SELECT uuid AS host_uuid FROM system_info;"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"SELECT user AS username FROM logged_in_users ORDER BY time DESC LIMIT 1;"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"packs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"osquery-monitoring"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/osquery-monitoring.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"incident-response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/incident-response.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"it-compliance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/it-compliance.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"vuln-management"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/vuln-management.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hardware-monitoring"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/hardware-monitoring.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ossec-rootkit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/ossec-rootkit.conf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attack-range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/osquery/share/osquery/packs/attack-range.conf"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">--snip--</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>Outputting the contents of one of the query packs referenced in the above configuration, we can see the following.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">root@ar-linux:~#</span><span class="w"> </span><span class="err">cat</span><span class="w"> </span><span class="err">/opt/osquery/share/osquery/packs/attack-range.conf</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"linux"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"queries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"process_events"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECT auid, cmdline, ctime, cwd, egid, euid, gid, parent, path, pid, time, uid FROM process_events WHERE path NOT IN ('/bin/sed', '/usr/bin/tr', '/bin/gawk', '/bin/date', '/bin/mktemp', '/usr/bin/dirname', '/usr/bin/head', '/usr/bin/jq', '/bin/cut', '/bin/uname', '/bin/basename') and cmdline NOT LIKE '%_key%' AND cmdline NOT LIKE '%secret%';"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Process events collected from the audit framework"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"authorized_keys"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECT * FROM users CROSS JOIN authorized_keys USING (uid);"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">86400</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A line-delimited authorized_keys table."</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"behavioral_reverse_shell"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECT DISTINCT(processes.pid), processes.parent, processes.name, processes.path, processes.cmdline, processes.cwd, processes.root, processes.uid, processes.gid, processes.start_time, process_open_sockets.remote_address, process_open_sockets.remote_port, (SELECT cmdline FROM processes AS parent_cmdline WHERE pid=processes.parent) AS parent_cmdline FROM processes JOIN process_open_sockets USING (pid) LEFT OUTER JOIN process_open_files ON processes.pid = process_open_files.pid WHERE (name='sh' OR name='bash') AND remote_address NOT IN ('0.0.0.0', '::', '') AND remote_address NOT LIKE '10.%' AND remote_address NOT LIKE '192.168.%';"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Find shell processes that have open sockets"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"file_paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"configuration"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"/etc/shadow"</span><span class="p">,</span><span class="w">
+      </span><span class="err">--snip--</span><span class="w">
+      </span><span class="s2">"/etc/crontab"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"binaries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"/usr/bin/%%"</span><span class="p">,</span><span class="w">
+      </span><span class="err">--snip--</span><span class="w">
+      </span><span class="s2">"/usr/sbin/%%"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>An example of a <i>discovery</i> query that can be used to apply different osquery packs and configurations based on the results of the query.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"discovery"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"SELECT pid FROM processes WHERE name = 'apache2';"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"SELECT hostname FROM system_info WHERE hostname like 'ar-web%';"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"queries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">--snip--</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h5 id="running-queries-on-the-command-line">Running Queries on the Command Line</h5>
+<p>Using the osquery CLI tool, <code class="language-plaintext highlighter-rouge">osqueryi</code>, to run queries interactively. First, getting the loaded queries and their scheduled frequency.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ar-linux:~# osqueryi
+
+osquery&gt; SELECT name, interval FROM osquery_schedule<span class="p">;</span>
++--------------------------------------------------+----------+
+| name                                             | interval |
++--------------------------------------------------+----------+
+| crontab                                          | 300      |
+| system_info                                      | 3600     |
+| system_profile                                   | 3600     |
+<span class="nt">--snip--</span>
+| pack_attack-range_authorized_keys                | 86400    |
+| pack_attack-range_behavioral_reverse_shell       | 600      |
+| pack_attack-range_dns_resolvers                  | 3600     |
+| pack_attack-range_ec2_instance_metadata          | 3600     |
+| pack_attack-range_ec2_instance_metadata_snapshot | 86400    |
+| pack_attack-range_ec2_instance_tags              | 3600     |
++--------------------------------------------------+----------+
+</code></pre></div></div>
+<p>Then, running a query to see the list of local users (formatting with JSON output).</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ar-linux:~# osqueryi <span class="nt">--json</span> <span class="s1">'SELECT username FROM users;'</span>
+<span class="o">[</span>
+    <span class="o">{</span><span class="s2">"username"</span>:<span class="s2">"root"</span><span class="o">}</span>,
+    <span class="o">{</span><span class="s2">"username"</span>:<span class="s2">"daemon"</span><span class="o">}</span>,
+    <span class="o">{</span><span class="s2">"username"</span>:<span class="s2">"bin"</span><span class="o">}</span>,
+    <span class="o">{</span><span class="s2">"username"</span>:<span class="s2">"sys"</span><span class="o">}</span>,
+    <span class="nt">--snip--</span>
+    <span class="o">{</span><span class="s2">"username"</span>:<span class="s2">"agpt"</span><span class="o">}</span>,
+<span class="o">]</span>
+</code></pre></div></div>
+<p>Another query to fetch <code class="language-plaintext highlighter-rouge">crontab</code> entries.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ar-linux:~# osqueryi <span class="nt">--json</span> <span class="s1">'SELECT command FROM crontab;'</span>
+
++---------------------------------------------------------------------------+
+| <span class="nb">command</span>                                                                   |
++---------------------------------------------------------------------------+
+| root <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts <span class="nt">--report</span> /etc/cron.hourly                          |
+<span class="nt">--snip--</span>
+| root <span class="nb">test</span> <span class="nt">-e</span> /run/systemd/system <span class="o">||</span> <span class="nv">SERVICE_MODE</span><span class="o">=</span>1 /sbin/e2scrub_all ...  |
++---------------------------------------------------------------------------+
+</code></pre></div></div>
+<p>A log entry produced in <code class="language-plaintext highlighter-rouge">/var/log/osquery/osqueryd.results.log</code> that highlights a change to system configuration as a result of the scheduled queries in the osquery configuration.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crontab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hostIdentifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ec26f56f-e007-0deb-74b7-8278550336d3"</span><span class="p">,</span><span class="w">
+    </span><span class="err">--snip--</span><span class="w">
+    </span><span class="nl">"epoch"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"counter"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"numerics"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"decorations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"host_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ec26f56f-e007-0deb-74b7-8278550336d3"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"whoami"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"day_of_week"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"minute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/spool/cron/crontabs/root"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"added"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="yara-scanning">YARA Scanning</h4>
+<h5 id="exploring-rule-syntax">Exploring Rule Syntax</h5>
+<p>A YARA rule from Florian Roth for detecting strings known to be present in Mimikatz.</p>
+<table>
+ <tbody>
+   <tr>
+     <td>Sourced from: <a target="_blank" href="https://github.com/Neo23x0/signature-base/blob/c943048164788661f6d25f58fbfd849acdeddc38/yara/gen_mimikatz.yar">https://github.com/Neo23x0/signature-base/blob/c943048164788661f6d25f58fbfd849acdeddc38/yara/gen_mimikatz.yar</a></td>
+   </tr>
+ </tbody>
+</table><pre><code class="language-yara">rule Mimikatz_Strings {
+   meta:
+      description = "Detects Mimikatz strings"
+      license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+      author = "Florian Roth (Nextron Systems)"
+      reference = "not set"
+      date = "2016-06-08"
+      score = 65
+      id = "d8f63b71-c66c-5c10-9268-2d8970f7c8a1"
+   strings:
+      $x1 = "sekurlsa::logonpasswords" fullword wide ascii
+      $x2 = "List tickets in MIT/Heimdall ccache" fullword ascii wide
+      $x3 = "kuhl_m_kerberos_ptt_file ; LsaCallKerberosPackage %08x" fullword ascii wide
+      $x4 = "* Injecting ticket :" fullword wide ascii
+      $x5 = "mimidrv.sys" fullword wide ascii
+      $x6 = "Lists LM &amp; NTLM credentials" fullword wide ascii
+      $x7 = "\\_ kerberos -" wide ascii
+      $x8 = "* unknow   :" fullword wide ascii
+      $x9 = "\\_ *Password replace -&gt;" wide ascii
+      $x10 = "KIWI_MSV1_0_PRIMARY_CREDENTIALS KO" ascii wide
+      $x11 = "\\\\.\\mimidrv" wide ascii
+      $x12 = "Switch to MINIDUMP :" fullword wide ascii
+      $x13 = "[masterkey] with password: %s (%s user)" fullword wide
+      $x14 = "Clear screen (doesn't work with redirections, like PsExec)" fullword wide
+      $x15 = "** Session key is NULL! It means allowtgtsessionkey is not set to 1 **" fullword wide
+      $x16 = "[masterkey] with DPAPI_SYSTEM (machine, then user): " fullword wide
+   condition:
+      (
+         ( uint16(0) == 0x5a4d and 1 of ($x*) ) or
+         ( 3 of them )
+      )
+      /* exclude false positives */
+      and not pe.imphash() == "77eaeca738dd89410a432c6bd6459907"
+}
+</code></pre>
+<h5 id="detecting-mimikatz-strings">Detecting Mimikatz Strings</h5>
+<p>Running the <code class="language-plaintext highlighter-rouge">yara64.exe</code> binary and the above rules against the Mimikatz binary.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator&gt; .<span class="se">\y</span>ara64.exe .<span class="se">\g</span>en_mimikatz.yar .<span class="se">\m</span>imikatz.exe
+mimikatz .<span class="se">\m</span>imikatz.exe
+Mimikatz_Strings .<span class="se">\m</span>imikatz.exe
+HKTL_Mimikatz_SkeletonKey_in_memory_Aug20_1 .<span class="se">\m</span>imikatz.exe
+HKTL_mimikatz_icon .<span class="se">\m</span>imikatz.exe
+</code></pre></div></div>
+<p>Doing the same thing against a running process of Mimikatz by providing the process ID as an argument.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator&gt; .<span class="se">\y</span>ara64.exe .<span class="se">\g</span>en_mimikatz.yar 7656
+mimikatz 7656
+Mimikatz_Strings 7656
+HKTL_Mimikatz_SkeletonKey_in_memory_Aug20_1 7656
+</code></pre></div></div>
+<h4 id="sigma">Sigma</h4>
+<p>A Sigma rule to detect the process arguments of the Mimikatz binary.</p>
+<table>
+ <tbody>
+   <tr>
+     <td>Sourced from: <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/7f83008e9ee84ce0e2bcb1474dc002b41cdfe8a5/rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml">https://github.com/SigmaHQ/sigma/blob/7f83008e9ee84ce0e2bcb1474dc002b41cdfe8a5/rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml</a></td>
+   </tr>
+ </tbody>
+</table>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">HackTool - Mimikatz Execution</span>
+<span class="na">id</span><span class="pi">:</span> <span class="s">a642964e-bead-4bed-8910-1bb4d63e3b4d</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s">test</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Detection well-known mimikatz command line arguments</span>
+<span class="na">references</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment</span>
+    <span class="pi">-</span> <span class="s">https://tools.thehacker.recipes/mimikatz/modules</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Teymur Kheirkhabarov, oscd.community, David ANDRE (additional keywords), Tim Shelton</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2019-10-22</span>
+<span class="na">modified</span><span class="pi">:</span> <span class="s">2023-02-21</span>
+<span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">attack.credential-access</span>
+    <span class="pi">-</span> <span class="s">attack.t1003.001</span>
+    <span class="pi">-</span> <span class="s">attack.t1003.002</span>
+    <span class="pi">-</span> <span class="s">attack.t1003.004</span>
+    <span class="pi">-</span> <span class="s">attack.t1003.005</span>
+    <span class="pi">-</span> <span class="s">attack.t1003.006</span>
+<span class="na">logsource</span><span class="pi">:</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s">process_creation</span>
+    <span class="na">product</span><span class="pi">:</span> <span class="s">windows</span>
+<span class="na">detection</span><span class="pi">:</span>
+    <span class="na">selection_tools_name</span><span class="pi">:</span>
+        <span class="na">CommandLine|contains</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">DumpCreds'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">mimikatz'</span>
+    <span class="na">selection_function_names</span><span class="pi">:</span> <span class="c1"># To cover functions from modules that are not in module_names</span>
+        <span class="na">CommandLine|contains</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::aadcookie'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::detours'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::memssp'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::mflt'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::ncroutemon'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::ngcsign'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::printnightmare'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::skeleton'</span> <span class="c1"># misc module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::preshutdown'</span>  <span class="c1"># service module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::mstsc'</span>  <span class="c1"># ts module</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">::multirdp'</span>  <span class="c1"># ts module</span>
+    <span class="na">selection_module_names</span><span class="pi">:</span>
+        <span class="na">CommandLine|contains</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">rpc::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">token::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">crypto::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">dpapi::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">sekurlsa::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">kerberos::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">lsadump::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">privilege::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">process::'</span>
+            <span class="pi">-</span> <span class="s1">'</span><span class="s">vault::'</span>
+    <span class="na">condition</span><span class="pi">:</span> <span class="s">1 of selection_*</span>
+<span class="na">falsepositives</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">Unlikely</span>
+<span class="na">level</span><span class="pi">:</span> <span class="s">high</span>
+</code></pre></div></div>
+<p>The <code class="language-plaintext highlighter-rouge">pip</code> command to install dependencies for using pySigma.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>pysigma pysigma-backend-splunk pysigma-pipeline-sysmon
+</code></pre></div></div>
+<p>A script, <code class="language-plaintext highlighter-rouge">sigma_to_splunk.py</code>, that opens the above Sigma rule from the same directory and converts it to Splunk SPL queries that leverage Sysmon logs.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sigma.collection</span> <span class="kn">import</span> <span class="n">SigmaCollection</span>
+<span class="kn">from</span> <span class="nn">sigma.pipelines.sysmon</span> <span class="kn">import</span> <span class="n">sysmon_pipeline</span>
+<span class="kn">from</span> <span class="nn">sigma.backends.splunk</span> <span class="kn">import</span> <span class="n">SplunkBackend</span>
+
+<span class="n">rule_text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"./proc_creation_win_hktl_mimikatz_command_line.yml"</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">sysmon_pipeline</span><span class="p">()</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">SplunkBackend</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="n">rules</span> <span class="o">=</span> <span class="n">SigmaCollection</span><span class="p">.</span><span class="n">from_yaml</span><span class="p">(</span><span class="n">rule_text</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Query: </span><span class="se">\n\n</span><span class="s">"</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">backend</span><span class="p">.</span><span class="n">convert</span><span class="p">(</span><span class="n">rules</span><span class="p">)))</span>
+</code></pre></div></div>
+<p>The output of the above tool.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@agpt:/Tools<span class="nv">$ </span>python3 ./sigma_to_splunk.py
+Query: 
+
+<span class="nv">EventID</span><span class="o">=</span>1 CommandLine IN <span class="o">(</span><span class="s2">"*DumpCreds*"</span>, <span class="s2">"*mimikatz*"</span><span class="o">)</span> OR CommandLine IN <span class="o">(</span><span class="s2">"*::aadcookie*"</span>, <span class="s2">"*::detours*"</span>, <span class="s2">"*::memssp*"</span>, <span class="s2">"*::mflt*"</span>, <span class="s2">"*::ncroutemon*"</span>, <span class="s2">"*::ngcsign*"</span>, <span class="s2">"*::printnightmare*"</span>, <span class="s2">"*::skeleton*"</span>, <span class="s2">"*::preshutdown*"</span>, <span class="s2">"*::mstsc*"</span>, <span class="s2">"*::multirdp*"</span><span class="o">)</span> OR CommandLine IN <span class="o">(</span><span class="s2">"*rpc::*"</span>, <span class="s2">"*token::*"</span>, <span class="s2">"*crypto::*"</span>, <span class="s2">"*dpapi::*"</span>, <span class="s2">"*sekurlsa::*"</span>, <span class="s2">"*kerberos::*"</span>, <span class="s2">"*lsadump::*"</span>, <span class="s2">"*privilege::*"</span>, <span class="s2">"*process::*"</span>, <span class="s2">"*vault::*"</span><span class="o">)</span>
+</code></pre></div></div>
+<p>An example Mimikatz command that can be executed to trigger the Sigma rule and produce a result in Splunk.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="n">\mimikatz.exe</span><span class="w"> </span><span class="nx">privilege::debug</span><span class="w"> </span><span class="nx">sekurlsa::logonpasswords</span><span class="w"> </span><span class="nx">exit</span><span class="w">
+</span></code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="zeek-network-monitoring">Zeek Network Monitoring</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The BZAR Zeek plugin, leveraging Zeek data to detect attacker activity mapped to MITRE ATT&amp;CK</h6>
+               <p><i>"BZAR (Bro/Zeek ATT&amp;CK-based Analytics and Reporting)," GitHub, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre-attack/bzar" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of the BZAR extension and its coverage of MITRE ATT&amp;CK techniques</h6>
+               <p><i>"BZAR – Bro/Zeek ATT&amp;CK-based Analytics and Reporting: Detecting Adversary Behaviors via Internal Network Monitoring," M.I.Fernandez, October 9, 2019</i></p>
+                <a target="_blank" href="https://old.zeek.org/zeekweek2019/slides/bzar.pdf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The JA3 plugin for Zeek</h6>
+               <p><i>"JA3 - A method for profiling SSL/TLS Clients," Zeek, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://packages.zeek.org/packages/view/cebd1c8c-9348-11eb-81e7-0a598146b5c6" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The Dovehawk plugin for Zeek</h6>
+               <p><i>"Dovehawk Zeek Module," Zeek, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://packages.zeek.org/packages/view/ca24044b-9348-11eb-81e7-0a598146b5c6" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A complete overview of the logs that Zeek can generate, including log examples and applications</h6>
+               <p><i>Zeek, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://docs.zeek.org/en/master/logs/index.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Inclusion of Zeek detection capabilities in Microsoft Defender for Endpoint</h6>
+               <p><i>"New network-based detections and improved device discovery using Zeek," Elad Solomon, November 28, 2022</i></p>
+                <a target="_blank" href="https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/new-network-based-detections-and-improved-device-discovery-using/ba-p/3682111" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="event-tracing-for-windows-etw">Event Tracing for Windows (ETW)</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An overview of ETW architecture, concepts, telemetry and utilities</h6>
+               <p><i>"A Primer On Event Tracing For Windows (ETW)," Nasreddine Bencherchali, August 15, 2021</i></p>
+                <a target="_blank" href="https://nasbench.medium.com/a-primer-on-event-tracing-for-windows-etw-997725c082bf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The open-source Havoc C2 framework, with ETW bypass capabilities leveraging hardware breakpoints</h6>
+               <p><i>"Havoc," Paul Ungur, accessed April 29, 2024</i></p>
+                <a target="_blank" href="https://github.com/HavocFramework/Havoc" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An example of tooling to patch ETW and inhibit log generation, in this case a Cobalt Strike BOF</h6>
+               <p><i>"ETW," Alfie Champion, accessed April 29, 2024</i></p>
+                <a target="_blank" href="https://github.com/ajpc500/BOFs/tree/main/ETW" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Applying ETW telemetry to detect the offensive use of .NET</h6>
+               <p><i>"Detecting Malicious Use of .NET – Part 1," Noora Hyvärinen, August 10, 2018</i></p>
+                <a target="_blank" href="https://blog.f-secure.com/detecting-malicious-use-of-net-part-1/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Ruben Boonen’s SilkETW project, a great utility for experimenting with ETW telemetry in a lab environment</h6>
+               <p><i>"SilkETW," Ruben Boonen, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://github.com/mandiant/SilkETW" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An example of leveraging ETW telemetry for LDAP queries to identify reconnaissance activities</h6>
+               <p><i>"Hunting for Suspicious LDAP Activity with SilkETW and YARA," Riccardo Ancarani, October 19, 2019</i></p>
+                <a target="_blank" href="https://riccardoancarani.github.io/2019-10-19-hunting-for-domain-enumeration/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Provides a background to ETW, including an offensive perspective on tampering with tracing to hide malicious activities</h6>
+               <p><i>"Tampering with Windows Event Tracing: Background, Offense, and Defense," Palantir, December 24, 2018</i></p>
+                <a target="_blank" href="https://blog.palantir.com/tampering-with-windows-event-tracing-background-offense-and-defense-4be7ac62ac63" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A low-level analysis of Sysmon's DNS logging capability and how it can be evaded</h6>
+               <p><i>"Evading Sysmon DNS Monitoring," Adam Chester, June 15, 2019</i></p>
+                <a target="_blank" href="https://blog.xpnsec.com/evading-sysmon-dns-monitoring/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Further tampering with ETW to suppress indicators of in-memory .NET tradecraft</h6>
+               <p><i>"Hiding your .NET - ETW," Adam Chester, March, 2020</i></p>
+                <a target="_blank" href="https://www.mdsec.co.uk/2020/03/hiding-your-net-etw/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="osquery-1">Osquery</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The osquery schema including the tables and fields that can be queried</h6>
+               <p><i>"Schema," osquery, accessed May 3, 2024</i></p>
+                <a target="_blank" href="https://www.osquery.io/schema/current" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Fleet, an open source solution for enterprise management of osquery</h6>
+               <p><i>"Fleet," GitHub, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/fleetdm/fleet" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Guidance on configuring osquery and its components</h6>
+               <p><i>"Configuring an osquery deployment," osquery, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://osquery.readthedocs.io/en/stable/deployment/configuration/\#configuration-components" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The built-in osquery packs included to extend its query configuration</h6>
+               <p><i>"osquery packs," osquery, accessed May 2, 2024</i></p>
+                <a target="_blank" href="https://github.com/osquery/osquery/tree/master/packs" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More information on using the <code>osqueryi</code> command line tool</h6>
+               <p><i>"Using osqueryi," osquery, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://osquery.readthedocs.io/en/stable/introduction/using-osqueryi/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A walkthrough for getting started with osquery, centralising logs and developing detections</h6>
+               <p><i>"osquery For Security," Chris Long, January 19, 2016</i></p>
+                <a target="_blank" href="https://medium.com/@clong/osquery-for-security-b66fffdf2daf#.tr5fk7r2a" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A deeper dive into advanced osquery functionality, including file integrity monitoring, and process and socket activity monitoring</h6>
+               <p><i>"osquery For Security - Part 2," Chris Long, March 16, 2017</i></p>
+                <a target="_blank" href="https://medium.com/@clong/osquery-for-security-part-2-2e03de4d3721" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="yara">YARA</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A set of rules from Florian Roth's open sourced YARA rule collection to detect Mimikatz</h6>
+               <p><i>"gen_mimikatz.yar," GitHub, accessed November 2, 2024</i></p>
+                <a target="_blank" href="https://github.com/Neo23x0/signature-base/blob/c943048164788661f6d25f58fbfd849acdeddc38/yara/gen_mimikatz.yar" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A comprehensive guide to writing YARA rules</h6>
+               <p><i>"Writing YARA rules," YARA, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://yara.readthedocs.io/en/stable/writingrules.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details on integrating YARA into osquery</h6>
+               <p><i>"YARA-based scanning with osquery," Oqsuery, accessed March 30, 2024</i></p>
+                <a target="_blank" href="https://osquery.readthedocs.io/en/stable/deployment/yara/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="sigma-1">Sigma</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details on the design of Sigma and its rule schema</h6>
+               <p><i>"Sigma Specification - Generic Signature Format for SIEM Systems," GitHub, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma-specification" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>pySigma, a Python library to convert Sigma rules into tool-specific queries</h6>
+               <p><i>"pySigma," GitHub, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/pySigma" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A Sigma rule to command-line use of Mimikatz</h6>
+               <p><i>"proc_creation_win_hktl _mimikatz_command_line.yml," GitHub, accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/7f83008e9ee84ce0e2bcb1474dc002b41cdfe8a5/rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-II/collecting-telemetry/" class="btn btn-primary">&lt;&lt; Chapter 6</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/lotl-with-atomic-red-team/" class="btn btn-primary">Chapter 8 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

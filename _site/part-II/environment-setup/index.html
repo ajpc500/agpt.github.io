@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/environment-setup/"
+      },
+      "headline": "Environment Setup",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Environment Setup"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Environment Setup",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Environment Setup | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/environment-setup/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Environment Setup | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/environment-setup/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/environment-setup/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Environment Setup</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 41.6%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This chapter introduces Splunk’s Attack Range and goes through the steps required to deploy a test environment for adversary emulation. Once deployed some of the features of the environment are detailed, including the ability to access hosts via Apache Guacamole, query logs via Splunk and automate attacks via Atomic Red Team and PurpleSharp.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="deploying-splunks-attack-range">Deploying Splunk’s Attack Range</h4>
+<figure>
+<img src="/assets/images/5/arch-0.png" style="width: 75%" title="Figure 5-1" />
+<figcaption>Figure 5-1: An overview of the instances deployed in the Attack Range</figcaption>
+</figure>
+<h5 id="setting-up-the-docker-image">Setting Up the Docker Image</h5>
+<p>Commands to download and run the Attack Range Docker image.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull ajpc500/attack_range
+docker run <span class="nt">-it</span> ajpc500/attack_range
+</code></pre></div></div>
+<p>Commands to configure the AWS CLI within the docker container.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws configure
+AWS Access Key ID <span class="o">[</span>None]: AKIA...M67D
+AWS Secret Access Key <span class="o">[</span>None]: I1+DB...Xsdc
+Default region name <span class="o">[</span>None]: us-east-2
+Default output format <span class="o">[</span>None]: json
+</code></pre></div></div>
+<p>Commands to create an <code class="language-plaintext highlighter-rouge">~/.ssh</code> directory in the container and populate it with a private key.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/.ssh/
+<span class="nb">echo</span> <span class="s1">'PRIVATE_KEY_CONTENT'</span> <span class="o">&gt;</span> ~/.ssh/id_rsa
+<span class="nb">chmod </span>600 ~/.ssh/id_rsa
+</code></pre></div></div>
+<h5 id="configuring-attack-range">Configuring Attack Range</h5>
+<p>The complete <code class="language-plaintext highlighter-rouge">attack_range.yml</code> configuration file.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">general</span><span class="pi">:</span>
+  <span class="na">cloud_provider</span><span class="pi">:</span> <span class="s">aws</span>
+  <span class="na">attack_range_password</span><span class="pi">:</span> <span class="s">A_STRONG_PASSWORD</span>
+  <span class="na">key_name</span><span class="pi">:</span> <span class="s">attack-range-key-pair</span>
+  <span class="na">ip_whitelist</span><span class="pi">:</span> <span class="s">IP_CIDR_RANGE</span>
+  <span class="na">attack_range_name</span><span class="pi">:</span> <span class="s">agpt</span>
+<span class="na">aws</span><span class="pi">:</span>
+  <span class="na">private_key_path</span><span class="pi">:</span> <span class="s">~/.ssh/id_rsa</span>
+  <span class="na">region</span><span class="pi">:</span> <span class="s">us-east-2</span>
+  <span class="na">use_elastic_ips</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0'</span>
+<span class="na">windows_servers</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">hostname</span><span class="pi">:</span> <span class="s">ar-win-dc</span>
+  <span class="na">windows_image</span><span class="pi">:</span> <span class="s">windows-server-XXXX</span>
+  <span class="na">create_domain</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+  <span class="na">win_sysmon_config</span><span class="pi">:</span> <span class="s2">"</span><span class="s">SwiftOnSecurity.xml"</span>
+  <span class="na">aurora_agent</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>  
+  <span class="na">bad_blood</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+<span class="pi">-</span> <span class="na">hostname</span><span class="pi">:</span> <span class="s">ar-win-2</span>
+  <span class="na">windows_image</span><span class="pi">:</span> <span class="s">windows-server-XXXX</span>
+  <span class="na">join_domain</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+  <span class="na">win_sysmon_config</span><span class="pi">:</span> <span class="s2">"</span><span class="s">SwiftOnSecurity.xml"</span>  
+  <span class="na">aurora_agent</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+  <span class="na">install_red_team_tools</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+<span class="na">linux_servers</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">hostname</span><span class="pi">:</span> <span class="s">ar-linux</span>
+  <span class="na">sysmon_config</span><span class="pi">:</span> <span class="s2">"</span><span class="s">SysMonLinux-CatchAll.xml"</span>
+<span class="na">zeek_server</span><span class="pi">:</span>
+  <span class="na">zeek_server</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+<span class="na">kali_server</span><span class="pi">:</span>
+  <span class="na">kali_server</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+</code></pre></div></div>
+<h4 id="using-the-attack-range">Using the Attack Range</h4>
+<h5 id="managing-the-lab">Managing the Lab</h5>
+<p>Commands to interact with the Attack Range, including stopping and starting the deployed resources.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python attack_range.py show   <span class="c"># Show deployed resources</span>
+python attack_range.py stop   <span class="c"># Stop running instances</span>
+python attack_range.py resume   <span class="c"># Restart running instances</span>
+python attack_range.py destroy   <span class="c"># Teardown Attack Range</span>
+</code></pre></div></div>
+<h5 id="querying-logs-in-splunk">Querying Logs in Splunk</h5>
+<p>A Splunk SPL query leveraging Sysmon logs to identify instances of the <code class="language-plaintext highlighter-rouge">hostname</code> and <code class="language-plaintext highlighter-rouge">whoami</code> commands executed by the <code class="language-plaintext highlighter-rouge">Administrator</code> user.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="p">"</span><span class="s2">win</span><span class="p">"</span>
+<span class="nv">host</span><span class="o">=</span><span class="p">"</span><span class="s2">ar-win-dc</span><span class="p">"</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">user</span><span class="o">=</span><span class="nv">Administrator</span>
+<span class="p">(</span><span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">hostname</span><span class="p">"</span> <span class="nv">OR</span> <span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">whoami</span><span class="p">")</span>
+<span class="o">|</span> <span class="nv">table</span> <span class="nv">host</span><span class="p">,</span> <span class="nv">user</span><span class="p">,</span> <span class="nv">parent_process</span><span class="p">,</span> <span class="nv">process_id</span><span class="p">,</span> <span class="nv">process</span>
+</code></pre></div></div>
+<p>An equivalent query for Sysmon for Linux logs, identfying the same commands executed by the <code class="language-plaintext highlighter-rouge">ubuntu</code> user.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="p">"</span><span class="s2">unix</span><span class="p">"</span>
+<span class="nv">host</span><span class="o">=</span><span class="p">"</span><span class="s2">ar-linux</span><span class="p">"</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Linux-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">user</span><span class="o">=</span><span class="nv">ubuntu</span>
+<span class="p">(</span><span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">hostname</span><span class="p">"</span> <span class="nv">OR</span> <span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">whoami</span><span class="p">")</span>
+<span class="o">|</span> <span class="nv">table</span> <span class="nv">host</span><span class="p">,</span> <span class="nv">user</span><span class="p">,</span> <span class="nv">parent_process</span><span class="p">,</span> <span class="nv">process_id</span><span class="p">,</span> <span class="nv">process</span>
+</code></pre></div></div>
+<h5 id="importing-and-exporting-log-data">Importing and Exporting Log Data</h5>
+<p>A command to query and dump logs from a Splunk search, limited to the last two hours.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python attack_range.py dump <span class="nt">--file_name</span> attack_data/dump.log <span class="nt">--search</span> <span class="s1">'index=win CommandLine="hostname"'</span> <span class="nt">--earliest</span> 2h
+</code></pre></div></div>
+<p>An abridged example of the XML event log data dumped by the above command.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Event</span> <span class="na">xmlns=</span><span class="s">'http://schemas.microsoft.com/win/2004/08/events/event'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;System&gt;</span>
+        <span class="nt">&lt;Provider</span> <span class="na">Name=</span><span class="s">'Microsoft-Windows-Sysmon'</span> <span class="na">Guid=</span><span class="s">'{5770385f-c22a-43e0-bf4c-06f5698ffbd9}'</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;EventID&gt;</span>1<span class="nt">&lt;/EventID&gt;</span>
+        --snip--
+        <span class="nt">&lt;Execution</span> <span class="na">ProcessID=</span><span class="s">'3260'</span> <span class="na">ThreadID=</span><span class="s">'3832'</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Channel&gt;</span>Microsoft-Windows-Sysmon/Operational<span class="nt">&lt;/Channel&gt;</span>
+        <span class="nt">&lt;Computer&gt;</span>***ar-win-dc.attackrange.local***<span class="nt">&lt;/Computer&gt;</span>
+        <span class="nt">&lt;Security</span> <span class="na">UserID=</span><span class="s">'S-1-5-18'</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/System&gt;</span>
+    <span class="nt">&lt;EventData&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'ProcessId'</span><span class="nt">&gt;</span>5432<span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'CommandLine'</span><span class="nt">&gt;</span>***hostname***<span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'User'</span><span class="nt">&gt;</span>***ATTACKRANGE\Administrator***<span class="nt">&lt;/Data&gt;</span>
+        --snip--
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'Hashes'</span><span class="nt">&gt;</span>
+            MD5=7F95220A65A5A5D4A98873E86EF2E549,SHA256=1BFF2907C456F99277F45F9B2A21B1B3F11F6C01587D9E6D6F0B2B5F1472FE92,IMPHASH=5CD891320C666621E9783444DB8CBA78<span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'ParentProcessId'</span><span class="nt">&gt;</span>5360<span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'ParentImage'</span><span class="nt">&gt;</span>C:\Windows\System32\cmd.exe<span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'ParentCommandLine'</span><span class="nt">&gt;</span>"C:\Windows\system32\cmd.exe" <span class="nt">&lt;/Data&gt;</span>
+        <span class="nt">&lt;Data</span> <span class="na">Name=</span><span class="s">'ParentUser'</span><span class="nt">&gt;</span>ATTACKRANGE\Administrator<span class="nt">&lt;/Data&gt;</span>
+    <span class="nt">&lt;/EventData&gt;</span>
+<span class="nt">&lt;/Event&gt;</span>
+</code></pre></div></div>
+<p>A command to inject the dumped logs back into a Splunk instance (for example, to analyze historical activity in a fresh Splunk deployment).</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python attack_range.py replay <span class="nt">--file_name</span> attack_data/dump.log <span class="nt">--source</span> <span class="nb">test</span> <span class="nt">--sourcetype</span> <span class="nb">test</span>
+</code></pre></div></div>
+<h5 id="automating-attack-execution">Automating Attack Execution</h5>
+<p>A command to execute PurpleSharp on a host to perform credential access activities.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python attack_range.py simulate <span class="nt">-e</span> PurpleSharp <span class="nt">-te</span> T1003.001 <span class="nt">-t</span> ar-win-attack-range-key-pair-agpt-0
+</code></pre></div></div>
+<p>A similar Attack Range command, taking advantage of PurpleSharp’s JSON playbooks feature to run multiple actions in a chained simulation.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python attack_range.py simulate <span class="nt">-e</span> PurpleSharp <span class="nt">-t</span> ar-win-attack-range-key-pair-agpt-1 <span class="nt">-p</span> configs/purplesharp_playbook_T1110_003.pb
+</code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="choosing-a-lab-environment">Choosing a Lab Environment</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More information on the ingestion of AWS CloudTrail and Azure Activity Logs for performing and detecting cloud-based attack scenarios using the Attack Range</h6>
+               <p><i>"Attack Range Cloud," Attack Range, accessed April 18, 2024</i></p>
+                <a target="_blank" href="https://attack-range.readthedocs.io/en/latest/Attack_Range_Cloud.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>If you’re performing attacks against cloud resources, you should familiarize yourself with the penetration testing and simulated events terms for your relevant provider. AWS, for example, provides details here</h6>
+               <p><i>"Penetration Testing," Amazon Web Services</i></p>
+                <a target="_blank" href="https://aws.amazon.com/security/penetration-testing/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Azure's guidance on penetration testing in cloud environments can be found here</h6>
+               <p><i>"Penetration testing," Microsoft</i></p>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/pen-testing" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="deploying-the-attack-range">Deploying the Attack Range</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>AWS's pricing calculator which can help forecast the associated costs for running lab environments</h6>
+               <p><i>"AWS Pricing Calculator," Amazon Web Services</i></p>
+                <a target="_blank" href="https://calculator.aws/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="configuring-attack-range-1">Configuring Attack Range</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>AWS's guidance on the functionality, pricing and quotas for its Elastic IP Address feature</h6>
+               <p><i>"Elastic IP Addresses," Amazon Web Services</i></p>
+                <a target="_blank" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>SwiftOnSecurity's popular SysInternals Sysmon configuration</h6>
+               <p><i>"sysmon-config," GitHub, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://github.com/SwiftOnSecurity/sysmon-config" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The BadBlood Active Directory tool used to populate the lab with fictitious resources</h6>
+               <p><i>"BadBlood," GitHub, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://github.com/davidprowe/BadBlood" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The complete list of red team tools pre-installed in the Attack Range</h6>
+               <p><i>"red_team_tools," GitHub, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://github.com/splunk/attack_range/blob/develop/terraform/ansible/roles/red_team_tools/tasks/main.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The underlying concepts, applications, and pricing for AWS's VPC Traffic Mirroring feature</h6>
+               <p><i>"What is Traffic Mirroring?" Amazon Web Services</i></p>
+                <a target="_blank" href="https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="completing-aws-validations">Completing AWS Validations</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of the vCPU usage for each EC2 instance type, should you choose to further expand your Attack Range with additional hosts</h6>
+               <p><i>"AWS EC2 Instance Types," Amazon Web Services</i></p>
+                <a target="_blank" href="https://aws.amazon.com/ec2/instance-types/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="accessing-pre-installed-tools">Accessing Pre-Installed Tools</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A searchable list of the offensive security tools pre-installed on the Kali Linux operating system</h6>
+               <p><i>"Kali Tools," Kali, accessed March 16, 2024</i></p>
+                <a target="_blank" href="https://www.kali.org/tools/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="querying-logs-in-splunk-1">Querying Logs in Splunk</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More details on Splunk's query language, SPL</h6>
+               <p><i>"About the search language," Splunk, accessed March 16, 2024</i></p>
+                <a target="_blank" href="https://docs.splunk.com/Documentation/SplunkCloud/latest/Search/Aboutthesearchlanguage" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="automated-attack-execution">Automated Attack Execution</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>BlackHat USA 2020 Arsenal talk from Mauricio Velazco introducing PurpleSharp and its capabilities</h6>
+               <p><i>"BlackHat 2020 Arsenal - PurpleSharp: Adversary Simulation for the Blue Team by Mauricio Velazco," YouTube, accessed March 16, 2024</i></p>
+                <a target="_blank" href="https://www.youtube.com/watch?v=yaeNwdElYaQ" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of the attack simulation capabilities of the Attack Range</h6>
+               <p><i>"Attack Simulation," Attack Range, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://attack-range.readthedocs.io/en/latest/Attack_Simulation.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>PurpleSharp's supported credential access capabilities</h6>
+               <p><i>"Credential Access," PurpleSharp, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://www.purplesharp.com/en/latest/techniques/credential_access.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Using JSON playbooks to execute chained techniques with PurpleSharp</h6>
+               <p><i>"JSON Playbooks," PurpleSharp, accessed April 28, 2024</i></p>
+                <a target="_blank" href="https://www.purplesharp.com/en/latest/using-purplesharp/json_playbooks.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>More examples of PurpleSharp playbooks for multi-step attack simulations</h6>
+               <p><i>"PurpleTeamPlaybook," GitHub, accessed March 16, 2024</i></p>
+                <a target="_blank" href="https://github.com/mvelazc0/PurpleTeamPlaybook" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-I/the-scenario-based-methodology/" class="btn btn-primary">&lt;&lt; Chapter 4</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/collecting-telemetry/" class="btn btn-primary">Chapter 6 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

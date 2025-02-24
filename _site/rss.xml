@@ -6,32 +6,16 @@
 		<link>http://localhost:4000/</link>
 		<description>A Guide to Purple Teaming</description>
 		<language>en-US</language>
-		<copyright>(c) 2024, ajpc500</copyright>	
-		<pubDate>Mon, 16 Sep 2024 12:26:37 +0100</pubDate>
-		<lastBuildDate>Mon, 16 Sep 2024 12:26:37 +0100</lastBuildDate>
+		<copyright>(c) 2025, ajpc500</copyright>	
+		<pubDate>Mon, 24 Feb 2025 20:58:58 +0000</pubDate>
+		<lastBuildDate>Mon, 24 Feb 2025 20:58:58 +0000</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml" />
 		<image>
 			<title>A Guide to Purple Teaming | A Guide to Purple Teaming</title>
-			<url>http://localhost:4000/images/bg.jpg</url>
+			<url>https://github.com/ajpc500.png</url>
 			<link>http://localhost:4000/</link>
 			<description>A Guide to Purple Teaming</description>
-		</image><item>
-			<title>First post!</title>
-			<description>
-				<![CDATA[	
- 				
-    		<p>1 min.</p>
-				<div><p>Testing.</p>
-</div>
-				]]>
-			</description>
-			<link>http://localhost:4000/2024/09/15/first-post.html</link>
-			<category>posts</category>
-		    <category>intro</category><media:title type="html"><![CDATA[First post! ]]></media:title>
-      <media:content url="http://localhost:4000/images/bg.jpg" medium="image"/>
-      <media:thumbnail url="http://localhost:4000/images/bg.jpg" /><guid isPermaLink="true">http://localhost:4000/2024/09/15/first-post.html</guid>
-      <pubDate>Sun, 15 Sep 2024 00:00:00 +0100</pubDate>
-		</item></channel>
+		</image></channel>
 </rss>

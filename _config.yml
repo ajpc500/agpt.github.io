@@ -97,12 +97,41 @@ navbar:
     url     :  # default["url/baseurl"]
     img     :  # An small image, try 30x30px
   nav:
-  # - title   : Blog # Label
-  #   url     : /blog/ # url	
-  # - title   : Cheatsheets
-  #   url     : /cheatsheets
+  - title   : "Part I: How Purple Teaming Works"
+    child   :
+      - title : 1. The Basics of Purple Teaming
+        url   : /part-I/the-basics-of-purple-teaming
+      - title : 2. Offensive and Defensive Frameworks
+        url   : /part-I/offensive-and-defensive-frameworks
+      - title : 3. The Atomic Methodology
+        url   : /part-I/the-atomic-methodology
+      - title : 4. The Scenario-based Methodology
+        url   : /part-I/the-scenario-based-methodology
+  - title   : "Part II: Attack Emulation and Detection Lab"
+    child   :
+      - title : 5. Environment Setup
+        url   : /part-II/environment-setup
+      - title : 6. Collecting Telemetry
+        url   : /part-II/collecting-telemetry
+      - title : 7. Network Traffic and Event Tracing
+        url   : /part-II/network-traffic-and-event-tracing
+      - title : 8. Living-off-the-Land with Atomic Red Team
+        url   : /part-II/lotl-with-atomic-red-team
+      - title : 9. Active Directory Recon with MITRE Caldera
+        url   : /part-II/ad-recon-with-mitre-caldera
+      - title : 10. Domain Compromise with Mythic
+        url   : /part-II/domain-compromise-with-mythic
+  - title   : "Part III: Organizing an Exercise"
+    child   :
+      - title : 11. Reporting and Tracking
+        url   : /part-III/reporting-and-tracking
+      - title : 12. Implementing a Purple Teaming Function
+        url   : /part-III/implementing-a-purple-teaming-function
+      
   - title   : Resources
     url     : /resources
+  - title   : Errata
+    url     : /errata
   # - title   : Extras
   #   child   :
   #     - title : Tags
@@ -155,59 +184,36 @@ paginate: 4
 paginate_path: "/blog/page:num/"
 paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
 
-# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-# collections:
-#   cheatsheet:
-#     output: true
-#     permalink: /cheatsheets/:name
-# collections_dir     : 
-# permalink           : /:year:month:day_:title/
-
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-      header_type: "base"
-      include_on_search   : false
-      cloudtag_url        : /tags #This is where the link on tags would redirect
-      cloudcategory_url   : /categories #This is where the link on categories would redirect
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      header_type       : "post"
-      include_on_search : true
-      include_on_feed   : true
-      show_date         : true
-      show_related      : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      show_comments     : true
-      show_tags         : true
-      show_categories   : true
-      show_author       : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Blog
-          url: /blog/
-  -
-    scope:
-      path: ""
-      type: "cheatsheet"
-    values:
-      header_type       : "hero"
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      include_on_search : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Cheatsheets
-          url: /cheatsheets
+# defaults:
+#   - scope:
+#       path: ""
+#     values:
+#       layout: "default"
+#       header_type: "base"
+#       include_on_search   : false
+#       cloudtag_url        : /tags #This is where the link on tags would redirect
+#       cloudcategory_url   : /categories #This is where the link on categories would redirect
+#   - scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       header_type       : "post"
+#       include_on_search : true
+#       include_on_feed   : true
+#       show_date         : true
+#       show_related      : true
+#       show_bottomnavs   : true
+#       show_sociallinks  : true
+#       show_comments     : true
+#       show_tags         : true
+#       show_categories   : true
+#       show_author       : true
+#       show_breadcrumb   : true
+#       breadcrumb_list   :
+#         - label: Blog
+#           url: /blog/
 
 
 # XX. Other settings - no need to modify
@@ -234,6 +240,8 @@ exclude:
 include:
  - _pages
  - resources
+ - chapters
+ - errata
 
 # Conversion
 markdown: kramdown
