@@ -113,7 +113,7 @@ navbar:
         url   : /part-II/environment-setup
       - title : 6. Collecting Telemetry
         url   : /part-II/collecting-telemetry
-      - title : 7. Network Traffic and Event Tracing
+      - title : 7. Network Monitoring, Event Tracing and Memory Scanning
         url   : /part-II/network-traffic-and-event-tracing
       - title : 8. Living-off-the-Land with Atomic Red Team
         url   : /part-II/lotl-with-atomic-red-team
