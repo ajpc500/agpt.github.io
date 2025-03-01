@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Network Traffic and Event Tracing
+title: Network Monitoring, Event Tracing and Memory Scanning
 tags: []
 header_type       : "hero"
 include_on_search : true

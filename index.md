@@ -35,7 +35,7 @@ The sections of this site are as follows:
           <ul>
             <li>Environment Setup</li>
             <li>Collecting Telemetry</li>
-            <li>Network Traffic and Event Tracing</li>
+            <li>Network Monitoring, Event Tracing and Memory Scanning</li>
             <li>Living-off-the-Land with Atomic Red Team</li>
             <li>Active Directory Recon with MITRE Caldera</li>
             <li>Domain Compromise with Mythic</li>
