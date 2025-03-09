@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Purple Teaming
+title: Practical Purple Teaming
 header_type: splash
 subtitle: The art of collaborative defense
 ---
 
-This website serves as a companion to the "Purple Teaming: The Art of Collaborative Defence" book. Here you'll find copies of the diagrams and code snippets present in the book, as well as supporting resources so you can explore concepts further.
+This website serves as a companion to the "Practical Purple Teaming: The Art of Collaborative Defence" book. Here you'll find copies of the diagrams and code snippets present in the book, as well as supporting resources so you can explore concepts further.
 
 \\
 The sections of this site are as follows:
