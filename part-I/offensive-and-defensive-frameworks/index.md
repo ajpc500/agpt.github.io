@@ -145,11 +145,10 @@ The following resources expand on topics covered in this chapter.
             <div class="card-body">
                 <h6>An overview of the design for MITRE ATT&CK, including object model definitions and design choices</h6>
                 <p><i>Blake E. Strom, Andy Applebaum, Doug P. Miller, Kathryn C. Nickels, Adam G. Pennington, Cody B. Thomas, "MITRE ATT&CK: Design and Philosophy" MITRE Corporation, March, 2020</i></p>
-                <a target="_blank" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-150.pdf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
+                <a target="_blank" href="https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf" class="btn btn-primary" style="background-color:#eb34e1">Read More</a>
             </div>
         </div>
     </div>
-
     <div class="col mb-4">
         <div class="card">
             <div class="card-body">
@@ -159,7 +158,6 @@ The following resources expand on topics covered in this chapter.
             </div>
         </div>
     </div>
-
     <div class="col mb-4">
         <div class="card">
             <div class="card-body">
